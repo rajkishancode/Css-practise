@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap");
+
+body {
+  background: #f1f1f1;
+  color: #072a6c;
+}
+.card {
+  font-family: "Poppins";
+  background: #fff;
+  overflow: hidden;
+  border-radius: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 34px;
+  overflow: unset;
+  box-shadow: 0px 8px 22px #ddd;
+  width: 360px;
+}
+.title {
+  font-size: 18px;
+}
+.avatar {
+  width: 52px;
+  border-radius: 99px;
+  margin-top: 10px;
+}
+.job {
+  font-size: 12px;
+  position: relative;
+  top: -64px;
+  left: 58px;
+}
+.name {
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  top: -78px;
+  left: 58px;
+}
+.psw-title {
+  font-size: 10px;
+  margin-top: -62px;
+  font-weight: 600;
+}
+.psw-input {
+  font-family: "Poppins";
+  font-size: 12px;
+  padding: 10px 10px 10px 32px;
+  border: 1px solid #072a6c;
+  margin-top: -14px;
+  margin-left: -16px;
+  margin-bottom: -32px;
+}
+.psw-icon {
+  position: relative;
+  z-index: 2;
+  left: 14px;
+}
+#psw-eye {
+  margin-left: 8px;
+}
+
+input[type="&quot;checkbox&quot;"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+label {
+  display: block;
+  width: 48px;
+  height: 26px;
+  background: #fff;
+  border-radius: 99px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid #072a6c;
+}
+label::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #072a6c;
+  position: absolute;
+  border-radius: 99px;
+  top: 4px;
+  left: 2px;
+  transition: 0.3s ease-in-out;
+}
+input:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+input:checked + label {
+  background: #fff;
+}
+label:active:after {
+  width: 10px;
+}
+.switch-txt {
+  font-size: 10px;
+  font-weight: 600;
+  position: relative;
+  top: -32px;
+  left: 60px;
+}
+.continue-btn {
+  background: #072a6c;
+  color: #fff;
+  padding: 12px;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  position: relative;
+  top: -70px;
+  float: right;
+  right: 108px;
+  transition: 0.3s ease;
+}
+.continue-btn:hover {
+  background: #fff;
+  color: #072a6c;
+  border: 1px solid #072a6c;
+  transform: scale(1.05);
+}
+.reset-href {
+  color: #072a6c;
+  font-size: 12px;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-family: "Poppins";
+  font-size: 11px;
+  padding: 22px;
+}
+a {
+  text-decoration: none;
+  color: #616161;
+}
