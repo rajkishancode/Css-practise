@@ -1,0 +1,223 @@
+/* Add CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+/**
+* ! Resetting Base Styles
+**/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E8F1EE;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+}
+
+/**
+* ! Typography
+**/
+
+.movie-name{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.theatre-name{
+    font-size: 0.9rem;
+}
+
+.seat-types{
+    color: #5B879D;
+    font-size: 0.8rem;
+}
+
+.row-name{
+    color: #8b959c;
+    font-size: 0.8rem;
+}
+
+.field-group, .field-values{
+    font-size: 0.9rem;
+}
+
+.lg{
+    font-size: 1rem;
+}
+
+/**
+* ! Component Styles
+**/
+
+.movie-ticket{
+    max-width: 375px;
+    overflow: hidden;
+    margin: 4rem auto;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.movie-banner{
+    position: relative;
+    background:linear-gradient(rgba(201, 153, 153, 0.4),rgba(43, 57, 66, 1)) ,url(https://c4.wallpaperflare.com/wallpaper/958/991/699/marvel-cinematic-universe-guardians-of-the-galaxy-guardians-of-the-galaxy-vol-2-nebula-marvel-gamora-hd-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    height: 200px;
+}
+
+.fa-arrow-left{
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    font-size: 1.8rem;
+    left: 1.2rem;
+    top: 1.4rem;
+}
+
+.movie-info{
+    position: absolute;
+    color: white;
+    left: 1.2rem;
+    bottom: 0.8rem;
+}
+
+.theatre{
+    padding: 1rem 0.8rem;
+}
+
+.seat-types{
+    margin: 0.2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.seat-types .fa-couch{
+    font-size: 0.8rem;
+    margin-right: 4px;
+}
+.seat-matrix{
+    margin: 0.8rem 0;
+}
+
+.seat-row{
+    margin: 0.4rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.row-name{
+    margin-right: 14px;
+}
+
+.seat-row .fa-couch{
+    cursor: pointer;
+    margin: 0 0.1rem;
+    font-size: 1.3rem;
+}
+
+.aisle{
+    width: 50px;
+}
+
+.available{
+    color:#5C889D;
+}
+
+.booked{
+    color:#C9D8DF;
+}
+
+.selected{
+    color:#EC407A;
+}
+
+.text-sm{
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgb(150, 143, 143);
+}
+
+.screen{
+   margin: 0 auto;
+   height: 30px;
+   width: 90%;
+   border-bottom: 4px solid #5B879D;
+   border-bottom-right-radius: 80%;
+   border-bottom-left-radius: 80%;
+}
+
+.ticket-details{
+    background-color: #EC407A;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.field-group{
+    padding: 1rem 0.8rem;
+    background-color: #DB3769;
+}
+
+.field-values{
+    padding: 1rem 0.8rem;
+}
+
+.next-btn{
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 1rem;
+    font-weight: bold;
+    color: rgb(31, 29, 29);
+    background-color: white;
+    padding: 0.8rem 1rem;
+}
+
+.next-btn:hover{
+    color: #DB3769;
+}
+
+.card{
+    max-width: 375px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 4rem auto;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.book-more-btn{
+    cursor: pointer;
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid #DB3769;
+    border-radius: 10px;
+    background-color: #DB3769;
+    color: white;
+    transition: all 0.25s ease-out;
+}
+
+.book-more-btn:hover{
+    border: 2px solid #DB3769;
+    background-color:white ;
+    color:#DB3769;
+}
+
+.hidden{
+    display: none;
+}

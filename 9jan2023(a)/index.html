@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/c9e0256b33.js" crossorigin="anonymous" ></script>
+<script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Movie Ticket Booking</title>
+</head>
+<body>
+    <!-- Movie Ticket -->
+    <div class="movie-ticket">
+        <div class="movie-banner">
+            <i class="fa fa-arrow-left"></i>
+            <div class="movie-info">
+                <div class="movie-name">Guardians of the Galaxy Vol.2</div>
+                <div class="theatre-name">
+                    <i class="fa-solid fa-location-dot"></i> Cineplex Entertainment,
+                    Toronto ON
+                </div>
+            </div>
+        </div>
+        <div class="theatre">
+            <div class="seat-types">
+                <div>
+                    <i class="fa-solid fa-couch available"></i>
+                    <span>Available</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-couch booked"></i>
+                    <span>Booked</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-couch selected"></i>
+                    <span>Selected</span>
+                </div>
+            </div>
+            <div class="seat-matrix">
+                <!-- Row G -->
+                <div class="seat-row">
+                    <div class="row-name">G</div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                    <div class="aisle"></div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                </div>
+                <!-- Row F -->
+                <div class="seat-row">
+                    <div class="row-name">F</div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                    </div>
+                    <div class="aisle"></div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                    </div>
+                </div>
+                <!-- Row E -->
+                <div class="seat-row">
+                    <div class="row-name">E</div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                    <div class="aisle"></div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                </div>
+                <!-- Row D -->
+                <div class="seat-row">
+                    <div class="row-name">D</div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                    <div class="aisle"></div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                </div>
+                <!-- Row C -->
+                <div class="seat-row">
+                    <div class="row-name">C</div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                    <div class="aisle"></div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                </div>
+                <!-- Row B -->
+                <div class="seat-row">
+                    <div class="row-name">B</div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                        <i class="fa-solid fa-couch booked"></i>
+                    </div>
+                    <div class="aisle"></div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                </div>
+                <!-- Row A -->
+                <div class="seat-row">
+                    <div class="row-name">A</div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                    <div class="aisle"></div>
+                    <div class="seat-group">
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                        <i class="fa-solid fa-couch available"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-container">
+                <div class="text-sm">Screen</div>
+                <div class="screen"></div>
+            </div>
+        </div>
+        <div class="ticket-details">
+            <div class="field-group">
+                <div>Date</div>
+                <div>Tickets</div>
+                <div class="lg">TOTAL</div>
+            </div>
+            <div class="field-values">
+                <div>Jan 9, 19:15</div>
+                <div id="totalTickets">0</div>
+                <div class="lg">$<span id="totalPrice">0</span></div>
+            </div>
+            <div id="next-btn" class="next-btn button">
+                Next <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+<!-- Thank You Card -->
+    <div class="card hidden">
+        <h3>Thank You for buying the tickets </h3>
+        <h4>Please pay the $ <span id="money"></span> for <span id="total"></span> tickets through your favorite mode.
+        </h4>
+        <button id="book-more-btn" class="book-more-btn"> Book More Tickets </button><button>
+    </button></div>
+</body>
+</html>
