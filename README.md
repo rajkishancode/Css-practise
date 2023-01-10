@@ -1,4 +1,4 @@
 # Css-practise
 
-I started making something with css from 1st jan 2023 for improving my css skills.
-I push everyday one login screen,cards or graph made with html ,css etc 
+Since January 1st, 2023, I have been creating with CSS to hone my skills.
+I push one login screen, card, graph, etc. per day that was created with html and CSS.
