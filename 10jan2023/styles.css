@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Merriweather:wght@300&family=Mulish:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap');
+/**
+* ! Resetting Base Styles
+**/
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.color-fixed{
+    background-color: #10182f;
+    color: #fff;
+}
+
+.container{
+
+    padding: 10% 25%; 
+row-gap: 90px;
+    width: 100vw;
+    height: 100%;
+    background-color: #F7F8FC;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+
+.pagination-wrapper{
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+    height: 100px; 
+    width: 600px;
+}
+.btn-circle{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    color: #545D7A;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid #DAE1F5;
+    background-color: #FFF;
+}
+.three-dot-btn-circle{
+    font-size: 2.5rem;
+       display: inline-flex;
+      justify-content: center;
+ 
+    
+    
+}
+.ml-85{
+    margin-left:85px;
+}
+.btn{
+    
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    padding:23px 28px;
+    border-radius: 8px;
+    border: 1px solid #DAE1F5;
+    background-color: #FFF;
+    color: #545D7A;
+    font-size: 1.5rem;
+    font-weight: 600;
+    height: 75px;
+    width: 72px;
+  
+}
+.three-dot-btn{
+ padding-bottom:40px;
+ padding-inline-start:20px ;
+ 
+    font-size: 2.5rem;
+    display: inline-flex;
+  align-items: center;
+
+}
+back-color{
+    background-color:#10182f ;
+}
+.border-none{
+    border: none;
+    background-color:inherit ;
+}
+
+
+.btn-circle:hover{
+    background-color: #10182F;
+    color: #fff;
+}
+.btn:hover{
+    background-color: #10182F;
+    color: #fff;
+}
+.right-arrow-btn{
+    border: none;
+    background-color: inherit;
+}
