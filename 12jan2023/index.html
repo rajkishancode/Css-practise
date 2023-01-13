@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Poll</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="question">
+            <p>If you write a book about failure,<br>
+                and it doesn't sell, is it called success?</p>
+        </div>
+
+        <div class="polling-group">
+
+            <input type="checkbox" id="success-vote" checked>
+            <label for="success-vote">Definitely a success.
+            </label></label>
+            <div class="info">
+                <div class="empty-bar">
+                    <div class="success-bar"></div>
+                </div>
+                <div class="vote-percentage">65%</div>
+            </div>
+
+        </div>
+
+        <div class="polling-group">
+            <input type="checkbox" id="no-vote">
+            <label for="no-vote">No.</label>
+            <div class="info">
+                <div class="empty-bar">
+                    <div class="no-bar"></div>
+                </div>
+                <div class="vote-percentage">12%</div>
+            </div>
+
+        </div>
+
+
+        <div class="polling-group">
+            <input type="checkbox" id="only-vote">
+            <label for="only-vote">Only if it's in the How To section of the library.</label>
+            <div class="info">
+                <div class="empty-bar">
+                    <div class="only-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container"><button type="submit">Submit</button></div>
+    </div>
+</body>
+
+</html>
