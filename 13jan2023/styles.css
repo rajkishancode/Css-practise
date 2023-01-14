@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+
+:root{
+    --backgroundColor:#22161A;
+    --accentColor:#AF2830;
+    --textColor:#B8B0B2;
+      --gradient: radial-gradient(#b0000c, #9f1d25);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+background-color: var(--accentColor);
+font-family: 'Nunito', sans-serif;
+font-size: 18px;
+color: var(--textColor);
+}
+
+.container{
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+   min-height: 100vh;
+    
+}
+.card{
+    background-color:var(--backgroundColor) ;
+    display: grid;
+    place-content: center;
+    width: 85vw;
+    max-width: 1000px;
+    padding: 10rem 0;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: rgba(0,0,0,0.45) 0px 25px 20px -5px;
+    
+}
+.pricing-list  h2{
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+.pricing-list h3,
+.pricing-list h4
+{
+    font-weight: normal;
+}
+
+.pricing-list h3{
+    font-size: 1.5rem;
+}
+
+.pricing-list{
+    position: relative;
+    justify-content: center;
+    padding: 0 3rem;
+    display: flex;
+    gap: 15rem;
+    
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
+    gap: 0.25rem;
+}
+
+
+ol{
+    list-style: none;
+
+}
+ul{
+    list-style-type: disc;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+.action-btn.outline{
+    background-color: transparent;
+    border: 1px solid var(--accentColor);
+    color:var(--accentColor) ;
+}
+.action-btn:hover{
+    filter: brightness(1.25);
+}
+.action-btn{
+    padding: 1rem;
+    width: 120%;
+    margin-left: -1rem;
+    border-radius: 0.25rem;
+    background-color: var(--accentColor);
+  color: #fff;
+  transition: 150ms linear;
+
+}
+
+.pricing-list::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 1px;
+  height: 140%;
+  background-color: var(--textColor);
+  opacity: 0.1;
+}
+
+@media screen and (max-width:850px) {
+    .card{
+        padding: 5rem 0;
+    }
+    .pricing-list{
+        flex-direction: column;
+    }
+    .pricing-list::before {
+    width: 80%;
+    height: 1px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .pricing-list {
+    gap: 5rem;
+  }
+}
+
+
+.card::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -70px;
+  width: 120%;
+  height: 125px;
+  background: var(--gradient);
+  border-radius: 50%;
+  z-index: -1;
+}
