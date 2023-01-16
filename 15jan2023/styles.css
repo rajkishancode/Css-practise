@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+html{
+    background-color: #17213F;
+    font-family: 'Poppins', sans-serif;
+}
+h3{
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+h4{
+    color: #8B96B8;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+h5{
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: #8B96B8;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+.container {
+    margin:10rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 260px;
+    width: 80%;
+    gap: 40px;
+    margin-inline: 10%;
+}
+
+
+.card{
+    
+color: white;
+background-color: #0F162B;
+
+height: 350px;
+
+border-radius: 5px;
+}
+
+.card-image{
+   
+    width: 100%;
+    max-height: 200px;
+    object-position: top;
+
+
+}
+
+.card-content{
+    padding: 15px;
+}
+
+.card-image{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.company-logo{
+    width: 70px;
+}
+
+.uber-icon{
+background: url('https://api.iconify.design/simple-icons/uber.svg?color=white') no-repeat center center / contain;
+content: url('https://api.iconify.design/simple-icons/uber.svg?color=white');
+width: 45px;
+}
+
+.prev-company {
+    height: 23px;
+    margin-top: 10px;
+    
+}
+
+.card.add-more{
+    border: 2px solid #17213F;
+}
+
+.card.plus {
+    
+    border: 5px solid #131b35;
+    background-color: inherit;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #9da9cd;
+    gap: 7px;
+}
+p{
+    font-size: 1.5rem;
+}
+
+
+
+@media screen and (min-width: 650px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 30px;
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 30px;
+    max-width: 1040px;
+  }
+}
