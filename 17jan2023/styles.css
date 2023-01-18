@@ -1,0 +1,12 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #7DC2E3;
+    height: 80vh;
+}
