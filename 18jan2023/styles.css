@@ -1,0 +1,299 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Colors*/
+  --lighter-black:#272B4A;
+  --light-black: #232744;
+  --dark-black: #1D2039;
+  --white: #fff;
+  --red:#F8417D;
+  --dark-grey: #868794;
+  --light-grey: #CBCCD3;
+
+  /*Fonts*/
+  --font: 'Mulish', sans-serif;
+
+  /*Font size*/
+  --fs-1: 4.8rem;
+  --fs-2: 3.6rem;
+  --fs-3: 3rem;
+  --fs-4: 2.4rem;
+  --fs-12:2.2rem;
+  --fs-5: 1.8rem;
+  --fs-6: 1.6rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.2rem;
+  --fs-9: 1rem;
+  --fs-10: 1.1rem;
+  --fs-11: 0.9rem;
+
+  /*Font weight*/
+  --fw-400: 400;
+  --fw-600: 600;
+
+  /*Border radius*/
+  --radius-10: 1rem;
+  --radius-8: 0.8rem;
+  --radius-5: 0.5rem;
+  --radius-3: 0.3rem;
+  --radius-15: 1.5rem;
+  --radius-circle: 50%;
+  --radius-semi-circle: 100px;
+
+  /*Line height*/
+  --lh: 1.7;
+}
+
+html {
+  font-family: var(--font);
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+body{
+   background:var(--dark-black);
+   min-height: 100vh; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.card{
+    max-width:600px;
+    width:87%;
+    display:flex;
+    flex-direction: column;
+    box-shadow:  20px -20px 60px rgba(0,0,0,.1),
+             -20px 20px 60px rgba(0,0,0,.1);
+}
+
+.company-box{
+    width:100%;
+    padding:30px 10px;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:var(--lighter-black);
+    gap:10px;;
+}
+.review-box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    /* flex:1 1 0; */
+}
+
+.company-logo{
+    width:110px;
+    height:110px;
+    background-color:white;
+    background-image:url("https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: var(--radius-circle);
+
+
+}
+.review-summary{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+}
+
+.review-stars{
+    display:flex;
+    gap:5px;
+}
+
+.review-star{
+    color:gold;
+}
+
+.review-count{
+    color:var(--white);
+    font-size:var(--fs-11);
+}
+
+.btn{
+    font-size:5rem;
+    background-color:transparent;
+    border:none;
+    cursor: pointer;
+}
+
+.btn-right{
+    color:var(--light-grey);
+}
+
+.btn-prev{
+    color:var(--dark-black)
+}
+
+.company-description{
+    flex:2 1 0;
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+}
+
+.company-details{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.company-title{
+    color:var(--white);
+    font-size:var(--fs-6);
+    font-weight: var(--fw-600);
+}
+
+.company-link{
+    color:var(--red);
+    font-size:var(--fs-8);
+    text-decoration: none;
+}
+.company-summary{
+    font-size:var(--fs-10);
+    color:var(--light-grey);
+    line-height:var(--lh);
+}
+
+.company-info{
+    background-color:var(--light-black);
+    padding:30px 40px ;
+    display:flex;
+    gap:20px;
+}
+
+.employment-box{
+    flex:1 1 0;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    color:var(--white);
+}
+
+.employee-box,
+.job-box{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.employee-title,
+.job-title{
+    font-size:var(--fs-8);
+    font-weight:var(--fw-400);
+}
+
+.employee-count,
+.job-count{
+    font-size:var(--fs-12);
+    font-weight: var(--fw-600);
+
+}
+.job-count{
+    color:var(--red);
+}
+
+.paid-time-box{
+    flex: 2 1 0;
+    color:var(--white);
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.paid-time-big-title{
+    font-size:var(--fs-6);
+    font-weight: var(--fw-600);
+}
+
+.paid-times{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.paid-time{
+    display:flex;
+}
+.paid-time-title{
+    font-size:var(--fs-10);
+    flex:1 1 0;
+}
+
+.paid-time-percentage{
+    flex:1 1 0;
+    display:flex;
+    gap:5px;
+    align-items: center;
+}
+
+.chart-container{
+    height:5px;
+    width:90%;
+    background-color:var(--dark-black);
+    border-radius: var(--radius-semi-circle);
+    position:relative;
+}
+
+.paid-time:nth-child(1) .paid-time-percentage .chart-container .chart-percentage{
+    width:15%;
+    background-color:var(--red);
+    height:100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    border-radius: var(--radius-semi-circle);
+}
+
+.paid-time:nth-child(2) .paid-time-percentage .chart-container .chart-percentage{
+    width:20%;
+    background-color:var(--red);
+    height:100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    border-radius: var(--radius-semi-circle);
+}
+.paid-time:nth-child(3) .paid-time-percentage .chart-container .chart-percentage{
+    width:25%;
+    background-color:var(--red);
+    height:100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    border-radius: var(--radius-semi-circle);
+}
+.paid-time:nth-child(4) .paid-time-percentage .chart-container .chart-percentage{
+    width:7%;
+    background-color:var(--red);
+    height:100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    border-radius: var(--radius-semi-circle);
+}
+.paid-time:nth-child(5) .paid-time-percentage .chart-container .chart-percentage{
+    width:0%;
+    background-color:var(--red);
+    height:100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    border-radius: var(--radius-semi-circle);
+}
