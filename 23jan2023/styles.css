@@ -1,0 +1,173 @@
+
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to bottom right, #6fb656 20%, #107a70 60%);
+  z-index: 1;
+  overflow: hidden;
+}
+.back {
+  width: 110%;
+  height: 110%;
+  background-color: transparent;
+  background-image: radial-gradient(#f2f4f8 10%, transparent 11%),
+    radial-gradient(#f2f4f8 10%, transparent 11%);
+  background-size: 30px 30px;
+  background-position: -30px 0, 0 0;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0.2;
+}
+
+.grid {
+  background-color: transparent;
+  opacity: 0.8;
+  background-image: linear-gradient(#f2f4f8 1px, transparent 1px),
+    linear-gradient(to right, #f2f4f8 1px, transparent 1px);
+  background-size: 30px 30px;
+  position: absolute;
+  background-repeat: repeat;
+  top: -15px;
+  left: -15px;
+  width: 110%;
+  height: 110%;
+  z-index: 2;
+  opacity: 0.2;
+}
+.points {
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: transparent;
+  background-image: radial-gradient(#fff 10%, transparent 11%);
+  background-position: -10px -10px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+
+  z-index: 6;
+}
+
+.point-1 {
+  top: 191px;
+  left: 100px;
+}
+
+.point-2 {
+  top: 191px;
+  left: 400px;
+}
+
+.point-3 {
+  top: 580px;
+  left: 71px;
+}
+
+.point-4 {
+  top: 580px;
+  left: 251px;
+}
+
+.point-5 {
+  top: 610px;
+  left: 610px;
+}
+
+.point-6 {
+  top: 81px;
+  left: 3500px;
+}
+
+.point-7 {
+  top: 251px;
+  left: 790px;
+}
+
+.point-8 {
+  top: 310px;
+  left: 400px;
+}
+
+.point-9 {
+  top: 400px;
+  left: 100px;
+}
+
+.point-10 {
+  top: 800px;
+  left: 500px;
+}
+
+.point-11 {
+  top: 371px;
+  left: 791px;
+}
+
+.point-12 {
+  top: 371px;
+  left: 1210px;
+}
+
+.point-13 {
+  top: 41px;
+  left: 1000px;
+}
+
+.point-14 {
+  top: 800px;
+ 
+  left: 1210px;
+}
+.point-15 {
+  top: 250px;
+  left: 1390px;
+}
+
+.point-16 {
+  top: 430px;
+  left: 1000px;
+}
+
+.point-17 {
+  top: 521px;
+  left: 1300px;
+}
+
+.point-18 {
+  top: 700px;
+  left: 1450px;
+}
+
+.point-19 {
+  top: 100px;
+  left: 1210px;
+}
+
+.point-20 {
+  top: 790px;
+  left: 1210px;
+}
+
+.point-21 {
+  top: 610px;
+  left: 850px;
+}
