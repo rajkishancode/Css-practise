@@ -1,173 +1,152 @@
-
 *::after,
 *::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background: linear-gradient(to bottom right, #6fb656 20%, #107a70 60%);
-  z-index: 1;
-  overflow: hidden;
-}
-.back {
-  width: 110%;
-  height: 110%;
-  background-color: transparent;
-  background-image: radial-gradient(#f2f4f8 10%, transparent 11%),
-    radial-gradient(#f2f4f8 10%, transparent 11%);
-  background-size: 30px 30px;
-  background-position: -30px 0, 0 0;
-  background-repeat: repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  opacity: 0.2;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom right, #6fb656 25%, #127E71 60%);
+    /* background: linear-gradient(80deg, #6fb656 20%, #127E71 60%); */
+    z-index: 1;
+    overflow: hidden;
 }
 
-.grid {
-  background-color: transparent;
-  opacity: 0.8;
-  background-image: linear-gradient(#f2f4f8 1px, transparent 1px),
-    linear-gradient(to right, #f2f4f8 1px, transparent 1px);
-  background-size: 30px 30px;
-  position: absolute;
-  background-repeat: repeat;
-  top: -15px;
-  left: -15px;
-  width: 110%;
-  height: 110%;
-  z-index: 2;
-  opacity: 0.2;
+.back {
+    width: 110%;
+    height: 110%;
+    background-color: transparent;
+    background-image: radial-gradient(#f2f4f8 10%, transparent 11%),
+        radial-gradient(#f2f4f8 10%, transparent 11%);
+    background-size: 30px 30px;
+    background-position: -30px 0, 0 0;
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0.2;
 }
+
+
+.grid {
+    background-color: transparent;
+    opacity: 0.8;
+    background-image: linear-gradient(#f2f4f8 1px, transparent 1px),
+        linear-gradient(to right, #f2f4f8 1px, transparent 1px);
+    background-size: 30px 30px;
+    position: absolute;
+    background-repeat: repeat;
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.2;
+}
+
+
 .points {
-  width: 110%;
-  height: 110%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
 }
 
 .point {
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  background-color: transparent;
-  background-image: radial-gradient(#fff 10%, transparent 11%);
-  background-position: -10px -10px;
-  background-size: 30px 30px;
-  background-repeat: no-repeat;
-
-  z-index: 6;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: transparent;
+    background-image: radial-gradient(#fff 10%, transparent 11%);
+    background-position: -10px -10px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    z-index: 6;
 }
 
 .point-1 {
-  top: 191px;
-  left: 100px;
+    top: 10px;
+    left: 280px;
 }
 
 .point-2 {
-  top: 191px;
-  left: 400px;
+    top: 40px;
+    left: 760px;
 }
 
 .point-3 {
-  top: 580px;
-  left: 71px;
+    top: 130px;
+    left: 220px;
 }
 
 .point-4 {
-  top: 580px;
-  left: 251px;
+    top: 130px;
+    left: 610px;
 }
 
 .point-5 {
-  top: 610px;
-  left: 610px;
+    top: 190px;
+    left: 160px;
 }
 
+
 .point-6 {
-  top: 81px;
-  left: 3500px;
+    top: 280px;
+    left: 10px;
 }
 
 .point-7 {
-  top: 251px;
-  left: 790px;
+    top: 341px;
+    left: 460px;
 }
 
 .point-8 {
-  top: 310px;
-  left: 400px;
+    top: 371px;
+    left: 70px;
 }
 
 .point-9 {
-  top: 400px;
-  left: 100px;
+    top: 430px;
+    left: 430px;
 }
 
 .point-10 {
-  top: 800px;
-  left: 500px;
+    top: 460px;
+    left: 220px;
 }
 
 .point-11 {
-  top: 371px;
-  left: 791px;
+    top: 460px;
+    left: 250px;
 }
 
 .point-12 {
-  top: 371px;
-  left: 1210px;
+    top: 460px;
+    left: 400px;
 }
 
 .point-13 {
-  top: 41px;
-  left: 1000px;
+    top: 490px;
+    left: 520px;
 }
 
 .point-14 {
-  top: 800px;
- 
-  left: 1210px;
+    top: 490px;
+    left: 760px;
 }
+
 .point-15 {
-  top: 250px;
-  left: 1390px;
+    top: 520px;
+    left: 160px;
 }
 
 .point-16 {
-  top: 430px;
-  left: 1000px;
-}
-
-.point-17 {
-  top: 521px;
-  left: 1300px;
-}
-
-.point-18 {
-  top: 700px;
-  left: 1450px;
-}
-
-.point-19 {
-  top: 100px;
-  left: 1210px;
-}
-
-.point-20 {
-  top: 790px;
-  left: 1210px;
-}
-
-.point-21 {
-  top: 610px;
-  left: 850px;
+    top: 550px;
+    left: 790px;
 }
