@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  /* color */
+  --container-bg-color: #141414;
+
+  /*Fonts*/
+  --font: 'Open Sans', sans-serif;
+
+  /*Font size*/
+  --fs-1: 4.8rem;
+  --fs-2: 3.6rem;
+  --fs-3: 3rem;
+  --fs-4: 2.4rem;
+  --fs-12: 2.2rem;
+  --fs-5: 1.8rem;
+  --fs-6: 1.6rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.2rem;
+  --fs-9: 1rem;
+  --fs-10: 1.1rem;
+  --fs-11: 0.9rem;
+
+  /*Font weight*/
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /*Border radius*/
+  --radius-10: 1rem;
+  --radius-8: 0.8rem;
+  --radius-5: 0.5rem;
+  --radius-3: 0.3rem;
+  --radius-15: 1.5rem;
+  --radius-circle: 50%;
+  --radius-semi-circle: 100px;
+
+  /*Line height*/
+  --lh: 1.7;
+}
+
+
+
+html {
+  font-family: var(--font);
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background: url("https://i.postimg.cc/tgHkycsG/Screenshot-2023-01-24-145824-cleanup.png") no-repeat center/cover;
+}
+
+
+
+
+
+.banner {
+  position: relative;
+  width: 87%;
+  background-image: url("https://i.postimg.cc/YqVSdWPP/narcos.png");
+  background-position: 10% 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 160px;
+  display: flex;
+  flex-direction: row-reverse;
+
+
+
+}
+
+p,
+h1 {
+  color: #F7F4EF;
+}
+
+p {
+  text-align: center;
+  font-size: var(--fs-4);
+  font-weight: normal;
+
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 8.8rem;
+  font-weight: normal;
+  letter-spacing: 8px;
+
+}
+
+.btn {
+  cursor: pointer;
+  margin: 4rem;
+  border: none;
+  font-size: var(--fs-6);
+  border-radius: var(--radius-8);
+  letter-spacing: 1px;
+  padding: 25px 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #fff;
+  background-color: #E50913;
+}
+
+.btn:hover {
+  filter: brightness(1.5);
+}
+
+.close-btn {
+
+  cursor: pointer;
+  margin-top: 8px;
+  margin-right: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background: url('https://api.iconify.design/iwwa/close.svg?color=%23777674&rotate=90deg') no-repeat center center / contain;
+  content: url('https://api.iconify.design/iwwa/close.svg?color=%23777674&rotate=90deg');
+}
