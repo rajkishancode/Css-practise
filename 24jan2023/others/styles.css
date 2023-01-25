@@ -1,0 +1,141 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Colors*/
+  --blue: #68c5ee;
+  --green: #65ebc0;
+  --dark: #003b4b;
+  --white: #fff;
+  --fc: #b8b0b2;
+  --black: #22161a;
+
+  /*Fonts*/
+  --font:'Noto Sans', sans-serif;
+
+  /*Font size*/
+  --fs-1: 4.8rem;
+  --fs-2: 3.6rem;
+  --fs-3: 3rem;
+  --fs-4: 2.4rem;
+  --fs-5: 1.8rem;
+  --fs-6: 1.6rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.2rem;
+  --fs-9: 1rem;
+
+  /*Font weight*/
+  --fw-100: 100;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-900: 900;
+
+  /*Border radius*/
+  --radius-10: 1rem;
+  --radius-8: 0.8rem;
+  --radius-5: 0.5rem;
+  --radius-3: 0.3rem;
+  --radius-15: 1.5rem;
+  --radius-circle: 50%;
+  --radius-semi-circle: 100px;
+
+  /*Line height*/
+  --lh: 1.7;
+}
+
+html {
+  font-family: var(--font);
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  background: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+ background:linear-gradient(rgba(150,150,150,0.5), rgba(150,150,150,0.5)),url("https://images6.alphacoders.com/109/1091705.jpg") no-repeat;
+  background-size:cover;
+  background-position: center;
+  overflow: hidden;
+  position:relative;
+  
+}
+body::after{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color:rgba(0,0,0,.6);
+}
+.container{
+    position:relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:80%;
+    background-color:#000;
+    gap:30px;
+    padding-inline-end:20px;
+    max-width:800px;
+}
+
+.container::after{
+    content:"⨯";
+    position: absolute;
+    color:white;
+    font-size:var(--fs-4);
+    top:0px;
+    right:5px;
+    line-height:1;
+    cursor: pointer;
+}
+
+.img-narcos{
+    background: url("https://www.justfocus.fr/wp-content/uploads/2020/12/Narcos-banniere-1-696x392.jpg") no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: 100px;
+    width: 200px;
+
+}
+
+.narcos-title{
+    color:var(--white);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.narcos-secondary{
+    font-size:var(--fs-7);
+    font-weight: var(--fw-100);
+}
+
+.narcos-primary{
+    font-size:var(--fs-3);
+    letter-spacing: 3px;
+    font-weight: 700;
+}   
+
+
+
+.btn{
+    background-color:#E50913;
+    border:none;
+    padding:13px 20px;
+    color:var(--white);
+    text-transform: uppercase;
+    font-size:var(--fs-9);
+    border-radius: var(--radius-3);
+}
