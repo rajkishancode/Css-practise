@@ -68,3 +68,10 @@ body {
   align-items: center;
   min-height: 100vh;  
 }
+
+.container {
+  width: 87%;
+  margin-block: 50px;
+  display: flex;
+  justify-content: center;
+}
