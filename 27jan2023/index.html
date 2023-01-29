@@ -1,13 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>mortgage calculator</title>
 </head>
-<body>
-    
+
+<body class="bg-blue-100 flex justify-center items-center min-h-screen">
+
+    <div class="
+        flex flex-col
+        justify-center
+        bg-sky-50
+        text-gray-900
+        border-8 border-white
+        font-[Nunito]
+        p-8
+        space-y-6
+        shadow-lg
+        rounded
+      ">
+
+        <h1 class="font-extrabold text-2xl max-md:text-xl">
+            Mortgage Calculator
+        </h1>
+
+
+        <div class="flex flex-row max-md:flex-col justify-center gap-6">
+
+            <div class="flex flex-col space-y-6 w-48">
+                <div>
+                    <p class="text-sm mb-2">
+                        Purchase price:
+                        <strong>$450,000</strong>
+                    </p>
+                    <input type="range" class="accent-[#909BFF]" id="purchase_range" value="50">
+                </div>
+
+            </div>
+
+
+            <div class="flex flex-col space-y-6 w-48">
+
+                <div>
+                    <p class="text-sm mb-2">
+                        Equity:
+                        <strong>$135,000</strong>
+                    </p>
+                    <input type="range" class="accent-[#909BFF]" id="equity_range" value="25">
+                </div>
+
+            </div>
+
+            <div class="flex flex-col space-y-6 w-48">
+
+                <div>
+                    <p class="text-sm mb-2">
+                        Repayment time:
+                        <strong>25 years</strong>
+                    </p>
+                    <input class="accent-[#909BFF]" type="range" id="repayment_time_range" value="90">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="flex flex-row max-md:flex-col gap-6">
+            <div class="flex flex-col w-48">
+                <p class="text-sm">Loan amount</p>
+                <p class="font-extrabold text-xl mt-2">$315,000</p>
+            </div>
+
+            <div class="flex flex-col w-48">
+                <p class="text-sm">Estimated pr. month:</p>
+                <p class="font-extrabold text-xl mt-2">$1,300</p>
+                <p class="text-slate-600 text-[10px]">
+                    2.10% eff./2.4% nrom. interest
+                </p>
+            </div>
+        </div>
+
+        <button class="
+          bg-slate-700
+          px-4
+          py-4
+          w-52
+          text-white
+          rounded-md
+          my-6
+          hover:scale-105 hover:bg-slate-900
+          transition-all
+          ease-linear
+          duration-300
+          bg-[#5667FF]
+        ">
+            Get a mortgage quote
+        </button>
+
+    </div>
+
+
 </body>
+
 </html>
