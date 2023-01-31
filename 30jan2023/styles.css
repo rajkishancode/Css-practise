@@ -1,0 +1,13 @@
+
+
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  color: var(--white);
+  background: transparent;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-300);
+}
