@@ -4,10 +4,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>apps-list</title>
 </head>
 <body>
-    
+    <div class="bg-white text-slate-800 p-8 shadow-lg rounded md:max-w-5xl w-full m-4">
+        <h1 class="text-2xl font-bold text-center">Recently added</h1>
+        <p class="text-center mt-2">The latest tools that help you and your team build software better, together.</p>
+
+        <div class="flex flex-wrap my-4">
+            <div class="flex gap-4 md:w-1/2 p-1 md:p-4">
+                <img class="w-16 h-16 md:w-24 md:h-24 rounded-full object-cover" src="https://i.postimg.cc/PxmFzWhL/Screenshot-2023-01-31-221407.png" alt="Florin Pop">
+                <div>
+                    <h3 class="text-lg font-semibold flex items-center">Instabug
+                        <div id="special" class="relative group ml-1">
+                            <span class="special-span text-sm px-6 py-3 bg-slate-800 text-slate-100 rounded shadow-xl absolute -top-[120%] left-1/2 transform -translate-y-1/2 -translate-x-1/2 group-hover:block hidden">
+                            Verified 
+                            <span class="w-2 h-2 bg-slate-800 block transform rotate-45 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="green" fill="green" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1">
+                                </path>
+                                <path fill="none" stroke="white" d="M9 12l2 2l4 -4"></path>
+                            </svg>
+                        </div>
+                    </h3>
+                    <p>
+                        The top apps in the world rely on Instabug for bug
+reporting, crash reporting, and in-app user
+feedback.
+                        </p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 md:w-1/2 p-1 md:p-4">
+                <img class="w-16 h-16 md:w-24 md:h-24 rounded-full object-cover" src="https://i.postimg.cc/kgvZkrpj/Screenshot-2023-01-31-222059.png" alt="DeepScan">
+                <div>
+                    <h3 class="text-lg font-semibold flex items-center">DeepScan
+                        <div class="relative group ml-1">
+                            <span class="text-sm px-6 py-3 bg-slate-800 text-slate-100 rounded shadow-xl absolute -top-[120%] left-1/2 transform -translate-y-1/2 -translate-x-1/2 hidden group-hover:block">
+                                                    Verified 
+                                                    <span class="w-2 h-2 bg-slate-800 block transform rotate-45 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="green" fill="green" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1">
+                                </path>
+                                <path fill="none" stroke="white" d="M9 12l2 2l4 -4"></path>
+                            </svg>
+                        </div>
+                    </h3>
+                    <p>
+                        DeepScan is an advanced static analysis tool
+engineered to support JavaScript, TypeScript,
+React, and Vue.js.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 md:w-1/2 p-1 md:p-4">
+                <img class="w-16 h-16 md:w-24 md:h-24 rounded-full object-cover" src="https://i.postimg.cc/5NvDSQqW/octobox.png" alt="Octobox">
+                <div>
+                    <h3 class="text-lg font-semibold flex items-center">Octobox 
+                        <div class="relative group ml-1">
+                            <span class="text-sm px-6 py-3 bg-slate-800 text-slate-100 rounded shadow-xl absolute -top-[120%] left-1/2 transform -translate-y-1/2 -translate-x-1/2 hidden group-hover:block">
+                                                    Verified 
+                                                    <span class="w-2 h-2 bg-slate-800 block transform rotate-45 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="green" fill="green" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1">
+                                </path>
+                                <path fill="none" stroke="white" d="M9 12l2 2l4 -4"></path>
+                            </svg>
+                        </div>
+                    </h3>
+                    <p>
+                        Octobox helps you manage your notifications in
+the same way Gmail helps you manage your
+email.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 md:w-1/2 p-1 md:p-4">
+                <img class="w-16 h-16 md:w-24 md:h-24 rounded-full object-cover" src="https://i.postimg.cc/JzLv67PD/Leanboard.png" alt="LeanBoard">
+                <div>
+                    <h3 class="text-lg font-semibold flex items-center">LeanBoard 
+                        <div class="relative group ml-1">
+                            <span class="text-sm px-6 py-3 bg-slate-800 text-slate-100 rounded shadow-xl absolute -top-[120%] left-1/2 transform -translate-y-1/2 -translate-x-1/2 hidden group-hover:block">
+                                                    Verified 
+                                                    <span class="w-2 h-2 bg-slate-800 block transform rotate-45 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="green" fill="green" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1">
+                                </path>
+                                <path fill="none" stroke="white" d="M9 12l2 2l4 -4"></path>
+                            </svg>
+                        </div>
+                    </h3>
+                    <p>
+                        Lean Board is a collaborative whiteboard with
+sticky notes which seamlessly connects with your
+GitHub issue.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 md:w-1/2 p-1 md:p-4">
+                <img class="w-16 h-16 md:w-24 md:h-24 rounded-full object-cover" src="https://i.postimg.cc/kMLkSvSy/Gamma-Data.png" alt="Gamma Data Leak Prevention">
+                <div>
+                    <h3 class="text-lg font-semibold flex items-center">Gamma Data Leak Prevention 
+                        <div class="relative group ml-1">
+                            <span class="text-sm px-6 py-3 bg-slate-800 text-slate-100 rounded shadow-xl absolute -top-[120%] left-1/2 transform -translate-y-1/2 -translate-x-1/2 hidden group-hover:block">
+                                                    Verified 
+                                                    <span class="w-2 h-2 bg-slate-800 block transform rotate-45 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="green" fill="green" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1">
+                                </path>
+                                <path fill="none" stroke="white" d="M9 12l2 2l4 -4"></path>
+                            </svg>
+                        </div>
+                    </h3>
+                    <p>
+                       69% of data breaches start with negligence. One
+negligent employee could cost your company a
+decade worth of reputation.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex gap-4 md:w-1/2 p-1 md:p-4">
+                <img class="w-16 h-16 md:w-24 md:h-24 rounded-full object-cover" src="https://i.postimg.cc/8k72s075/Odin.png" alt="ODIN">
+                <div>
+                    <h3 class="text-lg font-semibold flex items-center">ODIN
+                        <div class="relative group ml-1">
+                            <span class="text-sm px-6 py-3 bg-slate-800 text-slate-100 rounded shadow-xl absolute -top-[120%] left-1/2 transform -translate-y-1/2 -translate-x-1/2 hidden group-hover:block">
+                                                    Verified 
+                                                    <span class="w-2 h-2 bg-slate-800 block transform rotate-45 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="green" fill="green" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1">
+                                </path>
+                                <path fill="none" stroke="white" d="M9 12l2 2l4 -4"></path>
+                            </svg>
+                        </div>
+                    </h3>
+                    <p>
+                       The top apps in the world rely on Instabug for bug
+reporting., crash reporting, and in-app user
+feedback.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
