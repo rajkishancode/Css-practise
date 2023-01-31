@@ -1,36 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
- 
-     <title>Calender-2</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <title>Calender-2-tailwind</title>
 </head>
+
 <body>
-    <div>
-        
-           
-            
-		<section class="top-section">
-		           <button class="btn btn-left">
-            <i class="bx bx-chevron-left"></i>
-          </button>
-		  
-               <p class="header-text">OCTOBER 2016</p>
-				
-                <button class="btn btn-right">
-            <i class="bx bx-chevron-right"></i>
-          </button>
-		  
-		</section>
-        
-    </div>
+  <div>
+
+
+    <section class="flex justify-between w-90 pink bg-stone-200 p-3 px-4  text-gray">
+      <button>
+        <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokewidth="{1.5}"
+          stroke="currentColor" classname="w-6 h-6">
+          <path strokelinecap="round" strokelinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+        </svg>
+      </button>
+      <p>OCTOBER 2016</p>
+      <button>
+        <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokewidth="{1.5}"
+          stroke="currentColor" classname="w-6 h-6">
+          <path strokelinecap="round" strokelinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+        </svg>
+      </button>
+    </section>
+
+
+    <section>
+      <ol
+        class="bg-gradient-to-r from-cyan-400 to-green-500 grid grid-cols-7 gap-x-5 gap-y-4 bg-zinc-600 px-5 py-5 text-white text-center text-white font-bold text-center">
+        <li> Su </li>
+        <li> Mo </li>
+        <li> Tu </li>
+        <li> We </li>
+        <li> Th </li>
+        <li> Fr </li>
+        <li> Sa </li>
+      </ol>
+      <div
+        class="bg-gradient-to-r from-cyan-400 to-green-500 grid grid-cols-7 gap-x-5 gap-y-4 bg-zinc-600 px-5 pt-0 pb-5 text-white text-center font-semibold">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div class="bg-yellow-300 text-green-600 rounded-full">8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+        <div>25</div>
+        <div>26</div>
+        <div>27</div>
+        <div>28</div>
+        <div>29</div>
+        <div>30</div>
+        <div>31</div>
+      </div>
+    </section>
+
+    <section class="flex flex-col w-90 h-56 bg-stone-100 p-1 relative">
+      <div class="flex pb-1">
+        <div class="h-12 w-12 bg-gray-200 flex justify-center items-center text-gray-600">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokewidth="{1.5}"
+            stroke="currentColor" classname="w-6 h-6">
+            <path strokelinecap="round" strokelinejoin="round"
+              d="M9.143 17.082a24.248 24.248 0 003.844.148m-3.844-.148a23.856 23.856 0 01-5.455-1.31 8.964 8.964 0 002.3-5.542m3.155 6.852a3 3 0 005.667 1.97m1.965-2.277L21 21m-4.225-4.225a23.81 23.81 0 003.536-1.003A8.967 8.967 0 0118 9.75V9A6 6 0 006.53 6.53m10.245 10.245L6.53 6.53M3 3l3.53 3.53">
+            </path>
+          </svg>
+        </div>
+        <div class="px-2 py-1">
+          <p class="text-neutral-500 font-semibold">Meeting with my accountant</p>
+          <p class="text-neutral-400 leading-3 text-sm">13:00</p>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="h-12 w-12 bg-gray-200 flex justify-center items-center text-green-500">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokewidth="{1.5}"
+            stroke="currentColor" classname="w-6 h-6">
+            <path strokelinecap="round" strokelinejoin="round"
+              d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0">
+            </path>
+          </svg>
+        </div>
+        <div class="px-2 py-1">
+          <p class="text-neutral-500 font-semibold">Do the groceries</p>
+          <p class="text-neutral-400 leading-3 text-sm">18:00</p>
+        </div>
+      </div>
+      <button class="h-16 w-16 bg-cyan-400 rounded-tl-full absolute bottom-0 right-0">
+        <p class="flex justify-center text-5xl text-white pl-2 pt-1 font-thin">+</p>
+      </button>
+    </section>
+
+
+  </div>
 </body>
+
 </html>
-
-
-	
-            
