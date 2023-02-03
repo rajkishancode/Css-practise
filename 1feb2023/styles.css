@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background:linear-gradient(97deg, #10182F 50%, #fff 50%);
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+
+}
+.card{
+    width: 300px;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    height: 40%;
+    background-color: #4F80F2;
+}
+.card .header .dot p{
+   margin-left: 260px;
+   font-size: 24px;
+   margin-top: -16px;
+   cursor: pointer;
+}
+.card .header i{
+    font-size: 60px;
+    color: #fff;
+    
+}
+
+.card h1{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.card h1 span{
+    background-color: rgba(10, 10, 10, 0.324);
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 2px 4px;
+}
+
+.card p{
+    color: #fff;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    gap: 46px;
+    text-align: center;
+}
+ .content ul li{
+    margin-bottom: 16px;
+
+ }
+.content ul li a{
+    color:#8c98ba;
+
+
+
+}
+
+.content ul li:hover{
+    border-bottom: 1px solid #8c98ba;
+    transition: all ease .7s;
+
+
+}
+
+button{
+    padding: 12px 76px;
+    color:#8c98ba ;
+    border: 1px solid rgb(204, 202, 202) ; 
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+button:hover{
+    background-color: #4F80F2;
+    color: #fff;
+    transition: all ease .7s;
+}
+
+
+.card-1{
+    
+    background-color: #fff;
+}
+
+.card-2{
+   
+    background-color: #10182F;
+}
