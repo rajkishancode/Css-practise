@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>followers</title>
+</head>
+<body>
+    <div class="bg-[#e4f2ff] shadow-lg rounded max-w-md">
+        <div class="options bg-[#1965d9] p-5 space-y-7">
+            <div class="title flex items-center relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute icon icon-tabler icon-tabler-chevron-left transition rounded-full hover:scale-110 hover:cursor-pointer hover:bg-[#3a79d9]" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <polyline points="15 6 9 12 15 18"></polyline>
+                </svg>
+                <h1 class="text-2xl text-white mx-auto">Find Friends</h1>
+            </div>
+            <div class="search-bar relative flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 icon icon-tabler icon-tabler-search" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#88abd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <line x1="21" y1="21" x2="15" y2="15"></line>
+                </svg>
+                <input class="p-4 pl-12 rounded-full bg-[#3a79d9] w-full text-[#9fc4f3] outline-none" type="text" spellcheck="false" placeholder="Enter a friend's name">
+            </div>
+        </div>
+        <div class="friends-container space-y-5 p-4">
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105" src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8MXwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="">
+                    <span class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer">Jason Graham</span>
+                </div>
+                <button class="bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 shadow-lg transition hover:bg-none hover:text-[#1863d6] bg-none text-[#1863d6]">Unfollow</button>
+            </div>
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8MXwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="">
+                    <span class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer">Ophelia Gaddy</span>
+                </div>
+                <button class="bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 shadow-lg transition hover:bg-none hover:text-[#1863d6] bg-none text-[#1863d6]">Unfollow</button>
+            </div>
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8MXwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="">
+                    <span class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer">Lilian Whitmire</span>
+                </div>
+                <button class="bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 shadow-lg transition hover:bg-none hover:text-[#1863d6] bg-none text-[#1863d6]">Unfollow</button>
+            </div>
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGVyc29ufGVufDB8MXwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="">
+                    <span class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer">Joseph Shepherd</span>
+                </div>
+                <button class="bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 shadow-lg transition hover:bg-none hover:text-[#1863d6] bg-none text-[#1863d6]">Unfollow</button>
+            </div>
+            <div class="friend-card flex items-center justify-between">
+                <div class="friend-description flex items-center gap-x-4">
+                    <img class="w-20 h-20 object-cover rounded-full transition hover:cursor-pointer hover:scale-105" src="https://images.unsplash.com/photo-1615813967515-e1838c1c5116?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHBlcnNvbnxlbnwwfDF8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="">
+                    <span class="friend-name font-bold text-[#1860d0] hover:underline hover:cursor-pointer ">Alex R. Prowell</span>
+                </div>
+                <button class="bg-gradient-to-r from-[#0d48a3] to-[#1966db] rounded-full border border-[#1863d6] py-3 text-white font-bold w-32 h-12 shadow-lg transition hover:bg-none hover:text-[#1863d6] bg-none text-[#1863d6]">Unfollow</button>
+            </div>
+
+
+            
+        </div>
+    </div>
+</body>
+</html>
