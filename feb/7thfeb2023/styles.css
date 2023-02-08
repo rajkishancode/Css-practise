@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-bg-primary: #141528;
+    --color-bg-grad-1: #fc5c61;
+    --color-bg-grad-2: #df6aab;
+    --color-text-1: #ffffff;
+    --color-text-2: #141528;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    min-height: 50vh;
+    width: 100vw;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.newsletter {
+    max-width: 90rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.newsletter>ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 8rem;
+}
+
+.newsletter>ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.newsletter>ul li h5 {
+    font-size: 2.5rem;
+}
+
+.newsletter>ul li span {
+    font-size: 1.5rem;
+    color: #e0e1e3;
+}
+
+.newsletter>div {
+    background-image: linear-gradient(to right, var(--color-bg-grad-1), var(--color-bg-grad-2));
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 1rem;
+    margin: 0 2rem -10.3rem;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.newsletter__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+}
+
+.newsletter__desc {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.newsletter__form {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter__form>input {
+    outline: none;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1.5rem 2rem;
+}
+
+.newsletter__form>input[type="email"] {
+    background: none;
+    color: #ffffff;
+    flex-grow: 1;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+.newsletter__form>input[type="email"]::placeholder {
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.newsletter__form>input[type="submit"] {
+    color: var(--color-text-2);
+    padding: 1.5rem 3.5rem;
+    border-radius: 3rem;
+    margin-left: -2rem;
+    box-shadow: 4px 2px 8px #df6aaa81;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .newsletter {
+        gap: 2rem;
+    }
+
+    .newsletter>ul {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .newsletter>div {
+        padding: 3rem 2rem;
+        margin: 0 1rem -12.4rem;
+    }
+
+    .newsletter__form {
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        transition: all .25s ease-in-out;
+    }
+
+    .newsletter__form>input {
+        border-radius: 3rem;
+        width: 100%;
+    }
+
+    .newsletter__form>input[type="submit"] {
+        margin-left: 0;
+    }
+
+}
