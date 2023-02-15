@@ -17,19 +17,22 @@ body {
     background: linear-gradient(to left bottom, #031831 10%, #11449c 80%);
 }
 
-.screen {
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     background: url("https://i.postimg.cc/FsDCrQ4z/zootopia.jpg");
-    height: 600px;
-    width: 1000px;
+    height: 50vh;
+    width: 90%;
     background-size: cover;
     background-position: center;
-    /* opacity: 0.7; */
     padding: .5rem;
-
 }
 
 .header {
@@ -40,8 +43,8 @@ body {
 }
 
 .movie-title {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .movie-type {
@@ -65,9 +68,17 @@ body {
     padding: 10px;
     background-color: #000000;
     opacity: 0.6;
-
-
+    gap: 10px;
 }
+
+.btn svg {
+  width: 15px;
+  height: 15px;
+  fill: #fff;
+  stroke: #fff;
+}
+
+
 
 .pause-icon {
     color: white;
@@ -148,4 +159,28 @@ body {
     height: 5px;
     border-radius: 50%;
     background: red;
+}
+
+@media screen and (min-width: 500px) {
+    .player-box{
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .container{
+        height: 70vh;
+    }
+
+    .btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .movie-title {
+    font-size: 1.4rem;
+  }
+  .video-time{
+    font-size:13px ;
+  }
 }
