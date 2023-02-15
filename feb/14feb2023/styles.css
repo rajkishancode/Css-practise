@@ -1,7 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to left bottom, #031831 10%, #11449c 80%);
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: url("https://i.postimg.cc/FsDCrQ4z/zootopia.jpg");
+    height: 600px;
+    width: 1000px;
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.7; */
+    padding: .5rem;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.movie-type {
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+
+.icons {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.player-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+    background-color: #000000;
+    opacity: 0.6;
+
+
+}
+
+.pause-icon {
+    color: white;
+}
+
+
+
+.hd-btn {
+    color: #fff;
+    font-weight: 800;
+    font-size: larger;
+    text-align: center;
+    position: relative;
+}
+
+
+.player-timeline {
+    width: 60%;
+    height: 5px;
+    background: #054597;
+    border-radius: 100px;
+    position: relative;
+    max-width: 600px;
+}
+
+.player-progress {
+    position: absolute;
+    width: 40%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #f18e0b;
+    border-radius: 100px;
+
+}
+
+.player-timeline::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: #2675c2;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    left: 40%;
+
+
+
+}
+
+.video-time {
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+
+.volume {
+    color: #fff;
+}
+
+.maximize {
+    color: #fff;
+}
+
+.hd-active {
+    font-weight: var(--fw-600);
+    position: relative;
+}
+
+.hd-active::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    right: -7px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: red;
 }
