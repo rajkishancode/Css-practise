@@ -1,0 +1,21 @@
+
+.circles {
+    position: relative;
+    overflow: hidden;
+}
+
+.circles::after, .circles::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #312e81;
+
+    position: absolute;
+    top: -0.5rem;
+    right: -0.35rem;
+}
+
+.circles::before {
+    top: 0;
+}

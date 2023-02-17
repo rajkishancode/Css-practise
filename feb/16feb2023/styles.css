@@ -1,0 +1,147 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*::before,
+*::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Colors*/
+    --white: #fff;
+    --primary: #01bfa5;
+    --background: #E8ECF3;
+    --gray-light: #6c7e86;
+    --gray-dark: #364750;
+    --gray-ligher: #c0c3c7;
+    --border-c: #e9e8ed;
+    /*Fonts*/
+    --font:'Roboto', sans-serif;
+
+    /*Font size*/
+    --fs-1: 4.8rem;
+    --fs-2: 3.6rem;
+    --fs-3: 3rem;
+    --fs-4: 2.4rem;
+    --fs-12: 2.2rem;
+    --fs-5: 1.8rem;
+    --fs-6: 1.6rem;
+    --fs-7: 1.4rem;
+    --fs-8: 1.2rem;
+    --fs-9: 1rem;
+    --fs-10: 1.1rem;
+    --fs-11: 0.9rem;
+
+    /*Font weight*/
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+
+    /*Border radius*/
+    --radius-10: 1rem;
+    --radius-8: 0.8rem;
+    --radius-5: 0.5rem;
+    --radius-3: 0.3rem;
+    --radius-15: 1.5rem;
+    --radius-circle: 50%;
+    --radius-semi-circle: 100px;
+
+    --width: 10px;
+    --height: 10px;
+    /*Line height*/
+    --lh: 1.7;
+}
+
+html {
+    font-family: var(--font);
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    /* height: 100vh; */
+    color: #A7B3D6;
+}
+
+
+
+h1{
+    font-size: 5.5rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.container{
+background-color: #0D1E5C;
+width: 100%;
+padding: 2rem;
+max-width: 64rem;
+/* gap: 1rem; */
+/* height: 90vh; */
+}
+
+header{
+    margin-bottom: 25px;
+}
+.icon-box{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border-radius: var(--radius-circle);
+    background-color: #2C3D7B;
+}
+
+.icon-box > svg{
+    position:absolute;
+    color: #b6c1e2;
+    width:3em;
+    height:3em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.features{
+	display: flex;
+	flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feature {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.feature-heading{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.detail{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    max-width: 380px;
+    line-height: var(--lh);
+    color: #E4E5EA;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+
+
+
