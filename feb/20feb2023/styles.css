@@ -1,6 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+button{
+    border: none;
+
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+
+.header{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 4rem;
+}
+.incident-tag{
+background-color: #10182F;
+color: #fff;
+padding: 10px 25px;
+font-size: 1.4rem;
+font-weight: 500;
+border-radius: 5px;
+}
+
+.ticket-container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ticket-header{
+    display: flex;
+    gap: 5px;
+}
+.ticket-heading{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ticket-tag-btn{
+    color: #fff;
+    background-color: #21774F;
+    padding: 2px 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.ticket-details{
+    padding: 10px 0px;
+    line-height: 1.7;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #505667;
+}
+
+.report-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #636B85;
+     padding: 4px 12px;
+     border: 1px solid #DAE1F5;
+     font-weight: 700;
+     font-size: .9rem;
+     border-radius: 4px;
+}
+
+.bg-orange-color{
+background-color: #CF4300;
+}
+
+.bg-pink-color{
+    background-color: #DF184A;
 }
