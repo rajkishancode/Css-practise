@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*, *::after, *::before {
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-over-img {
+    background-image: url('https://i.postimg.cc/pXjWkmJs/big-ben.jpg');
+    background-size: cover;
+    /* filter: grayscale(50%); */
+}
+
+.container-over-img::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(151, 151, 151, 0.473);
+    backdrop-filter: blur(1.4px);
+    z-index: -1;
+}
+
+.day-of-week {
+    transition: all .15s ease-in;
+}
+
+.day-of-week:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(233, 233, 233);
+    scale: 1.01;
+}

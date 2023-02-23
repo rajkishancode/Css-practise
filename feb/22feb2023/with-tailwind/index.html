@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>weather-app</title>
+</head>
+<body>
+    <div class="main bg-white shadow-lg w-[30rem] max-w-md">
+        <div class="container-over-img relative h-[17.5rem]">
+            <!-- TOP ROW -->
+            <div class="top-row w-full grid grid-cols-3 p-1 px-2">
+                <!-- Connection container - LEFT -->
+                <div class="connection-container flex items-center gap-x-2">
+                    <div class="signal flex gap-0.5">
+                        <div class="w-2 h-2 border border-white rounded-full bg-white"></div>
+                        <div class="w-2 h-2 border border-white rounded-full bg-white"></div>
+                        <div class="w-2 h-2 border border-white rounded-full"></div>
+                        <div class="w-2 h-2 border border-white rounded-full"></div>
+                        <div class="w-2 h-2 border border-white rounded-full"></div>
+                    </div>
+                    <span class="text-white text-sm font-semibold">EE</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wifi" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 18l.01 0"></path>
+                        <path d="M9.172 15.172a4 4 0 0 1 5.656 0"></path>
+                        <path d="M6.343 12.343a8 8 0 0 1 11.314 0"></path>
+                        <path d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0"></path>
+                    </svg>
+                </div>
+                <!-- CLOCK - center -->
+                <span class="text-white mx-auto">08:16 am</span>
+
+                <!-- Battery - right -->
+                <div class="flex justify-end items-center">
+                    <span class="text-white text-sm">72%</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-battery-3" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 7h11a2 2 0 0 1 2 2v.5a.5 .5 0 0 0 .5 .5a.5 .5 0 0 1 .5 .5v3a.5 .5 0 0 1 -.5 .5a.5 .5 0 0 0 -.5 .5v.5a2 2 0 0 1 -2 2h-11a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2">
+                        </path>
+                        <path d="M7 10l0 4"></path>
+                        <path d="M10 10l0 4"></path>
+                        <path d="M13 10l0 4"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- LOCATION -->
+            <div class="text-center mt-4 relative">
+                <small class="text-white text-lg">EDINBURGH, SCOTLAND</small>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down absolute top-0 right-3" width="34" height="34" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                </svg>
+            </div>
+
+            <!-- Temperature -->
+            <div class="w-full flex flex-col items-center justify-center mt-12">
+                <span class="text-white font-bold text-7xl relative">8
+                    <span class="absolute -right-4 top-0 font-normal text-3xl class=" font-bold""="">°</span>
+                </span>
+                <span class="text-white">Sunny</span>
+            </div>
+
+            <!-- Swipe through locations - container -->
+            <div class="w-full flex justify-center gap-x-2 absolute bottom-4">
+                <div class="w-1.5 h-1.5 rounded-full bg-[#b9bbc7]"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-[#b9bbc7]"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-[#b9bbc7]"></div>
+            </div>
+        </div>
+
+        <!-- Weather forecast by days -->
+        <div class="weather-forecast w-full [&amp;>*]:px-16 [&amp;>*]:text-[#868e9e] flex flex-col items-center gap-y-2 py-5">
+            <div class="day-of-week thursday w-full flex items-center justify-between py-1">
+                <span>Thursday</span>
+                <div class="flex items-center gap-x-3">
+                    <span class="font-bold">9°</span>
+                    <img class="w-12" src="https://cdn-icons-png.flaticon.com/128/300/300756.png" alt="">
+                </div>
+            </div>
+            <div class="day-of-week friday w-full flex items-center justify-between py-1">
+                <span>Friday</span>
+                <div class="flex items-center gap-x-3">
+                    <span class="font-bold">8°</span>
+                    <img class="w-12" src="https://cdn-icons-png.flaticon.com/128/300/300754.png" alt="">
+                </div>
+            </div>
+            <div class="day-of-week saturday w-full flex items-center justify-between py-1">
+                <span>Saturday</span>
+                <div class="flex items-center gap-x-3">
+                    <span class="font-bold">7°</span>
+                    <img class="w-12" src="https://cdn-icons-png.flaticon.com/128/300/300756.png" alt="">
+                </div>
+            </div>
+            <div class="day-of-week sunday w-full flex items-center justify-between py-1">
+                <span>Sunday</span>
+                <div class="flex items-center gap-x-3">
+                    <span class="font-bold">8°</span>
+                    <img class="w-12" src="https://cdn-icons-png.flaticon.com/128/300/300756.png" alt="">
+                </div>
+            </div>
+            <div class="day-of-week monday w-full flex items-center justify-between py-1">
+                <span>Monday</span>
+                <div class="flex items-center gap-x-3">
+                    <span class="font-bold">8°</span>
+                    <img class="w-12" src="https://cdn-icons-png.flaticon.com/128/300/300756.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Add location container -->
+        <div class="flex justify-center bg-[#868e9e] text-white py-5">
+            <div class="transition flex items-center hover:cursor-pointer hover:scale-105">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 5l0 14"></path>
+                <path d="M5 12l14 0"></path>
+            </svg>
+            <small>Add Location</small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
