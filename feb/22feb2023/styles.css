@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+    font-family: 'Poppins', sans-serif;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -9,84 +17,199 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
+    margin: 2rem;
 }
 
-.circles {
-    display: flex;
-    margin-bottom: 15px;
-
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    width: 30rem;
+    max-width: 28rem;
 }
 
-.small-circle {
-    margin-left: 1px;
-    height: 10px;
-    width: 10px;
-}
-
-
-
-.header-start {
-    display: flex;
-    gap: 15px;
-    /* align-items: center; */
-    /* justify-content: center; */
-}
-
-
-
-svg{width: 20px;
-height: 20px;
-}
-
-/* .battery-icon {
-
-    margin-right: 2px;
-    margin-bottom: 12px;
-} */
-
-.card{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.country{
-    font-size: 1rem;
-    color: red;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 5px;
-    /* align-items: top; */
-    
-    width: 400px;
-    height: 300px;
-    background: url("https://i.postimg.cc/pXjWkmJs/big-ben.jpg");
+.container-over-img {
+    background-image: url('https://i.postimg.cc/pXjWkmJs/big-ben.jpg');
     background-size: cover;
-    padding: 4px;
+    position: relative;
+    height: 17.5rem;
+}
+
+.top-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.connection-container-left {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+
+}
+
+
+.signal {
+    display: flex;
+    gap: 0.125rem;
+}
+
+.signal-circle {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-width: 1px;
+    border-color: #ffffff;
+    border-radius: 9999px;
+
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.ee-text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+
+.clock-center {
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+
+.battery-percent {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.battery-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.location {
+    text-align: center;
+    margin-top: 1rem;
     position: relative;
 }
 
-.status-bar{
-    display: flex;
-    /* flex-direction: column; */
-}
-
-.wifi-logo > svg{
+.chevron-down {
     position: absolute;
-    top: -5px;
-    left: 100px;
-    height: 32px;
-    width: 32px;
+    top: 0;
+    right: 0.75rem;
 }
 
-.battery {
-    display: flex;
-    gap: 5px;
-    /* justify-content: center; */
-    align-items: top;
+.country-name {
+    color: #ffffff;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
 }
+
+.temperature {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+
+.temperature-number {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 1;
+    position: relative;
+}
+
+.temperature-degree {
+    position: absolute;
+    right: -1rem;
+    top: 0;
+    font-weight: 400;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.temperature-type {
+    color: #ffffff;
+}
+
+.swipe-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 9999px;
+    background: #b9bbc7;
+}
+
+
+.swipe-through-location {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+}
+
+
+.day-of-week {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+
+.climates {
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+}
+
+.img-cloud {
+    width: 3rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.weather-forecast {
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: #868e9e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+
+
+	.location-container{
+	display: flex; 
+	justify-content: center; 
+	background: #868e9e;
+	color: #ffffff; 
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem; }
+
+	.add-location{
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform; 
+	display: flex; 
+	align-items: center; }
