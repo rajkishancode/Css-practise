@@ -1,12 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700;800;900&display=swap');
 
-
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 
-body{
-    
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
+    color: #2C4A64;
+}
+
+.container {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    border: 25px solid #E6ECF2;
+    padding-top: 1rem;
+}
+
+.day-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.day-number {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+.day-text {
+    font-weight: 600;
+}
+
+.footer-image {
+    object-fit: cover;
+    width: 100%;
 }
