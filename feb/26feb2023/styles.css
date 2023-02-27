@@ -1,13 +1,69 @@
 
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+
+}
+
+.star-fill {
+    stroke: #ABB8FE;
+    fill: #ABB8FE;
+    height: 16px;
+    width: 16px;
+}
+
+.star-empty {
+    stroke: #ABB8FE;
+height: 16px;
+    width: 16px;
+}
+
+.euro{
+    color: #526E79;
+}
+.card{
+    width: 180px;
+    border: 1px solid #EBEFF2;
+    color: #546F7A;
+    padding-bottom: 10px;
+}
+.header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+.singer-image{
+    width: 100%;
+}
+.card-text{
+    padding: 10px;
+}
+.album{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
     
+}
+
+.euro{
+    font-size: 14px;
+    font-weight: 700;
 }
