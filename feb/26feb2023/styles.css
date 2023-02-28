@@ -14,6 +14,7 @@ body {
     align-items: center;
     font-family: 'Open Sans', sans-serif;
     height: 100vh;
+    /* width: 100vw; */
 
 }
 
@@ -34,15 +35,43 @@ height: 16px;
     color: #526E79;
 }
 .card{
-    width: 180px;
+    min-width: 180px;
+    min-width: 140px;
     border: 1px solid #EBEFF2;
     color: #546F7A;
     padding-bottom: 10px;
+    background-color: #fff;
 }
 .header{
     display: flex;
     justify-content: flex-end;
     padding: 2rem;
+    background: url("https://images.unsplash.com/photo-1450044804117-534ccd6e6a3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+    column-gap: 10px;
+    background-size: cover;
+    min-width: 1000px;
+}
+.header-text   {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 3rem;
+}
+.read-btn > button{
+    padding: 8px 35px;
+    color: #8AA1FF;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    
+}
+main{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 .singer-image{
     width: 100%;
@@ -67,3 +96,10 @@ height: 16px;
     font-size: 14px;
     font-weight: 700;
 }
+
+.section-card{
+    width: 300px;
+    height: 100px;
+    background-color: cyan;
+}
+
