@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7AD9F7;
+    font-family: 'Roboto', sans-serif;
+}
+
+article {
+    color: #B3B3B3;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card {
+    background-color: #fff;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    row-gap: 30px;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.card.active {
+    scale: 1;
+    transform: translate(-50%, -50%);
+
+}
+
+.card.second {
+    scale: 0.9;
+    transform: translate(-55%, -65%);
+    z-index: -1;
+}
+
+.card.third {
+    scale: 0.8;
+    transform: translate(-62%, -84%);
+    z-index: -2;
+
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-left-icon {
+    color: #AAE361;
+    gap: 10px;
+}
+
+.top-left-icon>svg {
+    stroke-width: 3;
+}
+
+.top-right-icon {
+    color: #5A605E;
+}
+
+.save-btn {
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+
+button {
+    background-color: #AAE361;
+    border: none;
+    padding: 18px 100px;
+    color: #fff;
+    border-radius: 100px;
+    font-size: 20px;
+}
+
+
+.main {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    z-index: 1;
+}
