@@ -1,0 +1,228 @@
+ <style>@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-col: #d9e1e7;
+  --cont-col: #ffffff;
+  --list-col: #2e3336;
+}
+
+/* Imposing font family on all the items  */
+
+input,
+button,
+a,
+span {
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-col);
+  font-family: "League Spartan", sans-serif;
+}
+
+/* Main Container  */
+
+.container {
+  width: 50%;
+  padding: 50px 50px;
+  border-radius: 15px;
+  background-color: var(--cont-col);
+  display: flex;
+  flex-direction: column;
+  border: none;
+  gap: 2.8rem;
+  box-shadow: 4px 4px 7px #c3cfd9, -4px -4px 7px #c3cfd9;
+  transition: 0.2s all;
+}
+
+/* Navbar Styling  */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.85rem;
+}
+
+.nav-effect {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 2s all;
+}
+.navbar div span.nav-list {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: var(--list-col);
+}
+
+.nav-effect .nav-hover {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(24, 22, 22);
+  transform: scale(0);
+  transition: 0.3s;
+}
+
+.nav-effect:hover > .nav-hover {
+  transform: scale(1);
+}
+
+/* Search container styling  */
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-container .search-bar {
+  width: 40%;
+  position: relative;
+}
+.search-bar input {
+  height: 2.3rem;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 2px;
+  background-color: transparent;
+  padding: 2px 10px;
+  font-size: 1.2rem;
+}
+
+.search-bar input::placeholder {
+  font-size: 1.2rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.search-bar input:focus,
+.search-bar input:active {
+  outline: none;
+  border-bottom: 2px solid var(--list-col);
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+}
+
+.search-bar .search-icon i {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.search-container button {
+  padding: 10px 25px;
+  background-color: var(--list-col);
+  border-radius: 3px;
+  filter: drop-shadow(0px 2px 2px var(--list-col));
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-container button:hover {
+  filter: hue-rotate(270deg) drop-shadow(0px 2px 2px var(--list-col));
+}
+/* Grid Container styling  */
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 0.85rem;
+}
+
+/* Images  */
+
+.grid-container img {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container:hover > .img-desc {
+  opacity: 1;
+}
+.img-container .img-desc {
+  background-color: rgba(0, 0, 0, 0.55);
+  color: white;
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+}
+
+.img-desc .desc-insight {
+  margin-top: 10px;
+}
+
+/* Media Query  */
+
+@media only screen and (max-width: 1150px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    width: 85%;
+    padding: 20px 20px;
+  }
+  .navbar {
+    justify-content: center;
+  }
+  .navbar div span.nav-list {
+    font-size: 16px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .search-container .search-bar {
+    width: 80%;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navbar {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .navbar div span.nav-list {
+    font-size: 14px;
+  }
+}
+</style>
