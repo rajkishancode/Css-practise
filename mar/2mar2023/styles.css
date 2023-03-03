@@ -1,7 +1,126 @@
-
-
-*{
-    box-sizing: border-box;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 6rem;
+
+}
+
+.btn {
+    border-radius: 90px;
+    position: absolute;
+
+    cursor: pointer;
+    width: 200px;
+    height: 80px;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.btn:before {
+    position: absolute;
+    content: "";
+    height: 70px;
+    width: 70px;
+    left: 4px;
+    bottom: 5px;
+    background-color: #585858;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.btn::after {
+    position: absolute;
+    content: "";
+    height: 45px;
+    width: 45px;
+    left: 16px;
+    bottom: 17px;
+    background-color: #ffffff;
+    transition: .4s;
+    border-radius: 50%;
+
+}
+
+.toggle input {
+    opacity: 0;
+}
+
+.btn.round {
+    border-radius: 150px;
+}
+
+
+input:checked+.btn:before {
+    transform: translateX(120px);
+}
+
+input:checked+.btn::after {
+    transform: translateX(120px);
+}
+
+
+/* button2 */
+
+.btn2 {
+    border-radius: 90px;
+    position: absolute;
+
+    cursor: pointer;
+    width: 200px;
+    height: 80px;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.btn2:before {
+    position: absolute;
+    content: "";
+    height: 70px;
+    width: 70px;
+    left: 125px;
+    bottom: 5px;
+    background-color: #dd4976;
+    transition: .4s;
+    border-radius: 50%;
+
+}
+
+.btn2::after {
+    position: absolute;
+    content: "";
+    height: 45px;
+    width: 45px;
+    left: 139px;
+    bottom: 17px;
+    background-color: #ffffff;
+    transition: .4s;
+    border-radius: 50%;
+
+}
+
+.toggle2 input {
+    opacity: 0;
+}
+
+.btn2.round2 {
+    border-radius: 150px;
+}
+
+
+input:checked+.btn2:before {
+    transform: translateX(-120px);
+}
+
+input:checked+.btn2::after {
+    transform: translateX(-120px);
 }
