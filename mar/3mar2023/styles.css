@@ -1,7 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+
+
+header {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+    margin-top: 100px;
+    color: white;
+}
+
+body {
+    display: flex;
+      width: 100vw;
+    background: linear-gradient(175deg, rgb(227, 106, 125) 35%, rgb(247, 247, 247) 35%);
+   
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #2D2B2B;
+
+}
+
+.song-list {
+    margin-top: 20%;
+
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.track-container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.track-details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+.track-image {
+    height: 86px;
+    width: 86px;
+}
+
+.track-rank .track-num {
+    height: 24px;
+    width: 24px;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(69, 67, 67);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.track-name {
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.artist-name {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.track-views {
+    color: #959494;
+    font-weight: 700;
+    font-size: 1.2rem;
+    /* margin-left: 4rem; */
 }
