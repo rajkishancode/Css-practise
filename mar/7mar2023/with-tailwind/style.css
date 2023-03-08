@@ -1,0 +1,30 @@
+.portraits img:nth-last-of-type(2) {
+  transform: translateX(-10px);
+}
+.portraits img:last-of-type {
+  transform: translateX(-20px);
+}
+
+.automated-response:after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: -0.4rem;
+  display: block;
+  border-style: solid;
+  border-color: transparent #3a384c;
+  border-width: 7px 7px 7px 0;
+  z-index: 1;
+}
+
+.chatting-section::-webkit-scrollbar {
+  width: 1em;
+}
+
+.chatting-section::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chatting-section::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff6e6e, #f0caca, #ff6e6e);
+}

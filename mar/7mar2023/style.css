@@ -1,0 +1,233 @@
+
+	body, html {
+    margin: 0px;
+    padding:0px;
+    width: 100%;
+    height: 100%;
+    background-color: #2b2a38;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    max-width:460px;
+    margin:auto;
+    background-color: #252433;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 11px 27px 5px rgba(39,39,52,0.79); 
+    box-shadow: 0px 11px 27px 5px rgba(39,39,52,0.79);
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    background-color: #f85e62;
+    width: 100%;
+    height: 84px;
+    color: white;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+}
+
+.header small {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.header > div:first-of-type {
+    display: inline-block;
+}
+
+.header > div:last-of-type {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.header img {
+    border-radius:50%;
+    border:2px solid white;
+}
+
+.header img:not(:first-of-type) {
+    margin-left: -25px;
+}
+
+
+#chat {
+    background-color: #252433;
+    width: 460px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.notice {
+    background-color: #343344;
+    width: 100%;
+    padding: 30px;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.notice a, .notice a:hover {
+    text-decoration: underline;
+    color: #f86266;
+}
+
+.notice button {
+    padding: 15px 30px;
+    border: 1px solid #f86266;
+    background-color: #343344;
+    border-radius: 35px;
+    color: #f86266;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: all .3s ease;
+}
+
+.notice button:hover {
+    background-color: #f86266;
+    color: white;
+    cursor: pointer;
+}
+
+#text {
+    width: 100%;
+    margin: auto;
+    height: 70px;
+    padding: 10px;
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#text input[type=text] {
+    border:1px solid white;
+    margin-top: 4px;
+    padding: 10px;
+    font-size: 18px;
+    width: 80%;
+}
+
+#text ::placeholder {
+    color: rgb(167, 167, 167);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+}
+#text svg {
+    float: right;
+    padding-right: 10px;
+    box-sizing: content-box;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#text svg:hover {
+    stroke: #f85e62;
+}
+
+.bubble {
+    position: relative;
+    background: #343344;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #343344;
+    border-width: 8px 8px 8px 0;
+    top: 20px;
+    left: -8px;
+    margin-top: -8px;
+}
+
+.bubble2 {
+    position: relative;
+    background: #343344;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.bubble2:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #343344;
+    border-width: 8px 0px 8px 8px;
+    top: 20px;
+    right: -8px;
+    margin-top: -8px;
+}
+
+.chatLine {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  
+.chatLine > div {
+    flex-grow: 1;
+}
+
+.chatLine > div.myself {
+    max-width: 90px;
+}
+
+.chatLine > div.operator {
+    max-width: 90px;
+}
+
+.chatLine > div img {
+    border-radius: 50%;
+    border:2px solid white;
+    margin-right: 20px;
+}
+  
+.chatLine > div img.reverse {
+    border-radius: 50%;
+    border:2px solid white;
+    margin-left: 20px;
+}
+  
+  *:focus {
+    outline: none;
+}

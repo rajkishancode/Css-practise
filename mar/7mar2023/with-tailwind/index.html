@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>chatbox</title>
+</head>
+<body>
+    <!-- Open chat container -->
+    <button class="open-chat-btn w-44 h-14 rounded-full flex items-center justify-center gap-x-3 bg-[#ff6e6e] text-[#fffdfd] border-2 border-[#ff6e6e] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition hover:bg-[#ff6e6e]/10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 20l1.3 -3.9a9 8 0 1 1 3.4 2.9l-4.7 1"></path>
+            <path d="M12 12l0 .01"></path>
+            <path d="M8 12l0 .01"></path>
+            <path d="M16 12l0 .01"></path>
+        </svg>
+        <p>Let's chat!</p>
+    </button>
+    <!-- Content visible after chat is opened -->
+
+    <div class="chat-container hidden flex flex-col gap-y-3">
+        <div class="fullMobile bg-[#282639] rounded-lg overflow-hidden max-w-md flex flex-col">
+            <section class="bg-[#ff6e6e] p-4 flex items-center flex-col sm:flex-row">
+                <div class="portraits flex">
+                    <img class="w-12 h-12 flex-none rounded-full border-2 border-white object-cover object-top z-10 sm:w-14 sm:h-14" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGh1bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                    <img class="w-12 h-12 flex-none rounded-full border-2 border-white object-cover sm:w-14 sm:h-14" src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                    <img class="w-12 h-12 flex-none rounded-full border-2 border-white object-cover object-top sm:w-14 sm:h-14" src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                </div>
+                <div class="flex flex-col text-[#fffdfd] text-center sm:text-left">
+                    <span class="font-semibold text-sm sm:text-lg">Lucinda, John, Jenny</span>
+                    <small class="text-[0.7rem] sm:text-xs">We typically reply in a few minutes</small>
+                </div>
+            </section>
+
+            <!-- Full height chatting section -->
+            <div class="">
+                <!-- Chat section -->
+                <section class="chatting-section max-h-[470px] overflow-auto bg-[#282639] flex flex-col items-start gap-y-5 p-6 text-[#fffdfd] text-xs sm:text-sm">
+                    <div class="flex gap-x-5 w-full justify-start">
+                        <img class="w-12 h-12 border-2 border-white flex-none rounded-full overflow-hidden object-cover object-top sm:w-14 sm:h-14" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGh1bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                        <div class="automated-response relative bg-[#3a384c] p-4 rounded-lg">
+                            <p>Hi there!</p>
+                            <p>Looking to get started? I can help answer to your questions!</p>
+                        </div>
+                    </div>
+
+                    <!-- Dialog template container -->
+                    <div class="user-template hidden flex row-reverse gap-x-5 justify-end w-full">
+                        <div class="user-message-container relative bg-[#3a384c] p-4 rounded-lg">
+                            <p class="user-message"></p>
+                        </div>
+                        <img class="w-12 h-12 border-2 border-white flex-none rounded-full overflow-hidden object-cover object-top sm:w-14 sm:h-14" src="https://pbs.twimg.com/profile_images/1628770889033715713/UqHHu52c_400x400.jpg" alt="">
+                    </div>
+                    <!-- End of dialog template container -->
+                </section>
+
+                <section>
+                    <div class="chat-box px-2 pb-6 hidden">
+                        <form class="flex items-center w-full border border-[#ff6e6e] rounded-full overflow-hidden text-[#ff6e6e]">
+                            <input placeholder="Write something" id="user-input" type="text" class="w-full bg-[#3a384c] outline-none p-1 px-2.5 border-r border-[#ff6e6e] placeholder:text-xs placeholder:font-light placeholder:opacity-60">
+                            <button id="submit-input" type="submit" class="mx-2 mr-2.5 transition hover:cursor-pointer hover:text-[#ff6e6e]/60">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="disclaimer bg-[#3a384c] p-8 text-xs text-[#fffdfd] space-y-3 sm:text-sm">
+                        <p>By using the chat, I confirm that I have read the <a class="text-[#ff6e6e] underline hover:cursor-pointer" href="#">privacy policy</a> and do
+                            not
+                            object to the use of my personal data.</p>
+                        <button class="agree-btn border border-[#ff6e6e] rounded-full p-2.5 px-8 text-[#ff6e6e] transition hover:bg-[#ff6e6e]/10">I
+                            agree</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <button class="close-chat-btn self-end bg-[#ff6e6e] text-[#fffdfd] border-2 border-[#ff6e6e] p-3 rounded-full transition hover:bg-[#ff6e6e]/10"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
+            </svg></button>
+    </div>
+    <script>const disclaimer = document.querySelector(".disclaimer");
+const chatContainer = document.querySelector(".chat-container");
+const chatBox = document.querySelector(".chat-box");
+const agreeBtn = document.querySelector(".agree-btn");
+const openChatBtn = document.querySelector(".open-chat-btn");
+const closeChatBtn = document.querySelector(".close-chat-btn");
+
+// Change chat box height to full for mobile
+if (window.matchMedia("(max-width: 640px)").matches) {
+    document
+        .querySelector(".fullMobile")
+        .classList.add("h-full", "justify-between");
+} else {
+    document
+        .querySelector(".fullMobile")
+        .classList.remove("h-full", "justify-between");
+}
+
+// Start chatting
+openChatBtn.addEventListener("click", () => {
+    if (chatContainer.classList.contains("hidden")) {
+        chatContainer.classList.remove("hidden");
+        openChatBtn.classList.add("hidden");
+    } else {
+        chatContainer.classList.add("hidden");
+    }
+});
+
+// Accepting privacy policy
+agreeBtn.addEventListener("click", () => {
+    if (disclaimer.classList.contains("hidden")) {
+        disclaimer.classList.remove("hidden");
+        chatBox.classList.add("hidden");
+    } else {
+        disclaimer.classList.add("hidden");
+        chatBox.classList.remove("hidden");
+    }
+});
+
+// Close chatting
+closeChatBtn.addEventListener("click", () => {
+    if (!chatContainer.classList.contains("hidden")) {
+        chatContainer.classList.add("hidden");
+        openChatBtn.classList.remove("hidden");
+        userContainer.forEach(
+            userTemplates.forEach(userTemplate => userTemplate.remove())
+        );
+    } else {
+        chatContainer.classList.remove("hidden");
+    }
+});
+
+// Working chat
+const userContainer = document.querySelector(".chatting-section");
+const userTemplates = document.getElementsByClassName("user-template");
+const userTemplate = userTemplates.length ? userTemplates[0] : null;
+
+// Send messages
+const userInput = document.getElementById("user-input");
+const submitBtn = document.getElementById("submit-input");
+
+function sendMessage(messageText) {
+    const messageElement = userTemplate.cloneNode(true);
+    messageElement.classList.remove("hidden"); // remove hidden class from cloned element
+    const userMessage = messageElement.querySelector(".user-message");
+    userMessage.textContent = messageText;
+    userContainer.appendChild(messageElement);
+    userContainer.scrollTop = userContainer.scrollHeight;
+}
+
+submitBtn.addEventListener("click", e => {
+    e.preventDefault();
+    sendMessage(userInput.value);
+    userInput.value = "";
+});
+
+userInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        sendMessage(userInput.value);
+        userInput.value = "";
+    }
+});
+</script>
+</body>
+</html>

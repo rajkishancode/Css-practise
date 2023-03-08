@@ -8,6 +8,101 @@
     <title>chatbox</title>
 </head>
 <body>
-    
+    	<div id="container">
+        <div class="header">
+            <div class="users">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGh1bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" width="50">
+                <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" width="50">
+                <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" width="50">
+            </div>
+            <div>
+                Elnora, Leila, Lucinda<br>
+                <small>We typically respond in a few minutes</small>
+            </div>
+        </div>
+        <div id="chat">
+            <div class="chatLine">
+                <div class="operator">
+                    <img src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" width="50">
+                </div>
+                <div>
+                    <div class="bubble">Hi there!<br>Looking to get started? I can help answer your questions!</div>
+                </div>
+            </div>
+
+            <div class="chatLine">
+                <div>
+                    <div class="bubble2">I'd like to talk to AOC not with you dumb ass!</div>
+                </div>
+                <div>
+                    <img class="reverse" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGh1bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" width="50">
+                </div>
+            </div>
+
+        </div>
+        <div id="text">
+            <input type="text" name="chat" id="chatText" placeholder="Type your message here...">
+            <svg onclick="addCode()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#b1afad" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+                <path d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5"></path>
+            </svg>
+        </div>
+        <div class="notice">
+            By using the chat, I confirm that I have read the <a href="#">privacy policy</a> and do not object to the
+            use of my personal data.
+            <button id="close">I agree</button>
+        </div>
+        <script>
+            document.getElementById("chatText").addEventListener("keyup", function(event) { if (event.key === "Enter") addCode(); });
+
+                function addCode() {
+                    const val = document.getElementById("chatText").value;
+                    document.getElementById("chat").innerHTML +=
+                    '<div class="chatLine"><div><div class="bubble2">'+ val +'</div></div><div class="myself"><img class="reverse" src="https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg" width="50"></div></div>';
+                    document.getElementById('chatText').value = '';
+                    let objDiv = document.getElementById("chat");
+                    objDiv.scrollTop = objDiv.scrollHeight;
+
+                    if(document.getElementsByClassName("myself").length == 1) {
+                        document.getElementById("chat").innerHTML +=
+                    '<div class="chatLine"><div class="operator"><img src="https://pbs.twimg.com/profile_images/923274881197895680/AbHcStkl_400x400.jpg" width="50"></div><div class="bubble">Hey babe, will you date me? Cannot wait for a romatic sweet date with you!</div></div></div>';
+                    objDiv.scrollTop = objDiv.scrollHeight;
+                    }
+
+                    if(document.getElementsByClassName("myself").length == 2) {
+                        document.getElementById("chat").innerHTML +=
+                    '<div class="chatLine"><div class="operator"><img src="https://pbs.twimg.com/profile_images/923274881197895680/AbHcStkl_400x400.jpg" width="50"></div><div class="bubble">Now why would you say that?! I thought you were different!</div></div></div>';
+                    objDiv.scrollTop = objDiv.scrollHeight;
+                    }
+
+                    if(document.getElementsByClassName("myself").length == 3) {
+                        document.getElementById("chat").innerHTML +=
+                    '<div class="chatLine"><div class="operator"><img src="https://pbs.twimg.com/profile_images/923274881197895680/AbHcStkl_400x400.jpg" width="50"></div><div class="bubble">I want you to try again love!</div></div></div>';
+                    objDiv.scrollTop = objDiv.scrollHeight;
+                    }
+
+                    if(document.getElementsByClassName("myself").length == 5) {
+                        document.getElementById("chat").innerHTML +=
+                    '<div class="chatLine"><div class="operator"><img src="https://pbs.twimg.com/profile_images/923274881197895680/AbHcStkl_400x400.jpg" width="50"></div><div class="bubble">I do not wanna talk to you anymore!</div></div></div>';
+                    objDiv.scrollTop = objDiv.scrollHeight;
+                    }
+
+                    if(document.getElementsByClassName("myself").length == 6) {
+                        document.getElementById("chat").innerHTML +=
+                    '<div class="chatLine"><div class="operator"><img src="https://pbs.twimg.com/profile_images/923274881197895680/AbHcStkl_400x400.jpg" width="50"></div><div class="bubble">Fine, you can talk by yourself... have fun!</div></div></div>';
+                    objDiv.scrollTop = objDiv.scrollHeight;
+                    }
+
+                }
+
+
+                //$('.notice').hide();
+                $("#close").click(function(){
+                    $(".notice").slideToggle();
+                });
+        </script>
+    </div>
+	
 </body>
 </html>
