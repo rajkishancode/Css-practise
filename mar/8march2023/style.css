@@ -1,9 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+  background-color: hsl(240, 28%, 18%);
+  color: hsl(240, 7%, 84%);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.content {
+  background-color: hsl(238, 26%, 25%);
+  padding: 100px;
+  border-radius: 10px;
+  flex: 1;
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: 370px 430px;
+  gap: 150px;
+}
+
+.content > div:first-child > h1 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.donate_form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.donate_form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.donate_form label {
+  color: hsl(240, 11%, 96%);
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.donate_form button {
+  background-color: hsl(219, 89%, 52%);
+  font-size: 16px;
+  color: hsl(180, 100%, 100%);
+  border-radius: 4px;
+  padding: 20px 50px;
+  width: fit-content;
+  transition: transform 400ms ease;
+}
+
+.donate_form button:active {
+  transform: scale(0.95);
+}
+
+.switch {
+  border-radius: 100px;
+  background-color: hsl(240, 28%, 18%);
+  padding: 10px;
+  z-index: 0;
+  display: inline-flex;
+  gap: 20px;
+  width: fit-content;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  transition: background 600ms ease, color 600ms ease;
+}
+
+.toggle {
+  display: none;
+}
+
+
+
+*:not(a):focus-visible {
+  outline: 3px dashed hsl(201deg 56% 80%);
+  outline-offset: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle + label {
+  cursor: pointer;
+  min-width: 60px;
+  color: hsl(240, 6%, 87%);
+  line-height: 28px;
+  padding: 5px 30px;
+}
+
+.toggle + label:hover {
+  background: none;
+  color: hsl(0, 0%, 99%);
+}
+
+.toggle + label::after {
+  content: '';
+  background-color: hsl(238, 26%, 25%);
+  border-radius: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1),
+    opacity 100ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.toggle.toggle_left + label {
+  border-right: 0;
+}
+
+.toggle.toggle_left + label::after {
+  left: 100%;
+  opacity: 0;
+}
+
+.toggle.toggle_right + label {
+  margin-left: -5px;
+}
+
+.toggle.toggle_right + label::after {
+  left: -100%;
+  opacity: 0;
+}
+
+.toggle:checked + label {
+  cursor: default;
+  color: hsl(240, 7%, 74%);
+  transition: color 200ms;
+}
+
+.toggle:checked + label::after {
+  left: 0;
+  opacity: 1;
+}
+
+.radio_group {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  margin-bottom: 0;
+  transition: margin-bottom 400ms ease;
+}
+
+.radio_group > input[type='text'] {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  opacity: 0;
+  transition: top 400ms ease, opacity 200ms 100ms ease;
+}
+
+.radio_group:has(input[value='other']:checked) {
+  margin-bottom: 62px;
+}
+
+.radio_group > input[value='other']:checked + input[type='text'] {
+  pointer-events: all;
+  opacity: 1;
+  top: calc(100% + 10px);
+  transition: top 400ms ease, opacity 200ms ease;
+}
+
+.radio_group > input[type='radio'] {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid hsl(236, 29%, 20%);
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 5px 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.radio_group > input[type='radio']:checked {
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 100%);
+  color: hsl(238, 26%, 25%);
+}
+
+.radio_group > input[type='radio']::before {
+  content: attr(data-label);
+}
+
+.donate_form input[type='text'] {
+  background-color: transparent;
+  border: 2px solid hsl(236, 29%, 20%);
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.donate_form input[type='text']::placeholder {
+  color: hsl(240, 6%, 87%);
+}
+
+.donate_form input[type='text']:focus-visible {
+  outline-width: 1px;
+}
+
+button.btn_add {
+  background-color: transparent;
+  font-size: 14px;
+  color: hsl(230, 49%, 57%);
+  padding: 0;
+}
+
+button.btn_add:active {
+  transform: none;
+}
+
+.checkbox {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.checkbox > input[type='checkbox'] {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid hsl(236, 29%, 20%);
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox > input[type='checkbox']:checked::before {
+  content: '';
+  position: absolute;
+    left: 7px;
+    top: 4px;
+    width: 6px;
+    height: 10px;
+  border: solid hsl(0, 0%, 100%);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox > label {
+  line-height: 18px;
+  color: hsl(240, 7%, 74%);
+}
+
+.alert {
+  border-radius: 100px;
+  background-color: hsl(0 0% 25%);
+  color: hsl(0 0% 80%);
+  padding: 15px 20px;
+  font-weight: 200;
+  position: fixed;
+  top: 10%;
+  opacity: 0;
+  left: 50%;
+  transform: translate(-50%);
+  transition: opacity 350ms ease-in;
+}
+
+.alert[aria-hidden='false'] {
+  opacity: 1;
+}
+
+.donors {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 

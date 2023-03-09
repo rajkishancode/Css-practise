@@ -1,13 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>donate</title>
 </head>
+
 <body>
-    
+
+
+
+
+
+
+    <div class="content">
+        <div>
+            <h1>Help us do more</h1>
+            <p>
+                We'll get right to the point: we're asking you to support us. We're a
+                nonprofit that relies on support from people like you. If everyone
+                reading this gives 10€ monthly, we can thrives forr years.
+            </p>
+        </div>
+        <form class="donate_form">
+
+            <div>
+                <label>Select gift frequency</label>
+                <div class="switch">
+                    <input id="toggle-on" class="toggle toggle_left" name="paying_type" type="radio" value="monthly"
+                        checked="">
+                    <label for="toggle-on" class="btn">
+                        Monthly
+                    </label>
+                    <input id="toggle-off" class="toggle toggle_right" name="paying_type" type="radio" value="onetime">
+                    <label for="toggle-off" class="btn">
+                        One time
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label>Select amount (in US dollar)</label>
+                <div class="radio_group">
+                    <input type="radio" name="amount" data-label="10$" value="10" checked="">
+                    <input type="radio" name="amount" data-label="20$" value="20">
+                    <input type="radio" name="amount" data-label="30$" value="30">
+                    <input type="radio" name="amount" data-label="40$" value="40">
+                    <input type="radio" name="amount" data-label="Other" value="other">
+                    <input type="text" placeholder="Enter the amount" name="amount_other" step="any"
+                        pattern="^[0-9]*[.,]?[0-9]{0,2}$">
+                </div>
+            </div>
+            <div>
+                <div class="checkbox">
+                    <input type="checkbox" name="pay_fee" id="pay_fee">
+                    <label for="pay_fee">
+                        Yes, I'll generously add 0.75$ each month to cover the transaction
+                        fees.
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" name="donor">
+                <div class="donors"></div>
+                <button class="btn_add" type="button">
+                    Click here to give in honor of other person
+                </button>
+            </div> 
+             <button type="submit">Donate now</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
 </body>
+
 </html>
