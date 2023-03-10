@@ -1,9 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto Slab', serif;
+    background-color: #F9EFF0;
+}
 
+.container {
+    display: flex;
+    width: 800px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+
+}
+
+.login-box {
+    width: 60%;
+    padding: 3rem;
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+}
+
+
+.img-box {
+  position: relative;
+  width: 40%; 
+  background-image: url("https://i.postimg.cc/MHzMz75x/Screenshot-2023-03-10-090453.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px 10px 10px 0px;
+}
+.img-box > span{
+    position: absolute;
+    background-color: #E2EFF1;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    right: 10px;
+    top: 20px;
+    text-align: center;
+    padding-top: 8px;
+    color: #1F2E34;
+}
+input {
+    border: 1px solid #D4D3DA;
+    width: 100%;
+    padding: 20px;
+    border-radius: 4px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+
+}
+
+.forgot-text {
+    color: #6989A5;
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.next-btn {
+
+    background-color: #056687;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 18px;
+
+    box-shadow: 0px 15px 10px -10px #056687;
+}
+
+hr.new1 {
+    height: 4px;
+    background-color: #EAEBF1;
+    width: 100%;
+}
+
+.social-handle{
+    display: flex;
+    gap: 10px;
+
+}
+.social-btn{
+padding: 10px ;
+width: 50%;
+    border: 1px solid #D4D3DA;
+background-color: #fff;
+font-size:1rem;
+font-weight: 300;
+}
+.logo-fb {
+    --text-opacity: 1;
+    color: rgb(37 99 235 / var(--text-opacity));
+}
+.signup-text{
+    font-size: .9rem;
+}
+.signup-text > span{
+    color: #58777D;
+
+    text-decoration: underline;
+}
