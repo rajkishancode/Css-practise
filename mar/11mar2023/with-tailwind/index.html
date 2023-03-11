@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>neumorphic_ui</title>
+</head>
+
+<body class="bg-[#f0f1f8] flex justify-center items-center min-h-screen">
+
+ <div id="box" class="flex flex-col gap-8 w-[480px] ">
+        <!-- 
+    -webkit-box-shadow: -3px -3px 11px -2px rgba(255,255,255,0.8); 
+box-shadow: -3px -3px 11px -2px rgba(255,255,255,0.8);
+    -->
+        <div id="top" class="special_shadow  p-6 bg-[#f1f3fa] rounded-lg flex gap-6 justify-center items-center">
+            <div class="rounded-lg w-[120px] h-[120px] flex justify-center items-center flex-col gap-2">
+                <div class="rounded-full bg-[#fb7070] w-[60px] h-[60px] text-white text-xl flex justify-center items-center">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <span class="text-sm">CREDIT CARD</span>
+            </div>
+            <div class=" special_shadow rounded-lg w-[120px] h-[120px] flex justify-center items-center flex-col gap-2">
+                <div class="rounded-full bg-[#fbaa70] w-[60px] h-[60px] text-white text-xl flex justify-center items-center">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <span class="text-sm font-bold">GIFT CARDS</span>
+
+            </div>
+
+            <div class="rounded-lg w-[120px] h-[120px] flex justify-center items-center flex-col gap-2">
+                <div class="rounded-full bg-[#7f7afd] w-[60px] h-[60px] text-white text-xl flex justify-center items-center">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <span class="text-sm">ORDERS</span>
+            </div>
+
+        </div>
+        <div id="middle" class="rounded-lg py-4 px-12 bg-[#e5e8f2] inset_special_shadow">
+            <p class="text-center">
+                Stay on top of your order status, deals, new messages and more.
+                <a href="#" class="text-[#7a90fd]">Enable notifications</a>
+            </p>
+        </div>
+        <div id="bottom" class="flex gap-4">
+            <button class=" special_shadow flex-1 rounded-full bg-[#7a90fd] p-3 text-white font-bold">
+                Continue
+            </button>
+            <button class="special_shadow flex-1 rounded-full bg-[#f1f3fa] p-3 text-[#7a90fd] font-bold">
+                Cancel
+            </button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
