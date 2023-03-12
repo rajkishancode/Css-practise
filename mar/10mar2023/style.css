@@ -1,8 +1,149 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+background-color: #F8F6FF;
+font-family: 'Noto Serif Lao', serif;
+margin: 4rem;
+flex-direction: column;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 100px;
+}
+.container  {
+
+    
+    border-radius: 10px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #F8F6FF;
+position: relative;
+}
+.top{
+    padding: 2rem;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+}
+
+.progress-level{
+    width: 40%;
+    background-color: #18192B;
+height: 12px;
+border-radius: 100px;
+    position: absolute;
+}
+
+.progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-circle{
+ 
+    border-radius: 50%;
+
+}
+.check-circle > svg{
+    stroke: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+     border: 3px solid #D7D8EA;
+    
+    
+}
+
+
+
+
+.bottom{
+    padding: 2rem;
+    flex-direction: column;
+    display: flex;
+    row-gap: 15px;
+}
+.points{
+    display: flex;
+    flex-direction: row;
+    /* justify-content:space-between; */
+    column-gap: 30px;
+    align-items: center;
+    /* gap: 20px; */
+    width: 80%;
+}
+
+.empty-circle{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+     border: 3px solid #D7D8EA;
+     /* max-width: 100%; */
+}
+
+.skip-link{
+    color: #616063;
+}
+
+.start-btn{
+    background-color: #18182F;
+}
+
+ .start-btn > .btn-circle{
+height: 30px;
+width: 30px;
+background-color: #fff;
+color: #18182F;
+border-radius: 50%;
+position: relative;
+
+}
+
+.start-btn{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    gap: 15px;
+}
+
+.btn-number{
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    font-family: 'Noto Serif Lao', serif;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.get-start{
+    margin-top:15px ;
+    margin-left: 140px;
 }
