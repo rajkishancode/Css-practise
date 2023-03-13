@@ -5,9 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>progress_checks</title>
 </head>
 <body>
-    
+   <div id="main">
+        <div class="container">
+            <div>
+                <h1>Build your page</h1>
+                Complete actions to unlock new features along the way.<br>
+                    On average, complete pages get 30% more traffic.
+                <br>
+                <br>
+                <br>
+                <span style="background-color: rgb(72, 100, 248);"></span>
+                <span style="background-color: rgb(74, 111, 245);"></span>
+                <span style="background-color: rgb(75, 123, 240);"></span>
+                <span style="background-color: rgb(77, 139, 234);"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <br>
+                <small id="total">5 remaining to complete.</small>
+            </div>
+            <div>
+                <h2>Checklist</h2>
+                <label class="checkbox" for="Industry">
+                        Industry<input type="checkbox" id="Industry" onclick="toggleCheckbox()" checked="">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <label class="checkbox" for="WebsiteURL">
+                        Website URL<input type="checkbox" id="WebsiteURL" onclick="toggleCheckbox()" checked="">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <label class="checkbox" for="CompanySize">
+                        Company size<input type="checkbox" id="CompanySize" onclick="toggleCheckbox()" checked="">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <label class="checkbox" for="Description">
+                        Description<input type="checkbox" id="Description" onclick="toggleCheckbox()">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <label class="checkbox" for="Logo">
+                        Logo<input type="checkbox" id="Logo" onclick="toggleCheckbox()">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <label class="checkbox" for="Location">
+                        Location<input type="checkbox" id="Location" onclick="toggleCheckbox()" checked="">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <label class="checkbox" for="CustomButton">
+                        Custom button<input type="checkbox" id="CustomButton" onclick="toggleCheckbox()">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <label class="checkbox" for="OnSiteSEO">
+                        On Site SEO<input type="checkbox" id="OnSiteSEO" onclick="toggleCheckbox()">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <label class="checkbox" for="PageSpeed">
+                        Page speed<input type="checkbox" id="PageSpeed" onclick="toggleCheckbox()">
+                        <span class="checkmark"></span>
+                    </label>
+                <script>
+                    const colors = [ '#141829', '#4864f8', '#4a6ff5', '#4b7bf0', '#4d8bea', '#4f9ce5', '#52aade', '#54bad8', '#55c8d4', '#56d2d0' ];
+
+                        document.querySelector('.container > div:first-of-type > span:nth-of-type(1)').style.backgroundColor = colors[1];
+                        document.querySelector('.container > div:first-of-type > span:nth-of-type(2)').style.backgroundColor = colors[2];
+                        document.querySelector('.container > div:first-of-type > span:nth-of-type(3)').style.backgroundColor = colors[3];
+                        document.querySelector('.container > div:first-of-type > span:nth-of-type(4)').style.backgroundColor = colors[4];
+
+                        function toggleCheckbox() {
+
+                            let totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+
+                            let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+                            let deleteSpan = checkboxes;
+
+                            let totalUnchecked = totalCheckboxes - checkboxes;
+
+                            if(checkboxes > 0) {
+                                document.querySelector('.container > div:first-of-type > span:nth-of-type('+ checkboxes + ')').style.backgroundColor = colors[checkboxes];
+
+                                if(checkboxes != totalCheckboxes)
+                                    document.querySelector('.container > div:first-of-type > span:nth-of-type('+ (checkboxes+1) + ')').style.backgroundColor = colors[0];
+                            }
+                            else if(checkboxes == 0) {
+                                document.querySelector('.container > div:first-of-type > span:nth-of-type(1)').style.backgroundColor = colors[0];
+                            }
+
+                            let msg = '';
+                            if(checkboxes == 0)
+                                msg = 'Please make your selection.';
+                            else if (checkboxes == totalCheckboxes)
+                                msg = 'Your selection is now complete!';
+                            else if (checkboxes > 0)
+                                msg = (totalCheckboxes - checkboxes) + ' remaining to complete.';
+
+                            document.getElementById("total").innerHTML = msg;
+                        } 
+                </script>
+            </div>
+        </div>
+    </div> 
 </body>
 </html>
