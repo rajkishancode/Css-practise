@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>webinar_signup</title>
+</head>
+
+
+
+
+
+
+   <body class=" flex justify-center text-[#c5c6c8] items-center min-h-screen flex-col md:flex-row" ">
+
+    <!-- FORM CONTAINER -->
+    <div class="form-container p-4 bg-[#232631] flex flex-col justify-center items-end py-6 md:min-h-screen md:w-[60%] md:p-4">
+        
+		<div class="md:max-w-xl">
+            <div class="flex flex-col gap-y-2">
+                <span>March 17, 2023 12:00</span>
+                <h1 class="font-bold text-3xl text-white">The help of Augmented Reality and Holograms.</h1>
+                <div class="text-sm">
+                    <p>
+                        Use Augmented Reality to keep students engaged and provide detailed explanations of models and
+                        course
+                        material.
+                    </p>
+                    <p>In a 3D, AR Lab, students can pinch, zoom, and rotate equipment related to the course, for a
+                        fully
+                        immersive learning experience.</p>
+                </div>
+            </div>
+
+
+            <h2 class="text-xl font-semibold mb-2 mt-5">Join the event</h2>
+            <form action="" class="flex flex-col gap-2 gap-y-3" id="myForm">
+
+                <div class="w-full flex gap-2 flex-col md:flex-row">
+				
+                    <div class="w-full flex flex-col md:w-1/2">
+                        <label for="first-name">First name *</label>
+                        <input class="p-2" required="" type="text" name="first-name" id="first-name" placeholder="Enter your first name">
+                    </div>
+
+                    <div class="w-full flex flex-col md:w-1/2">
+                        <label for="last-name">Last name *</label>
+                        <input class="p-2" required="" type="text" name="last-name" id="last-name" placeholder="Enter your last name">
+                    </div>
+					
+                </div>
+				
+				
+				
+				
+				
+				
+
+                <div class="w-full flex gap-2 flex-col md:flex-row">
+                    <div class="w-full flex flex-col md:w-1/2">
+                        <label for="email">Business email *</label>
+                        <input class="p-2" required="" type="email" name="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="w-full flex flex-col md:w-1/2">
+                        <label for="title">Title</label>
+                        <input class="p-2" type="text" name="title" id="title" placeholder="What is your job title?">
+                    </div>
+                </div>
+				
+				
+				
+				
+
+                <div class="w-full flex gap-2 flex-col md:flex-row">
+				
+                    <div class="w-full flex flex-col md:w-1/2">
+                        <label for="company-name">Company name *</label>
+                        <input class="p-2" required="" type="company-name" name="company-name" id="company-name" placeholder="Where do you work?">
+                    </div>
+
+                    <div class="w-full flex flex-col md:w-1/2">
+                        <label for="company-size">Company size</label>
+                        <select name="company-size" id="company-size" class="bg-transparent text-white border border-[#676b70] p-[0.6rem] outline-none">
+                            <option value="">Select</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+					
+                </div>
+				
+				
+				
+
+                <div class="w-full">
+                    <label for="learn-textarea">What are you hoping to learn about?</label>
+                    <textarea name="learn-textarea" id="learn-textarea" cols="50" rows="5" placeholder="Let us know here"  spellcheck="false"></textarea>
+                </div>
+				
+				
+
+                <div class="text-sm flex items-center gap-x-2 [&amp;>*]:hover:cursor-pointer">
+                    <input  type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox">I would like to receive emails about future webinars</label>
+                </div>
+				
+				
+
+                <button id="submit-btn" class="w-max self-center text-xs font-bold text-[#232631] mt-3 border border-white bg-white p-3 px-5 transition hover:text-white hover:bg-transparent md:self-start">Register
+                    for this event</button>
+            </form>
+			
+			
+        </div>
+    </div>
+    <!-- END OF FORM CONTAINER -->
+
+    <!-- SOCIALS CONTAINER -->
+    <div class="socials-container 
+    text-[#fcfefe] bg-[#2b2e39]
+     flex flex-col-reverse p-4 
+     flex-col w-full items-center
+      justify-end md:min-h-screen
+       md:justify-center md:self-stretch md:items-start md:flex-col md:w-[40%] md:p-10">
+        <div class="flex gap-y-3 items-center mt-8 border-t border-[#4d505e] w-full gap-x-4 justify-center flex-col pt-3 md:pt-0 md:items-start md:border-t-0 md:mt-0 md:mb-20">
+            <span>Share</span>
+            <div class="flex gap-x-5 md:gap-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler hover:cursor-pointer hover:stroke-[#676b70] transition icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler hover:cursor-pointer hover:stroke-[#676b70] transition icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z">
+                    </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler hover:cursor-pointer hover:stroke-[#676b70] transition icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                    <path d="M8 11l0 5"></path>
+                    <path d="M8 8l0 .01"></path>
+                    <path d="M12 16l0 -5"></path>
+                    <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-y-9">
+		
+		
+            <div class="flex flex-col gap-y-3">
+                <h3 class="font-semibold tracking-widest text-center md:text-left">GUESTS</h3>
+                <div class="flex items-center gap-x-4 md:gap-x-2">
+                    <img class="w-16 h-16 object-cover rounded-full md:w-12 md:h-12" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cG9ydHJhaXR8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                    <div class="flex flex-col">
+                        <span class="font-bold md:text-sm">Lisa Alvin</span>
+                        <span class="text-sm md:text-xs">Cofounder, Jea</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-x-4 md:gap-x-2">
+                    <img class="w-16 h-16 object-cover rounded-full md:w-12 md:h-12" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                    <div class="flex flex-col">
+                        <span class="font-bold md:text-sm">Jenny Pick</span>
+                        <span class="text-sm md:text-xs">Head of Education, Jea</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-x-4 md:gap-x-2">
+                    <img class="w-16 h-16 object-cover rounded-full md:w-12 md:h-12" src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                    <div class="flex flex-col">
+                        <span class="font-bold md:text-sm">Peter Scott</span>
+                        <span class="text-sm md:text-xs">Founder, Jea</span>
+                    </div>
+                </div>
+            </div>
+			
+			
+
+            <div>
+                <h3 class="font-semibold tracking-widest text-center md:text-left">HOSTED BY</h3>
+                <div class="flex items-center gap-x-4 md:gap-x-2">
+                    <img class="w-16 h-16 object-cover rounded-full md:w-12 md:h-12" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                    <div class="flex flex-col">
+                        <span class="font-bold md:text-sm">Josh Jacob</span>
+                        <span class="text-sm md:text-xs">Educator, Web</span>
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+			
+        </div>
+    </div>
+    <!-- END OF SOCIALS CONTAINER -->
+
+    <!-- THANK YOU CONTAINER -->
+    <div id="ty-message" class="bg-[#232631] flex flex-col justify-center items-center text-center gap-y-6 h-screen w-full hidden">
+        <h4 class="text-3xl font-bold">Thank you for registering!</h4>
+        <p class="text-white">See you there on March 17, 2023 at 12:00</p>
+        <button id="back-btn" class="w-max text-xs font-bold text-white  border border-white bg-transparent p-3 px-10 transition hover:text-white hover:bg-white/10">Go
+            back</button>
+    </div>
+    <!-- END OF THANK YOU CONTAINER -->
+
+    <!-- MODAL SECTION -->
+    <section class="modal hiddenM">
+        <div>
+            <p class="message">
+                Please fill out the form.
+            </p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-triangle" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f1a801" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M10.24 3.957l-8.422 14.06a1.989 1.989 0 0 0 1.7 2.983h16.845a1.989 1.989 0 0 0 1.7 -2.983l-8.423 -14.06a1.989 1.989 0 0 0 -3.4 0z">
+            </path>
+            <path d="M12 9v4"></path>
+            <path d="M12 17h.01"></path>
+        </svg>
+        <button class="back-to-form-btn hover:bg-white/10">Back</button>
+    </section>
+    <div class="overlay hiddenM"></div>
+    <!-- END OF MODAL SECTION -->
+
+<script>const submitBtn = document.getElementById('submit-btn');
+const formContainer = document.querySelector('.form-container');
+const socialsContainer = document.querySelector('.socials-container');
+const tyMessage = document.getElementById('ty-message');
+const backBtn = document.getElementById('back-btn');
+const backToFormBtn = document.querySelector('.back-to-form-btn');
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+
+function checkForm(event) {
+    event.preventDefault();
+    let form = document.getElementById("myForm");
+    if (form.checkValidity()) {
+        formContainer.classList.add('hidden');
+        socialsContainer.classList.add('hidden');
+        tyMessage.classList.remove('hidden');
+    } else {
+        errorForm();
+    }
+}
+
+submitBtn.addEventListener('click', checkForm);
+
+backBtn.addEventListener('click', () => {
+    formContainer.classList.remove('hidden');
+    socialsContainer.classList.remove('hidden');
+    tyMessage.classList.add('hidden');
+})
+
+function errorForm() {
+    modal.classList.remove("hiddenM");
+    overlay.classList.remove("hiddenM");
+}
+
+function closeModal() {
+    modal.classList.add("hiddenM");
+    overlay.classList.add("hiddenM");
+};
+
+backToFormBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.classList.contains("hiddenM")) {
+        modalClose();
+    }
+});</script>
+        </body>
+</html>
