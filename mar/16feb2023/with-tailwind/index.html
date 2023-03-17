@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>accordion2</title>
+</head>
+<body class="bg-[#f8f9fd] text-[#1c2027] flex justify-center items-center min-h-screen" >
+
+    <div class="main relative flex flex-col bg-white px-4 py-10 rounded-lg md:rounded-xl md:p-16 md:max-w-2xl">
+
+        <div class="text-center space-y-4 mb-10">
+            <h1 class="font-bold text-2xl">The Barebones Of An Accordion</h1>
+            <p class="w-5/6 mx-auto font-semibold">
+                Highlighting important details of a section and revealing more details upon a tap or a click, if
+                necessary.
+            </p>
+        </div>
+
+        <!-- FAQ Container -->
+        <div id="faq-container" class="flex flex-col gap-y-2 text-[#6a6c78]">
+
+            <div class="qna-container border-b-2 border-[#edf0f8] rounded p-3 flex justify-between flex-col transition">
+               
+                <div class="question flex justify-between items-center">
+                    <p class="font-semibold text-[#75737f]">When and how it should be used?</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus expand-btn flex-none" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 5l0 14" class="line"></path>
+                        <path d="M5 12l14 0"></path>
+                    </svg>
+                </div>
+
+
+                <div class="display-on-click pt-6 [&amp;>*]:text-sm hidden">
+                    <p>
+                        The accordion is a graphical control element comprising a vertically stacked list of items, such
+                        as
+                        labels or
+                        thumbnails.
+                    </p>
+                    <p class="mt-3">An accordion is similar in purpose to a tabbed interface, a list of items where
+                        exactly
+                        one item is expanded into a
+                        panel.</p>
+                    <button class="text-black font-semibold border-2 border-[#eceff7] p-1.5 px-5 rounded-full my-3 transition hover:bg-[#eceff7]/30 hover:shadow">Read more</button>
+                </div>
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- Second question -->
+            <div class="qna-container border-b-2 border-[#edf0f8] rounded p-3 flex justify-between flex-col transition">
+                <div class="question flex justify-between items-center">
+                    <p class="font-semibold text-[#75737f]">What's an accordion?</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus expand-btn flex-none" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 5l0 14" class="line"></path>
+                        <path d="M5 12l14 0"></path>
+                    </svg>
+                </div>
+                <div class="display-on-click pt-6 [&amp;>*]:text-sm hidden">
+                    <p>
+                        The accordion is a graphical control element comprising a vertically stacked list of items, such
+                        as
+                        labels or
+                        thumbnails.
+                    </p>
+                    <p class="mt-3">An accordion is similar in purpose to a tabbed interface, a list of items where
+                        exactly
+                        one item is expanded into a
+                        panel.</p>
+                    <button class="text-black font-semibold border-2 border-[#eceff7] p-1.5 px-5 rounded-full my-3 transition hover:bg-[#eceff7]/30 hover:shadow">Read more</button>
+                </div>
+            </div>
+
+            <!-- Third question -->
+            <div class="qna-container border-b-2 border-[#edf0f8] rounded p-3 flex justify-between flex-col transition">
+                <div class="question flex justify-between items-center">
+                    <p class="font-semibold text-[#75737f]">What if the user clicks on a collapsed card while another
+                        card is open?</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus expand-btn flex-none" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 5l0 14" class="line"></path>
+                        <path d="M5 12l14 0"></path>
+                    </svg>
+                </div>
+                <div class="display-on-click pt-6 [&amp;>*]:text-sm hidden">
+                    <p>
+                        The accordion is a graphical control element comprising a vertically stacked list of items, such
+                        as
+                        labels or
+                        thumbnails.
+                    </p>
+                    <p class="mt-3">An accordion is similar in purpose to a tabbed interface, a list of items where
+                        exactly
+                        one item is expanded into a
+                        panel.</p>
+                    <button class="text-black font-semibold border-2 border-[#eceff7] p-1.5 px-5 rounded-full my-3 transition hover:bg-[#eceff7]/30 hover:shadow">Read more</button>
+                </div>
+            </div>
+
+            <!-- Forth question -->
+            <div class="qna-container rounded p-3 flex justify-between flex-col transition">
+                <div class="question flex justify-between items-center">
+                    <p class="font-semibold text-[#75737f]">How to choose an icon to indicate expansion?</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus expand-btn flex-none" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 5l0 14" class="line"></path>
+                        <path d="M5 12l14 0"></path>
+                    </svg>
+                </div>
+                <div class="display-on-click pt-6 [&amp;>*]:text-sm hidden">
+                    <p>
+                        The accordion is a graphical control element comprising a vertically stacked list of items, such
+                        as
+                        labels or
+                        thumbnails.
+                    </p>
+                    <p class="mt-3">An accordion is similar in purpose to a tabbed interface, a list of items where
+                        exactly
+                        one item is expanded into a
+                        panel.</p>
+                    <button class="text-black font-semibold border-2 border-[#eceff7] p-1.5 px-5 rounded-full my-3 transition hover:bg-[#eceff7]/30 hover:shadow">Read more</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <style>.main::before {
+    content: "";
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #eaedf8;
+    top: -80px;
+    left: -80px;
+    z-index: -1;
+}
+
+.main::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #edf0f8;
+    bottom: -60px;
+    right: -60px;
+    z-index: -1;
+}
+
+.qna-container:hover {
+    box-shadow: 0 4px 5px #edf0f8;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .main::after, .main::before {
+        display: none;
+    }
+}</style>
+            <script>
+            const expandBtns = document.querySelectorAll('.expand-btn');
+
+expandBtns.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+        const displayOnClick = document.querySelectorAll('.display-on-click');
+        displayOnClick[i].classList.toggle('hidden')
+        const line = document.querySelectorAll('.line');
+        line[i].classList.toggle('hidden')
+    })
+})
+</script>
+
+
+
+        </body>
+</html>
