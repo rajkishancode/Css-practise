@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+</head>
+<body class="bg-purple-100 flex justify-center items-center min-h-screen" >
+    <div class="component relative bg-white text-[#201659] flex flex-col shadow-lg h-screen md:h-max md:rounded-xl w-full md:max-w-4xl md:flex-row">
+
+        <div class="rounded-l-xl bg-[#f8f9ff] p-3 pr-0 flex gap-y-10 md:flex-col md:p-6 md:w-[13rem]">
+            <div class="flex gap-x-2 items-center">
+                <img class="w-12 h-12 rounded-xl" src="https://pbs.twimg.com/profile_images/1628770889033715713/UqHHu52c_400x400.jpg" alt="">
+                <div class="flex flex-col">
+                    <span class="font-bold text-sm">Raj Kishan</span>
+                    <small>@raj_kishan_</small>
+                </div>
+            </div>
+
+            <button id="hamburger" class="self-center ml-auto mr-4 md:hidden">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+
+            <div class="mobile-modal hidden absolute h-full w-full right-0 top-0 bg-black opacity-30 md:hidden"></div>
+            <div id="mobile-menu" class="absolute hidden right-0 top-0 bg-gray-100 h-full w-2/3 flex flex-col justify-between pl-8 py-16 shadow-[-20px_0px_20px_-10px_rgba(0,0,0,0.3)] md:hidden">
+                <ul class="flex flex-col gap-y-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="close-mobile absolute top-5 right-3 hover:cursor-pointer" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                    </svg>
+                    <li class="flex gap-x-2 text-gray-500 text-sm items-center transition hover:cursor-pointer hover:text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-model-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M8 8h8v8h-8z"></path>
+                            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z">
+                            </path>
+                        </svg>
+                        General
+                    </li>
+                    <li class="flex gap-x-2 text-gray-500 text-sm items-center transition hover:cursor-pointer hover:text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z">
+                            </path>
+                            <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                            <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+                        </svg>
+                        Password
+                    </li>
+                    <li class="flex gap-x-2 text-gray-500 text-sm items-center transition hover:cursor-pointer hover:text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+                            </path>
+                            <path d="M3 7l9 6l9 -6"></path>
+                        </svg>
+                        Invitations
+                    </li>
+                    <li class="flex gap-x-2 text-black text-sm items-center transition hover:cursor-pointer hover:text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wallet" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12">
+                            </path>
+                            <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4"></path>
+                        </svg>
+                        Billing
+                    </li>
+                    <li class="flex gap-x-2 text-gray-500 text-sm items-center transition hover:cursor-pointer hover:text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apps" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z">
+                            </path>
+                            <path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z">
+                            </path>
+                            <path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z">
+                            </path>
+                            <path d="M14 7l6 0"></path>
+                            <path d="M17 4l0 6"></path>
+                        </svg>
+                        Apps
+                    </li>
+                    <li id="hover-animation"></li>
+                    <li id="bg-animation"></li>
+                </ul>
+                <button id="mobile-logout-btn" class="gap-x-2 text-gray-500 text-sm flex items-center transition hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
+                    <path d="M7 12h14l-3 -3m0 6l3 -3" class="logout-arrow"></path>
+                    </svg>
+                    Log out
+                </button>
+            </div>
+
+            <ul id="menu" class="relative hidden md:block">
+                <li class="flex gap-x-2 text-gray-500 text-sm items-center transition hover:cursor-pointer hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-model-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M8 8h8v8h-8z"></path>
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z">
+                        </path>
+                    </svg>
+                    General
+                </li>
+                <li class="flex gap-x-2 text-gray-500 text-sm items-center transition hover:cursor-pointer hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path>
+                        <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                        <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+                    </svg>
+                    Password
+                </li>
+                <li class="flex gap-x-2 text-gray-500 text-sm items-center transition hover:cursor-pointer hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+                        </path>
+                        <path d="M3 7l9 6l9 -6"></path>
+                    </svg>
+                    Invitations
+                </li>
+                <li class="flex gap-x-2 text-black text-sm items-center transition hover:cursor-pointer hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wallet" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12">
+                        </path>
+                        <path d="M20 12v4h-4a2 2 0 0 1 0 -4h4"></path>
+                    </svg>
+                    Billing
+                </li>
+                <li class="flex gap-x-2 text-gray-500 text-sm items-center transition hover:cursor-pointer hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apps" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                        <path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                        <path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path>
+                        <path d="M14 7l6 0"></path>
+                        <path d="M17 4l0 6"></path>
+                    </svg>
+                    Apps
+                </li>
+                <li id="hover-animation"></li>
+                <li id="bg-animation"></li>
+            </ul>
+
+            <button id="logout-btn" class="hidden mt-auto gap-x-2 text-gray-500 text-sm items-center transition hover:text-black md:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
+                    <path d="M7 12h14l-3 -3m0 6l3 -3" class="logout-arrow"></path>
+                </svg>
+                Log out
+                </button>
+        </div>
+
+        <div class="p-3 flex flex-col gap-y-6 md:gap-y-8 md:p-10">
+            <h1 class="text-xl md:text-2xl font-bold">Billing</h1>
+
+            <div>
+                <h2 class="text-sm font-bold">Order History</h2>
+                <small class="text-gray-500">Manage billing information and view receipts</small>
+            </div>
+
+            <div class="flex flex-col gap-y-2">
+                <div class="grid grid-cols-3 py-1.5 md:p-1.5 md:px-3 gap-x-4 md:gap-x-10 text-gray-500 text-xs rounded-lg md:text-sm">
+                    <h3>Date</h3>
+                    <h3>Type</h3>
+                    <h3>Receipt</h3>
+                </div>
+
+                <div class="grid grid-cols-3 py-1.5 md:p-1.5 md:px-3 gap-x-4 md:gap-x-10 text-xs md:text-sm items-center transition hover:shadow-purple-100 hover:cursor-pointer hover:shadow-lg rounded-lg">
+                    <span>Oct. 21, 2021</span>
+                    <span>Pro Annual</span>
+                    <button class="border p-1 rounded transition hover:bg-[#ee4e39]/20 w-max">Download</button>
+                </div>
+                <div class="grid grid-cols-3 py-1.5 md:p-1.5 md:px-3 gap-x-4 md:gap-x-10 text-xs md:text-sm items-center transition hover:shadow-purple-100 hover:cursor-pointer hover:shadow-lg rounded-lg">
+                    <span>Aug. 21, 2021</span>
+                    <span>Pro Portfolio</span>
+                    <button class="border p-1 rounded transition hover:bg-[#ee4e39]/20 w-max">Download</button>
+                </div>
+                <div class="grid grid-cols-3 py-1.5 md:p-1.5 md:px-3 gap-x-4 md:gap-x-10 text-xs md:text-sm items-center transition hover:shadow-purple-100 hover:cursor-pointer hover:shadow-lg rounded-lg">
+                    <span>July. 21, 2021</span>
+                    <span>Sponsored Post</span>
+                    <button class="border p-1 rounded transition hover:bg-[#ee4e39]/20 w-max">Download</button>
+                </div>
+                <div class="grid grid-cols-3 py-1.5 md:p-1.5 md:px-3 gap-x-4 md:gap-x-10 text-xs md:text-sm items-center transition hover:shadow-purple-100 hover:cursor-pointer hover:shadow-lg rounded-lg">
+                    <span>Jun. 21, 2021</span>
+                    <span>Sponsored Post</span>
+                    <button class="border p-1 rounded transition hover:bg-[#ee4e39]/20 w-max">Download</button>
+                </div>
+                <div class="py-1.5 md:p-1.5 md:px-3 text-xs md:text-sm">
+                    <button class="text-[#ee4e39] underline">Load more</button>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h2 class="text-sm font-bold">Payment Method</h2>
+                <small class="text-gray-500">Manage billing information and view receipts</small>
+                <div class="flex justify-between items-center">
+                    <div class="card-info flex items-center gap-x-2">
+                        <img class="w-16 h-10 object-cover p-2 border rounded-lg md:w-20 md:h-12" src="https://cdn-icons-png.flaticon.com/512/5968/5968397.png" alt="">
+                        <span class="text-[0.65em] font-bold md:text-xs">Visa ending in 2255</span>
+                    </div>
+                    <button class="remove-card text-xs border rounded-lg p-1.5 px-2.5 transition hover:bg-[#ee4e39]/20 w-max md:text-sm">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="plan-info text-[0.7rem] text-white bg-[#ee4e39] h-max p-5 w-full flex flex-col items-center gap-y-3 md:gap-y-2 md:w-max md:rounded-lg mt-28">
+            <span>Your plan</span>
+            <div>
+                <h4 class="text-lg font-bold">Pro Annual</h4>
+                <small>Renews on Nov. 2021</small>
+            </div>
+            <button class="cancel-sub-warn border rounded p-1.5 transition hover:bg-white/10">Cancel subscription</button>
+        </div>
+    </div>
+
+            <div class="overlay hidden"></div>
+            <div class="modal-warning hidden z-10 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black w-full h-full text-white flex flex-col gap-y-4 justify-center items-center text-xl opacity-80">
+                <p class="w-full text-center md:w-1/2">
+                    Are you sure you want to cancel your subscription?
+                </p>
+                <div class="flex flex-col gap-2">
+                    <button class="keep-sub text-sm border rounded p-1.5 px-3 bg-green-800 transition hover:bg-green-800/60">Keep Subscription</button>
+                    <button class="cancel-sub-final text-sm border rounded bg-red-700 p-1.5 px-3 transition hover:bg-red-700/60">Unsubscribe</button>
+                </div>
+            </div>
+
+
+
+            <style>.component::after {
+    content: "";
+    height: 110%;
+    width: 200px;
+    position: absolute;
+    background-color: #ee4e39;
+    z-index: -1;
+    top: -5%;
+    left: -5%;
+    border-radius: 20px;
+}
+
+#menu li {
+ line-height: 40px;
+ position: relative;
+}
+
+#menu #hover-animation {
+ position: absolute;
+ height: 2.5rem;
+ width: 5px;
+ top: 7.5rem;
+ left: -10px;
+ z-index: 0;
+ background: #ee4e39;
+ border-radius: 8px;
+ transition: all .3s ease 0s;
+}
+
+#menu li:nth-child(1):hover~#hover-animation, #menu li:nth-child(1):hover~#bg-animation{
+ top: 0rem;
+}
+
+#menu li:nth-child(2):hover~#hover-animation, #menu li:nth-child(2):hover~#bg-animation{
+ top: 2.5rem;
+}
+
+#menu li:nth-child(3):hover~#hover-animation, #menu li:nth-child(3):hover~#bg-animation{
+ top: 5rem;
+}
+
+
+#menu li:nth-child(5):hover~#hover-animation, #menu li:nth-child(5):hover~#bg-animation{
+ top: 10rem;
+}
+
+.logout-arrow {
+    transition: transform 0.3s ease 0s;
+}
+
+#logout-btn:hover .logout-arrow {
+    transform: translateX(2px);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(53, 53, 53, 0.5);
+  backdrop-filter: blur(1.5px);
+  z-index: 1;
+}
+
+@media (max-width:768px) {
+
+    .component::after {
+        display: none;
+    }
+
+    #hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    gap: .4rem;
+}
+
+#hamburger > div {
+    background-color: grey;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: right;
+}
+    #menu #hover-animation {
+    display: none;
+    }
+
+    #menu #bg-animation {
+    display: none;
+    }
+}</style>
+            <script>const lis = document.querySelectorAll('#menu li');
+
+lis.forEach(li => {
+    li.addEventListener('click', () => {
+        textGray();
+        if (li.classList.contains('text-gray-500')) {
+            li.classList.remove('text-gray-500');
+            li.classList.add('text-black', 'font-semibold');
+        }
+    })
+})
+
+function textGray() {
+    lis.forEach(li => {
+        li.classList.remove('text-black', 'font-semibold');
+        li.classList.add('text-gray-500');
+    })
+}
+
+const hamburger = document.getElementById('hamburger');
+const lines = document.querySelectorAll('#hamburger div');
+const mobileModal = document.querySelector('.mobile-modal');
+
+hamburger.addEventListener('click', () => {
+    lines[0].classList.add('-rotate-45');
+    lines[1].classList.add('opacity-0');
+    lines[2].classList.add('rotate-45');
+    setTimeout(() => {
+        mobileModal.classList.remove('hidden');
+        mobileMenu.classList.remove('hidden');
+    }, 600);
+})
+
+const closeMobileBtn = document.querySelector('.close-mobile');
+const mobileMenu = document.getElementById('mobile-menu');
+
+closeMobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    mobileModal.classList.add('hidden');
+
+    lines[0].classList.remove('-rotate-45');
+    lines[1].classList.remove('opacity-0');
+    lines[2].classList.remove('rotate-45');
+})
+
+const removeCard = document.querySelector('.remove-card');
+const cardInfo = document.querySelector('.card-info');
+
+removeCard.addEventListener('click', () => {
+    cardInfo.classList.toggle('hidden');
+    removeCard.innerHTML = removeCard.innerHTML === 'Add Card'? 'Remove' : 'Add Card';
+})
+
+const planInfo = document.querySelector('.plan-info');
+const cancelSubWarn = document.querySelector('.cancel-sub-warn');
+const cancelSubFinal = document.querySelector('.cancel-sub-final');
+const keepSub = document.querySelector('.keep-sub');
+const modalWarning = document.querySelector('.modal-warning');
+const overlay = document.querySelector('.overlay');
+
+cancelSubWarn.addEventListener('click', () => {
+    modalWarning.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+    cancelSubFinal.addEventListener('click', () => {
+        planInfo.classList.add('hidden');
+        modalWarning.classList.add('hidden');
+        overlay.classList.add('hidden');
+    })
+
+    keepSub.addEventListener('click', () => {
+        modalWarning.classList.add('hidden');
+        overlay.classList.add('hidden');
+    })
+})</script>
+        </body>
+</html>

@@ -1,0 +1,377 @@
+body, html {
+    margin: 0px;
+    padding:0px;
+    width: 100%;
+    height: 100%;
+    background-color: #e5e7fc;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    align-items:center;
+
+}
+
+*:focus {
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#main {
+    max-width: 1320px;
+    width: 1320px;
+    margin:auto;
+    position: relative;
+}
+
+.content {
+    width: auto;
+    overflow: hidden;
+    color: #1e1d41;
+    background-color: #fefdff;
+    border-radius: 30px;
+    min-height: 200px;
+    margin: 10px;
+    -webkit-box-shadow: 0px 17px 15px -4px #CECCE9; 
+    box-shadow: 0px 17px 15px -4px #CECCE9;
+    display: flex;
+    z-index: 1;
+}
+
+.content > div.left {
+    width: 20%;
+    background-color: #f7f8ff;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+#mobileMenu {
+    display: none;
+}
+
+.content > div.left img {
+    width: 55px;
+    border-radius: 20px;
+    vertical-align: top;
+    margin-right: 10px;
+    box-sizing: content-box;
+    float: left;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.handle {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.content > div.right { 
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #fefdff;
+    z-index: 2;
+}
+
+.content > div + div { 
+    margin-left: 2%; 
+}
+
+h1 {
+    font-size: 34px;
+    margin: 0px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h2 span {
+    display: block;
+    color: #696981;
+    font-size: 14px;
+}
+
+.left a, .left a:visited {
+    display: block;    
+    text-decoration: none;
+    margin-left: -25px;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #696981;
+    border-left:6px solid transparent;
+    transition: all .3s ease;
+}
+
+.left a:hover {
+    color: #17182d;
+    font-weight: 600;
+    border-left: 6px solid #e43c38;
+}
+
+.left a:hover svg {
+    stroke: #17182d;
+}
+
+.left a.active {
+    color: #17182d;
+    font-weight: 600;
+    border-left: 6px solid #e43c38;
+}
+
+.left a + a {
+    margin-top: 10px;
+}
+
+.left svg {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all .3s ease;
+}
+
+.table:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(206,204,233,0.39); 
+    box-shadow: 5px 5px 15px 5px rgba(206,204,233,0.39);
+}
+
+.tableHeading {
+    font-weight: 500 !important;
+    box-shadow: none;
+}
+
+.table.noShadow:hover {
+    box-shadow: none !important;
+}
+
+.tableHeading:hover {
+    box-shadow: none;
+    cursor:auto
+}
+
+.table > div {
+    flex: 1;
+    font-size: 14px;
+    align-self: center;
+    vertical-align:middle;
+    cursor:context-menu;
+}
+
+.table > div:nth-child(3n) {
+    max-width: 110px;
+}
+
+.table > div:nth-child(3n+1) {
+    max-width: 110px;
+
+}
+
+.table > div:nth-child(3n-1) {
+    padding-left: 10px;
+}
+
+
+.table > div:last-of-type button {
+    padding: 4px 12px;
+    margin: 0px;
+    border-radius: 6px;
+    border:1px solid #c5c3d0;
+    font-size: 16px;
+    background-color: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.table > div:last-of-type button:hover {
+    background-color: #e54339;
+    color: white;
+    border: 1px solid #e54339;
+    cursor: pointer;
+}
+
+#bar {
+    position:absolute; background-color: #e54339; height: 120%; top:-10%; left:-50px; width: 250px; border-radius:50px; z-index: 0;
+}
+
+
+
+.billing {
+    display: flex;
+}
+
+.billing > div {
+    flex-grow: 1;
+
+}
+
+.billing > div:last-of-type {
+    max-width: 30%;
+}
+
+.billing > div + div {
+    margin-left: 4%;
+}
+
+.billing a, .billing a:visited {
+    color: #e54339;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: all .3s ease;
+}
+
+.billing a:hover {
+    text-decoration: none;
+}
+
+
+#plan {
+    width:100%; 
+    background-color: #e54339; 
+    min-height: 100px; 
+    border-radius: 15px; 
+    padding: 30px; 
+    color: white;
+    font-size: 16px;
+}
+
+#plan .title {
+    font-size: 24px;
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#plan button {
+    border:1px solid #fa9c92;
+    padding: 10px;
+    color: #feefe5;
+    background-color: #e54339;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#plan button:hover {
+    background-color: #fa9c92;
+    color: #e54339;
+}
+@media only screen and (max-width: 712px) {
+    .billing {
+        display: block;
+    }
+
+    .billing > div {
+        flex:none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .billing > div:last-of-type {
+        max-width: 100%;
+    }
+
+    .billing > div + div {
+        margin-left: 0;
+        margin-top: 4%;
+    }
+    
+
+}
+@media only screen and (max-width: 970px) {
+    .content { 
+        display: block;
+    }
+
+    .content div.left {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .left a, .left a:visited {
+        margin-left: 0px;
+        display: inline-block;
+        border: 0px;
+    }
+
+
+    .left a:hover {
+        border: 0px;
+        text-decoration: underline;
+    }
+
+    .left a.active {
+        color: #17182d;
+        font-weight: 600;
+        border-left: 0px solid #e43c38;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.show {
+        display: block;
+        animation: slide-down 0.5s ease forwards;
+      }
+      
+      @keyframes slide-down {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+    .content div.right {
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    #bar {
+        display: none;
+    }
+
+
+    #mobileMenu {
+        position:absolute; 
+        right: 0px; 
+        top:0px;
+        display: block;
+        cursor: pointer;
+    }
+}
