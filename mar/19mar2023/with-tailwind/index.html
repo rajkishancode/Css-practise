@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>donate_card</title>
+</head>
+<body class="bg-[#bbcbef] relative flex justify-center items-center min-h-screen w-auto" data-new-gr-c-s-check-loaded="14.1101.0" data-gr-ext-installed="">
+
+
+    <div class="absolute bg-[#ddd3ee] rounded-full h-2/5 w-2/5 z-10 right-32 top-10 h-16 blur-3xl"></div>
+
+    <button id="wantDonate" class="px-10 py-4 bg-[#ec1b6c] text-md text-white rounded-md uppercase tracking-wide hidden">Do you want Donate?</button>
+
+    <div id="donateDiv" class="z-50 flex relative bg-white text-[#181028] pt-0 pl-0 p-8 space-y-2 shadow-lg rounded-xl max-w-auto md:max-w-auto ">
+        <div class="relative  w-64 h-80 pl-0 z-0 ">
+            <img class="rounded-tl-xl" src="https://lh3.googleusercontent.com/XdkPR9epbJQA1GQUYIWJBkGRDLc383tykieuZMVVZVEgo6189J-D5l2iVwAry3RirAp1JqHxN-wSc_rCFwzbf6FGgPqrd1SZM7CFEIPc" alt="">
+        </div>
+        <div class=" bg-white text-[#181028] pl-0 p-8 max-w-auto md:max-w-auto ">
+            <p class="text-3xl mt-8 mb-5">Your gift changes lifes</p>
+            <p class="text-sm w-2/3 pr-5 text-[#6f6f7c]">Pledge your support today so that we can help more women in
+                2019.
+            </p>
+
+            <div class="flex mt-16 mb-10">
+                <button class="bg-[#f6f8fe]  ml-0 mx-2 px-10 py-4 rounded-lg text-[#bfbae3] font-semibold hover:text-[#030303] focus:text-[#030303] hover:bg-white focus:border-2 focus:border-[#8895f2]">
+                        $5
+                    </button>
+                <button class="bg-[#f6f8fe]  mx-2 px-10 py-4 rounded-lg text-[#bfbae3] font-semibold hover:text-[#030303] focus:text-[#030303] hover:bg-white focus:border-2 focus:border-[#8895f2]">
+                        $10
+                    </button>
+                <button class="bg-[#f6f8fe]  mx-2 px-10 py-4 rounded-lg text-[#bfbae3] font-semibold hover:text-[#030303] focus:text-[#030303] hover:bg-white focus:border-2 focus:border-[#8895f2]">
+                        $15
+                    </button>
+                <div class="flex mx-2 ">
+                    <span class="inline-flex items-center px-3 text-sm text-[#bfbae3] bg-[#f6f8fe] rounded-l-md ">
+                            $
+                        </span>
+                    <input type="text" class="rounded-none rounded-r-lg bg-transparent  border border-[#ededed] text-[#ededed] text-sm p-2 w-32
+                                                                                                                                                                            focus:border-[#8895f2] text-[#bfbae3] placeholder:text-center placeholder:text-[#bfbae3] focus:text-[#030303]" placeholder="Amount">
+                </div>
+            </div>
+
+            <button class="px-10 py-4 bg-[#ec1b6c] text-md text-white rounded-md uppercase tracking-wide">Donate</button>
+        </div>
+
+        <button id="colse-btn" class="rounded-full bg-[#f6f8fe] w-10 h-10 flex justify-center items-center absolute top-0 right-0 mr-3"><img class="w-3 h-3" src="https://lh3.googleusercontent.com/mRclOkumCk8SlOIkFWb60th5rBRhWySrDVjdytfb-0Y3i1XXgbwJ6STw8jWDjNeoYfAKwKsCbMGcobeu2xObzEc5D9JBgOHTQhUS8ipF0Q" alt=""></button>
+
+    </div>
+
+    <div class="absolute bg-[#ddd3ee] rounded-full h-32 w-32 z-10 bottom-20 left-80  h-16 blur-2xl"></div>
+
+
+
+
+            <style>/* Add CSS here */
+.hidden {
+  display: none;
+}
+.block{ 
+    display: block;
+}</style>
+            <script>// Add JavaScript code here
+const closeBtn = document.getElementById('colse-btn');
+const donateDiv = document.getElementById('donateDiv');
+const wantDonate = document.getElementById('wantDonate');
+
+closeBtn.addEventListener('click', () => {
+    donateDiv.classList.add('hidden');
+    wantDonate.classList.remove('hidden');
+});
+
+
+wantDonate.addEventListener('click', () => {
+    wantDonate.classList.add('hidden');
+    donateDiv.classList.remove('hidden');
+});
+</script>
+        </body>
+</html>
