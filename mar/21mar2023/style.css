@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #EFF3FF;
+    font-family: 'Noto Serif Lao', serif;
+}
+
+
+.grid-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+}
+
+.item {
+    padding: 2rem 2.5rem;
+    font-size: .7rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f2effb;
+    font-weight: 500;
+    color: #3b3535;
+    text-align: left;
+}
+.item.no-bottom {
+    border-bottom: none;
+}
+
+.item-border {
+    border-right: 1px solid #f2effb;
+    border-bottom: 1px solid #f2effb;
+    border-left: 1px solid #f2effb;
+}
+
+.search-bar {
+    border: 1px solid #EAEAF7;
+    display: flex;
+    border-radius: 100px;
+    width: 70%;
+    padding: .9rem;
+    gap: 10px;
+    color: #8F8E93;
+}
+
+.search-bar>svg {
+    color: #ACAEAD;
+    margin-left: 10px;
+}
+
+.container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    gap: 20px;
+    /* margin: 2rem 6rem; */
+}
+
