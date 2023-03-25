@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+*{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root{
+    
+  /*Colors*/
+  --color-one: #FFC884;
+  --color-two: #B6B3FF;
+  --color-three: #FFB5BF;
+  --color-one-light: #FFF6EE;
+  --color-two-light: #FCFBFF;
+  --color-three-light: #FFF2F2;
+}
+
+h2{
+    color: #1A2551;
+}
+body{
+    background-color: #FFFEFA;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container  {
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    width: 500px;
+    border-radius: .4rem;
+box-shadow: 2px 2px 25px 6px rgba(0, 0, 0, 0.2);}
+
+.accordion{
+    min-height: 100px;
+    border-radius: .4rem;
+  padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.accordion-show{
+display: flex;
+justify-content: center;
+margin-left: 1.5rem;
+flex-direction: column;
+
+}
+.accordion-top{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-left: 1.5rem;
+}
+
+.accordion-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-left: 2.5rem;
+}
+
+.accordion-top > svg{
+height: 40px;
+width: 40px;
+stroke-width: 1px;
+}
+
+.color-line{
+    width: 6px;
+    min-height: 100px;
+    border-radius: .4rem 0 0 .4rem;
+    
+}
+
+.accordion-1{
+    border-left: 6px solid var(--color-one);
+    background-color: var(--color-one-light);
+}
+.accordion-2{
+    border-left: 6px solid var(--color-two);
+    background-color: var(--color-two-light);
+}
+.accordion-3{
+    border-left: 6px solid var(--color-three);
+    background-color: var(--color-three-light);
+}
