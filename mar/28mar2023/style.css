@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F5F3FF;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #28264D;
+    gap: 40px;
+}
+
+
+.pricing-card{
+    width: 300px;
+    background-color: #fff;
+    padding: 2rem;
+    min-height: 500px;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 8px 8px #DDD5EC;
+  
+}
+
+button{
+    border-radius: 100px;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #212843;
+    font-size: 1rem;
+}
+
+.pricing{
+    font-size: 2rem;
+    font-weight: 600;
+    
+}
+
+.features > p{
+display: flex;
+gap: 6px;
+}
+
+.pro{
+    background-color:#212843;
+    color: #fff;
+}
+
+.pro > button{
+    background-color: #fff;
+    color: #212843;
+}
+
+
+@media  (max-width:600px) {
+    body{
+    display:flex;
+    flex-direction:column;
+  height: fit-content;
+  margin: 1rem;
+  
+    
+    }
+    .pricing-card{
+      align-items: center;
+    
+    }
+
+   
+}
