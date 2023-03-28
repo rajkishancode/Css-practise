@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1A193B;
+    font-family: 'Alkatra', cursive;
+    line-height: 18px;
+    color: grey;
+    margin: 3rem;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    height: inherit;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: #EDEDFD;
+    padding: 1rem;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: #2D2B4E;
+}
+
+.left-text{
+    display: flex;
+}
+.left-bottom{
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+}
+.left-bottom-box{
+    background-color: #fff;
+    height: 200px;
+
+}
+
+.white-bars{
+    display: flex;
+    gap: 5px;
+}
+
+.bar-1{
+    width: 60%;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 100px;
+}
+.bar-2{
+    width: 30%;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+.end-bar{
+ width: 40%;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+.right{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+justify-content: space-between;
+}
+
+
+h2{
+    color:#fff ;
+}
+.right > input{
+    border: none;
+    background-color: inherit;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    
+}
+
+ .card-number{
+  border: none;
+    background-color: inherit;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    width: 90%;    
+}
+
+svg{
+    color: grey;
+}
+
+.card-info > input{
+    border: none;
+    background-color: inherit;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    width: 30%;
+}
+
+.card-info{
+    display: flex;
+}
+
+button{
+    background-color: #46B2FF;
+    border: none;
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: .4rem;
+    letter-spacing: 2px;
+
+}
+
+.paypal-img{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container::before{
+    content: url("https://i.postimg.cc/NjLCCLSS/Screenshot-2023-03-28-111904.png");
+    position: absolute;
+    right: 200px;
+    top: 5px;
+    display: block;
+}
