@@ -14,6 +14,7 @@ body {
     height: 100vh;
     color: #fff;
     font-family: 'Poppins', sans-serif;
+    background-color: #36306D;
 
 }
 
@@ -22,6 +23,7 @@ body {
     background-color: #5B4585;
     width: 800px;
     display: flex;
+    position: relative;
 }
 
 .section-one {
@@ -40,19 +42,6 @@ body {
 }
 
 
-
-.item-border {
-    border-right: 1px solid #f2effb;
-    border-bottom: 1px solid #f2effb;
-
-}
-
-.item-border-2 {
-    border-top: 1px solid #f2effb;
-    border-left: 1px solid #f2effb;
-
-}
-
 .p {
     padding-left: 1rem;
 }
@@ -62,4 +51,34 @@ button {
     background-color: #634E89;
     color: #fff;
     padding: 1.2rem;
+}
+
+div>p:nth-child(1) {
+    font-size: 3rem;
+}
+
+div>p:nth-child(2) {
+    font-weight: 100;
+    font-size: .8rem;
+}
+
+.container::before {
+    content: "";
+    background: #312c5a;
+    position: absolute;
+    z-index: -1;
+    inset: -20px 40px -20px 40px;
+}
+
+.stat:first-child {
+    border-right: 2px solid #685c9e;
+    border-bottom: 2px solid #685c9e;
+}
+
+.stat:nth-child(2) {
+    border-bottom: 2px solid #685c9e;
+}
+
+.stat:nth-child(3) {
+    border-right: 2px solid #685c9e;
 }
