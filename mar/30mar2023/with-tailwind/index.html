@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+   <section class="w-full h-full absolute  grid grid-cols-4 grid-rows-3">
+        <div class="bg-[#6651d5] col-span-2"></div>
+        <div class="bg-[#ff6464] col-span-2"></div>
+        <div class="bg-[#ffa664] col-span-3 row-span-2"></div>
+        <div class="bg-[#ff6464] row-span-2"></div>
+
+        
+        <div class="absolute w-[20rem]  sm:w-[30rem] md:w-[46rem] rounded-xl p-12 bg-white top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+
+    
+        <div class=" md:w-[40rem] h-[20rem]   overflow-hidden relative">
+            <div class="absolute top-0 w-full h-[20rem] flex items-center justify-center transition-all duration-500" id="slide" style="transform: translateX(0%);">
+                <div class="w-[30rem]">
+    
+                    <blockquote class="text-center text-xs sm:text-base leading-relaxed">
+                      "This is simply unblievable! I wish  I would have thought of it first.
+                      Courses should be nominated for service of the year. it's the perfect solution for our business."
+                    </blockquote>
+                    <div class="mx-auto flex flex-col items-center w-fit gap-2 mt-6">
+                        <img src="https://shismqklzntzxworibfn.supabase.co/storage/v1/object/public/avatars/b31bde00-b6db-48e5-9798-1c0f053360d4.jpg" class="w-12 h-12 rounded-full object-cover" alt="user">
+                        <span class="text-xs sm:text-sm font-medium">Florin Pop</span>
+                    </div>
+    
+                </div>
+            </div>
+    
+    
+            <div class="absolute top-0 w-full h-[20rem] flex items-center justify-center transition-all duration-500" id="slide" style="transform: translateX(100%);">
+                <div class="w-[30rem]">
+    
+                    <blockquote class="text-center text-xs sm:text-base leading-relaxed">
+                        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt iusto fugiat aliquam recusandae. Impedit nihil eligendior inventore nostrum sit?."
+                    </blockquote>
+                    <div class="mx-auto flex flex-col items-center w-fit gap-2 mt-6">
+                        <img src="https://shismqklzntzxworibfn.supabase.co/storage/v1/object/public/avatars/6d9761f7-21fd-49dc-b8d6-f7e17c2b6234.jpg" class="w-12 h-12 rounded-full object-cover" alt="user">
+                        <span class="text-xs sm:text-sm font-medium">
+            Adrian Lică</span>
+                    </div>
+    
+    
+    
+                </div>
+            </div>
+    
+            <div class="absolute top-0 w-full h-[20rem] flex items-center justify-center transition-all duration-500" id="slide" style="transform: translateX(200%);">
+                <div class="w-[30rem]">
+    
+                    <blockquote class="text-center text-xs sm:text-base leading-relaxed">
+                 "  e fugit nesciunt iste, quasi vel. explicabo quasi reprehenderit labore voluptatem a vitae. Ab eaque porro quod."
+                    </blockquote>
+                    <div class="mx-auto flex flex-col items-center w-fit gap-2 mt-6">
+                        <img src="https://shismqklzntzxworibfn.supabase.co/storage/v1/object/public/avatars/60d928dd-fcfe-45d4-a7c2-75d25989a352.jpg" class="w-12 h-12 rounded-full object-cover" alt="user">
+                        <span class="text-xs sm:text-sm font-medium">Ansar Sadat</span>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="absolute top-0 w-full h-[20rem] flex items-center justify-center transition-all duration-500" id="slide" style="transform: translateX(300%);">
+                <div class="w-[30rem]">
+    
+                <blockquote class="text-center text-xs sm:text-base leading-relaxed">
+                    "This is simply unblievable! I wish I would have thought of it first.
+                    Courses should be nominated for service of the year. it's the perfect solution for our business."
+                </blockquote>
+                <div class="mx-auto flex flex-col items-center w-fit gap-2 mt-6">
+                    <img src="https://unsplash.com/photos/WNoLnJo7tS8/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8dXNlcnxlbnwwfHx8fDE2ODAxNTE1ODc&amp;force=true&amp;w=1920" class="w-12 h-12 rounded-full object-cover" alt="user">
+                    <span class="text-xs sm:text-sm font-medium">Olivia Jackson</span>
+                </div>
+    
+                </div>
+            </div>
+    
+            <!--  -->
+    
+    
+    
+            <div class="dots  items-center"><button class="dots__dot dots__dot--active" data-slide="0"></button><button class="dots__dot" data-slide="1"></button><button class="dots__dot" data-slide="2"></button><button class="dots__dot" data-slide="3"></button></div>
+        
+        
+   
+    </div>
+    </div>
+    
+      
+
+
+
+
+            <style>
+
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  transition: transform 1s;
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+ 
+}
+
+</style>
+            <script>// Slider
+const slider = function () {
+    const slides = document.querySelectorAll('#slide');
+  
+    const dotContainer = document.querySelector('.dots');
+
+    let curSlide = 0;
+    const maxSlide = slides.length;
+
+    // Functions
+    const createDots = function () {
+        slides.forEach(function (_, i) {
+            dotContainer.insertAdjacentHTML(
+                'beforeend',
+                `<button class="dots__dot" data-slide="${i}"></button>`
+            );
+        });
+    };
+
+    const activateDot = function (slide) {
+        document
+            .querySelectorAll('.dots__dot')
+            .forEach(dot => dot.classList.remove('dots__dot--active'));
+
+        document
+            .querySelector(`.dots__dot[data-slide="${slide}"]`)
+            .classList.add('dots__dot--active');
+    };
+
+    const goToSlide = function (slide) {
+        slides.forEach(
+            (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+        );
+    };
+
+    // Next slide
+    const nextSlide = function () {
+        if (curSlide === maxSlide - 1) {
+            curSlide = 0;
+        } else {
+            curSlide++;
+        }
+
+        goToSlide(curSlide);
+        activateDot(curSlide);
+    };
+
+    const prevSlide = function () {
+        if (curSlide === 0) {
+            curSlide = maxSlide - 1;
+        } else {
+            curSlide--;
+        }
+        goToSlide(curSlide);
+        activateDot(curSlide);
+    };
+
+    const init = function () {
+        goToSlide(0);
+        createDots();
+
+        activateDot(0);
+    };
+    init();
+
+    // Event handlers
+  
+
+    dotContainer.addEventListener('click', function (e) {
+        if (e.target.classList.contains('dots__dot')) {
+            const { slide } = e.target.dataset;
+            goToSlide(slide);
+            activateDot(slide);
+        }
+    });
+};
+slider();</script>
+        </section>
+</body>
+
+</html>

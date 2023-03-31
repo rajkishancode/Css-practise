@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testimonials</title>
+</head>
+
+<body>
+
+    <div class="bg">
+        <div class="purple"></div>
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="orange"></div>
+    </div>
+
+    <div class="container">
+
+        <div class="content">
+
+            <p>"This is simply unbelievable! I wish I would have thought of it first. Courses should be nominated for
+                service of the year. It's the perfect solution for our business"</p>
+
+            <div class="user">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80">
+                </div>
+                <p>Olivia Jackson</p>
+            </div>
+
+            <div class="dots">
+                <div class="dot active">•</div>
+                <div class="dot">•</div>
+                <div class="dot">•</div>
+                <div class="dot">•</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+   
+    <script>
+        const testimony = document.querySelector('.content p');
+        const userImage = document.querySelector('img');
+        const userName = document.querySelector('.user p');
+        const dots = document.querySelectorAll('.dot');
+
+        const testimonies = [{
+                testimony: '"This is simply unbelievable! I wish I would have thought of it first. Courses should be nominated for service of the year. It\'s the perfect solution for our business"',
+                image: 'https://xsgames.co/randomusers/assets/avatars/female/74.jpg',
+                name: 'Olivia Jackson'
+            },
+            {
+                testimony: '"I can\'t recommend this course enough! As someone who was new to the subject matter, I found the content to be engaging and easy to understand. The instructor was knowledgeable and approachable, and always willing to answer my questions."',
+                image: 'https://xsgames.co/randomusers/assets/avatars/male/5.jpg',
+                name: 'Steve Boz'
+            },
+            {
+                testimony: '"I\'ve taken a lot of courses over the years, but this one really stood out to me. The material was challenging, but the instructor did an excellent job of breaking it down into manageable pieces. I appreciated the hands-on approach"',
+                image: 'https://xsgames.co/randomusers/assets/avatars/female/22.jpg',
+                name: 'Taina Saak'
+            },
+            {
+                testimony: '"This course exceeded my expectations in every way. The content was not only informative, but also incredibly engaging. The instructor was passionate about the subject matter and clearly invested in our success."',
+                image: 'https://xsgames.co/randomusers/assets/avatars/male/18.jpg',
+                name: 'Winston Marlett'
+            }
+        ];
+
+        let i = 0;
+
+        document.body.addEventListener('keydown', (e) => {
+
+            switch (e.key) {
+
+                case 'ArrowRight':
+                    i++;
+                    if (i === 4) {
+                        i = 0;
+                    }
+                    updateTestimony(i);
+                    break;
+
+                case 'ArrowLeft':
+                    i--;
+                    if (i === -1) {
+                        i = 3;
+                    }
+                    updateTestimony(i);
+                    break;
+
+            }
+
+        });
+
+        let updateTestimony = (index) => {
+            testimony.textContent = testimonies[index].testimony;
+            userImage.src = testimonies[index].image;
+            userName.textContent = testimonies[index].name;
+            updateDot(index);
+        }
+
+        let updateDot = (index) => {
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
