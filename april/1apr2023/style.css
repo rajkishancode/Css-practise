@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    background-color: #F6F5F8;
+    color: #282C4F;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 10rem;
+}
+
+.main-container>* {
+
+    text-align: center;
+}
+
+.main-container>h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #282C4F;
+    margin-bottom: 1rem;
+}
+
+.main-container>p {
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    color: #888991;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 4rem 5rem;
+    position: relative;
+}
+
+.cards-container::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 5px;
+    background-color: #888;
+}
+
+.card {
+    width: 25rem;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8rem;
+    box-shadow: 2px 1px 10px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+    position: relative;
+}
+
+.card-1::before,
+.card-3::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #fff;
+}
+
+.card-2::before,
+.card-4::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+}
+
+.card-1::after,
+.card-3::after {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: #888991;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translate(-200%, -50%);
+}
+
+.card-2::after,
+.card-4::after {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: #888991;
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    transform: translate(230%, -50%);
+}
+
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header .tag {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.2rem 0.3rem;
+    border-radius: 3px;
+    color: #eee;
+}
+
+.card-1 .tag,
+.card-1 .more-info {
+    background-color: #E8F3EB;
+    color: #271E1D;
+}
+
+.card-2 .tag,
+.card-2 .more-info {
+    background-color: #FFF4EF;
+    color: #271E1D;
+}
+
+.card-3 .tag,
+.card-3 .more-info {
+    background-color: #FDF4E4;
+    color: #271E1D;
+}
+
+.card-4 .tag,
+.card-4 .more-info {
+    background-color: #00D0FF;
+}
+
+.card-header .date {
+    color: #888;
+    font-weight: 700;
+}
+
+.card .description {
+    font-size: 1.2rem;
+    width: 70%;
+    margin-bottom: 1.5rem;
+}
+
+.card .links {
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s linear;
+}
+
+.card .links:hover {
+    color: rgb(0, 202, 165);
+}
+
+.card-left>* {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.card-right>* {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.card-1,
+.card-3 {
+    grid-column: 2 / 3;
+}
+
+.card-2,
+.card-4 {
+    grid-column: 1 / 2;
+}
+
+.card-3 {
+    grid-row: 3 / 4;
+}
+
+.card-4 {
+    grid-row: 4 / 5;
+}
+
+.more-info {
+    color: #eee;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.hide {
+    display: none;
+}
