@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 *{
@@ -7,4 +7,81 @@
     margin: 0;
 }
 
+h2{
+    color: #A07FEA;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FCF6ED;
+    font-family: 'Montserrat', sans-serif;
+    margin: 2rem;
+}
+.feedback{
+    width: 100%;
+}
+textarea {
+  width: inherit;
+  height: 100px;
+  margin-right: 0;
+}
 
+.container > p{
+    color: #94908A;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+li{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 8px;
+
+    background-color: #F5F9FA;
+    color: #B1B3B4;
+}
+.card{
+    background-color: #fff;
+    padding: 2rem;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.container{
+    text-align: center;
+    flex-direction: column;
+ display: flex;
+ row-gap: 20px;
+
+}
+
+.feedback > p {
+    display: flex;       
+    margin-bottom: 20px;
+}
+
+button{
+    border: none;
+    color: #CF8543;
+    background-color: inherit;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+button:hover{
+    filter: brightness(1.2);
+}
+
+li:hover{
+    color: #fff;
+    background-color: #e68a02;
+}
