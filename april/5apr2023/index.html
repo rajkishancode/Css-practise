@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>email_settings</title>
 </head>
+
 <body>
-    
+
+    <div class="container">
+        <h2>Get email updates when:</h2>
+
+        <section class="inputs">
+            <div class="input-box">
+                <input type="checkbox" id="email-input">
+                <label for="email-updates"> You're the owner</label>
+            </div>
+            <div class="input-box">
+                <input type="checkbox" id="email-input">
+                <label for="email-updates"> You're the assignee</label>
+            </div>
+            <div class="input-box">
+                <input type="checkbox" id="email-input" checked>
+                <label for="email-updates"> You're the reporter</label>
+            </div>
+            <div class="input-box">
+                <input type="checkbox" id="email-input" checked>
+                <label for="email-updates"> Someone mentions you</label>
+            </div>
+            <div class="input-box">
+                <input type="checkbox" id="email-input">
+                <label for="email-updates"> Someone is assigning you</label>
+            </div>
+
+        </section>
+        <div class="notification">
+            <p>You may also receive other email notifications
+                your admin configured. <p>Learn more</p>
+
+            </p>
+        </div>
+
+        <h3>Email format</h3>
+
+        <div class="radio-input">
+            <input type="radio" checked>
+            <label for="">HTML</label>
+        </div>
+        <div class="radio-input">
+            <input type="radio">
+            <label for="">Text</label>
+        </div>
+
+        <button>Save</button>
+
+    </div>
 </body>
+
 </html>

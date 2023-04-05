@@ -1,10 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 
-
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+body {
+    background-color: #1E1E2E;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.container::before {
+    content: "";
+    background: #191929;
+    position: absolute;
+    z-index: -1;
+    inset: 120px -60px -20px -60px;
+    border-radius: 15px;
+}
+
+
+.container {
+    margin-top: 10rem;
+    position: relative;
+    padding: 2rem;
+    background-color: #252437;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 400px;
+    border-radius: 15px;
+
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    color: #85868F;
+}
+
+.input-box>input {
+    accent-color: #716BF4;
+
+    width: 30px;
+    height: 30px;
+
+    outline: 1px solid #5956a1;
+
+
+
+}
+
+
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+label {
+    font-size: .9rem;
+}
+
+.notification {
+    color: #9797A7;
+    background-color: #171722;
+    font-size: .8rem;
+    padding: 2rem;
+}
+
+.notification>p:nth-child(2) {
+    color: #6B67D3;
+    text-decoration: underline;
+}
+
+.radio-input {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+
+}
+
+.radio-input>input {
+    width: 30px;
+    height: 30px;
+    accent-color: #716BF4;
+}
+
+button {
+    border: none;
+    background-color: #716BF4;
+    padding: 1.2rem;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: 1.2rem;
+}
