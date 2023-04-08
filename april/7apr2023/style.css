@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 
 *{
@@ -11,5 +12,65 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: #EEECF4;
+    font-family: "Poppins", sans-serif;
     
+}
+h2,h4{
+    color:#2C284E ;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: .6rem;
+    
+}
+.button-group{
+    display: flex;
+    gap: 10px;
+}
+button{
+    border: none;
+    background-color: #675AFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+button > svg{
+    margin-right: 5px;
+}
+
+p> span{
+    text-decoration: underline;
+}
+
+.footer{
+      display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    
+}
+.footer > div {
+  border: 1px solid #D0CEDF;
+    background-color: #FCFBFF;
+    padding: 2rem;
+    border-radius: .4rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer > div >p{
+    display: flex;
+    color: #6860D7;
 }
