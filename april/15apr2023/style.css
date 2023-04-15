@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #F8F9FD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #A2A1A8;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    color: #111727;
+}
+
+.container {
+    background-color: #FFFFFF;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+
+
+}
+
+.bread-crumbs {
+    display: flex;
+}
+
+.bread-crumbs>div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+    color: #5C5C67;
+}
+
+.bread-crumbs>div>svg {
+    height: 20px;
+}
+
+.selected>div {
+    margin: 12px 0px 12px 20px;
+}
+
+
+
+
+
+.container>div:nth-child(3) {
+    color: red;
+}
+
+.highlight>div {
+    color: #6675CD;
+}
