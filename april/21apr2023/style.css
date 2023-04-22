@@ -1,7 +1,77 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F7FBFF;
 
+}
+
+
+.card {
+    width: 400px;
+    background: linear-gradient(90deg, #639CFD 40%, #8A7AED);
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: .8rem;
+    text-align: center;
+    padding-block-end: 140px;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+    border-radius: 100px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    padding: 1px 10px;
+}
+
+a>span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #97D43E;
+    border-radius: 50%;
+}
+
+button {
+    border: none;
+    background: linear-gradient(90deg, #639CFD 40%, #8A7AED);
+    padding: 15px 40px;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+.chat-card {
+    margin: 0 auto;
+    margin-top: -100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 2rem;
+    gap: 20px;
+    align-items: center;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 8px;
+}
