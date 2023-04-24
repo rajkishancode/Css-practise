@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&family=Lato:wght@100;300;400;700;900&family=Merriweather:wght@300;400;700;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+
+    font-family: 'Lato', sans-serif;
+    background-color: #EAEDFA;
+}
+
+main {
+    background-color: #ffffff;
+    text-align: center;
+    margin: 30px;
+    width: 800px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 1rem;
+
+}
+
+article {
+    padding: 1rem;
+    height: 250px;
+    width: 250px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date>p {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+article>p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.footer>div>p {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+article:nth-of-type(even) {
+    background-color: #EAEDFA;
+    color: #373850;
+}
+
+article:nth-of-type(odd) {
+    background-color: #554CAC;
+    color: #fff;
+}
+
+button {
+    background-color: #37335D;
+    color: #cccccc;
+    padding: 1.5rem;
+    border: none;
+    width: 90%;
+    font-size: .7rem;
+    margin: 10px;
+
+}
+
+article:hover {
+    transform: scale(.9);
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+@media screen and (max-width:600px) {
+    section {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    button {
+        width: 30%;
+        margin-left: -500px;
+    }
+
+
+}
