@@ -1,11 +1,154 @@
+/* Add CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 
 
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+main {
+    background-color: #FBFDFF;
+    color: #111438;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+
+}
+
+.search {
+    border: 1px solid #cccccc;
+    border-radius: 100px;
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    margin: 0 auto;
+}
+
+.search>svg {
+    color: #9897B7;
+}
+
+input {
+    border: none;
+    width: 100%;
+    margin-left: 20px;
+    background-color: inherit;
+}
+
+.search>svg:hover {
+    transform: scale(1.4);
+}
+
+.container>h3 {
+    text-align: left;
+}
+
+
+
+ul {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    gap: 15px;
+
+
+}
+
+img {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+li {
+    display: flex;
+    background-color: #FFFFFF;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2rem 2rem 1rem;
+
+
+}
+
+section>p:nth-of-type(1) {
+    color: #8B8A8D;
+    font-size: .8rem;
+}
+
+
+section>p:nth-of-type(2) {
+    font-size: .9rem;
+}
+
+button {
+    border: none;
+    background-color: #141A2F;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+li>section {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.cta {
+
+    justify-content: space-between;
+    display: flex;
+    margin-top: auto;
+
+}
+
+
+
+
+li:hover {
+    transform: scale(0.9);
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+input:focus {
+    outline: none;
+}
+
+@media screen and (max-width:800px) {
+    ul {
+
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    ul {
+
+        grid-template-columns: repeat(1, minmax(140px, 1fr));
+        gap: 10px;
+    }
+}
