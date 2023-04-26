@@ -1,10 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 
-*{
-    box-sizing:border-box;
-    padding:0;
-    margin:0;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #F2F3F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+main {
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+li>img {
+    height: 70px;
+    width: 90px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.user-img {
+    border: 1px solid #cccccc;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 120px;
+    height: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: #4C4A54;
+    font-size: .8rem;
+    color: #000;
+    font-weight: normal;
+}
+
+.toggle {
+    background-color: #F2F3F7;
+    padding: .6rem;
+    border-radius: 100px;
+    /* width: 250px; */
+    border: 1px solid #cccccc;
+}
+
+div>a:nth-of-type(1) {
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    padding: .4rem;
+
+    margin-right: 30px;
+}
+
+div>a:nth-of-type(1):hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.user-img>img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 
+
+h3 {
+    font-size: 2rem;
+}
+
+button {
+    background-color: #0E1127;
+    border: none;
+    font-weight: bold;
+    color: #cccccc;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+}
+
+button:hover {
+    transform: scale(1.2);
+
+}
+
+li:hover {
+    transform: scale(1.2);
+}
