@@ -1,11 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
-    
+body {
+    background-color: #F1F5F9;
+    color: #110E22;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+
+}
+
+p {
+    text-align: center;
+}
+
+.card {
+    /* margin: 40px; */
+    background-color: #FFFFFF;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 60%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+
+}
+
+section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+section>button {
+    background-color: #3D9FFF;
+    border: none;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: bold;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgb(104, 184, 236);
+}
+
+input {
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+input::placeholder {
+    color: #131215;
+}
+
+section {
+    padding: 1rem;
+}
+
+div {
+    display: flex;
+
+}
+
+div>input {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    margin-top: 0;
+
+    display: block;
+
+}
+
+div>label {
+    font-size: 14px;
+    font-weight: 600;
+
 }
