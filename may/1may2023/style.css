@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  padding: 3em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5em;
+  background: #f7f6f9;
+  height: 100%;
+  isolation: isolate;
+}
+
+.container > img {
+  height: 70px;
+  mix-blend-mode: darken;
+  margin-top: auto;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  background: #ffffff;
+  padding: 5em;
+  box-shadow: 0 0 10px rgba(0 0 0 / .25);
+  border-radius: 3px;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  inset: -10px -20px -10px -15px;
+  background: #d8d9eb;
+  z-index: -1;
+  border-radius: 150px 200px 100px 100px;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  inset: -20px -30px -20px -25px;
+  background: #eef0f6;
+  z-index: -2;
+  border-radius: 120px 200px 100px 100px;
+}
+
+.box span {
+  font-size: 6.5rem;
+  font-weight: 600;
+  color: #d6d5e9;
+}
+
+.box p {
+  color: #757398;
+}
+
+.container > p {
+  width: 90%;
+  max-width: 40ch;
+  color: #757398;
+  text-align: center;
+}
+
+.container > button {
+  color: #757398;
+  background: #ffffff;
+  padding: .75em 1.25em;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0 0 0 / .25);
+  margin-bottom: auto;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #ffffff00;
+  transition: all .3s;
+}
+
+.container > button:hover {
+  box-shadow: 0 10px 15px rgba(0 0 0 / .25);
+}
+
+@media (width <= 500px) {
+  body {
+    padding: 2em;
+  }
+
+  .box {
+    width: 75%;
+  }
+}
+
