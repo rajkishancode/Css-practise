@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+
+    background-color: #4A91E2;
+}
+
+main {
+    background-color: #FFFFFF;
+    width: 500px;
+    padding: 1rem;
+    color: #233543;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.search-bar {
+    background-color: #f3eded;
+    padding: 0.8rem;
+    display: flex;
+    gap: 10px;
+
+}
+
+.search-bar>svg {
+    color: #4A91E2;
+
+}
+
+input {
+    border: none;
+    background-color: inherit;
+    outline: none;
+    width: 80%;
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.feather{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color:#4A91E2 ;
+    bottom: 30px;
+    right: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 6px 25px 4px #4A91E2 ;
+
+}
+
+.feather > svg{
+    color: #fff;
+    height: 50px;
+    width: 50px;
+
+}
