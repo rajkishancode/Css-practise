@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> sign_in_form_2 </title>
+</head>
+
+    <body>
+        
+    <div class="card w-[1224px] min-h-[400px] bg-white rounded-xl flex justify-center items-center relative ml-2 mr-2">
+        <form class="min-[360px]:w-[360px] w-full mb-32 mt-32 pt-20 pb-20 px-2">
+            <h1 class="text-center mb-16 font-semibold text-lg">Sign into your account</h1>
+            <span class="block text-sm font-semibold">Username or Email</span>
+            <input oninput="checkFields()" type="text" id="username" class="w-full outline-[#328bf3] border-2 border-[#f4f5f7] rounded-md p-3 mt-2 mb-4 placeholder:font-semibold" placeholder="Your email address">
+
+            <span class="block text-sm font-semibold">Password</span>
+            <input oninput="checkFields()" type="password" id="password" class="w-full outline-[#328bf3] border-2 border-[#f4f5f7] rounded-md p-3 mt-2 mb-4 placeholder:font-semibold" placeholder="Enter your password">
+            <ul class="flex items-start justify-center">
+                <li class="grow">
+                    <label for="Remember" class="flex justify-start items-center gap-2">
+                        <input type="checkbox" name="Remember" id="Remember">
+                        <span class="font-semibold text-sm hover:underline ">Remember Me</span>
+                    </label>
+                </li>
+                <li><a href="#" class="font-semibold text-[#328bf3] text-sm italic hover:underline ">Forgot
+                        Password?</a></li>
+            </ul>
+            <button id="submit" class="w-full mt-6 bg-[#d1d4dc] rounded-[4px] p-3 text-white font-semibold">Sign in</button>
+            <span class="block mt-10 text-center text-[#767e96] text-sm font-semibold">Don't have an account? <a href="#" class="text-[#328bf3] hover:underline ">Sign Up</a></span>
+        </form>
+        <div class="flex absolute gap-10 justify-center text-[#425982] items-center bottom-6 text-sm">
+            <a href="#" class="hover:text-[#328bf3] transition-all ease-in duration-150">Terms of Service</a>
+            <a href="#" class="hover:text-[#328bf3] transition-all ease-in duration-150">Privacy Policy</a>
+            <a href="#" class="hover:text-[#328bf3] transition-all ease-in duration-150">Classic</a>
+            <a href="#" class="hover:text-[#328bf3] transition-all ease-in duration-150">© 2019 myBrand</a>
+        </div>
+    </div>
+
+
+
+
+            <script>function checkFields() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var submitButton = document.getElementById("submit");
+
+    if (username !== "" && password !== "") {
+        submitButton.style.backgroundColor = '#328bf3';
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+        submitButton.style.backgroundColor = '#d1d4dc';
+    }
+}
+</script>
+        
+</body>
+</html>
