@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+main{
+
+    background-color: #3457DD;
+    /* min-width: 500px; */
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: .5rem;
+    width: 60%;
+}
+
+.toast{
+    display: flex;
+    color: #F9FFFF;
+    justify-content: space-between;
+    font-size: .8rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius:.3rem ;
+    width: 100%;
+    
+}
+
+
+main > :nth-child(odd){
+    background-color: #5879F2;
+}
+main > :nth-child(even){
+    background-color: #EA657B;
+}
+
+.toast > div{
+    display: flex;
+    gap: 10px;
+}
+
+svg{
+    height: 20px;
+    width: 20px;
+}
+
