@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E3DFEE;
+    font-family: 'Rubik', sans-serif;
+}
+
+main{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 3rem;
+    background-color: #fff;
+    color: #26324B;
+    flex-direction: column;
+    display: flex;
+    border-radius: 1rem;
+    gap: 20px;
+    max-width: 450px;
+    
+    
+}
+
+button{
+    background-color: #8E5CF6;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+    width: 50%;
+    border-radius:0.5rem;
+}
+
+main > div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 40px;
+
+}
+
+.profile-text > p:not(:first-child):not(:first-of-type){
+color: #ACAEB2;
+font-size: .8rem;
+}
+
+.profile-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
