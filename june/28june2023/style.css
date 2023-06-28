@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #022063 50%, #fff 50%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Rubik', sans-serif;
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 80vh;
+    height: 80vh;
+    background: linear-gradient(135deg, violet 50%, red 50%),
+
+}
+
+main>section:nth-of-type(1) {
+    margin-left: -120px;
+}
+
+main>section:nth-of-type(2) {
+    margin-right: -150px;
+}
+
+.card {
+    padding: 2rem 3rem;
+    height: 150px;
+    border-radius: 1rem;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.card-1 {
+    border: 4px solid white;
+    padding: 2rem 3rem;
+    height: 150px;
+    border-radius: 1rem;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    text-align: center;
+
+
+}
+
+.card>p {
+    font-size: .8rem;
+    margin: 10px 0;
+}
+
+.card>header {
+    background-color: #fff;
+    font-size: .8rem;
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+    margin-top: -35px;
+    position: absolute;
+}
+
+.card>header>span {
+    color: #c97508;
+}
+
+.card-2>header {
+    border-top: 3px solid #001B60;
+    background-color: #001B60;
+}
+
+.card>header>svg {
+    height: 15px;
+    width: 15px;
+    color: #091238;
+}
+
+.card-2>header>svg {
+    height: 15px;
+    width: 15px;
+    color: #fff;
+}
+
+.card-2 {
+    border: 4px solid #001B60;
+    height: 150px;
+    padding: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    color: #8E9DBE;
+
+}
+
+.icons>svg {
+    color: #97A5CC;
+    border: 1px solid grey;
+    border-radius: 50%;
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+svg:hover{
+    transform: scale(1.2);
+    -webkit-transition: all 300ms ease;
+-moz-transition: all 300ms ease;
+-ms-transition: all 300ms ease;
+-o-transition: all 300ms ease;
+transition: all 300ms ease;
+
+}
+
+main>section>button {
+    color: #022063;
+    border-radius: 100px;
+    border: none;
+    padding: .5rem 1rem;
+    margin: 10px 5px;
+
+}
+
+main>section:nth-of-type(2)>button {
+    background-color: #001B60;
+    color: #fff;
+}
+
+.card-2>.icons>svg:nth-of-type(1) {
+    color: #1F9FF3;
+
+}
+
+.card-2>.icons>svg:nth-of-type(2) {
+    color: #333333;
+    border: 1px solid #c97508;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.card-2>.icons>svg:nth-of-type(3) {
+    color: #1274F3;
+
+}
+
+.card-2>.icons>svg:nth-of-type(4) {
+    color: #1F6CB6;
+
+}
