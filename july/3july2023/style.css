@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F2F2F2;
+    margin: 8rem;
+    font-family: 'Rubik', sans-serif;
+}
+.card{
+    /* background-color: #fff; */
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border-radius: 20px;
+    position: relative;
+    padding: 3rem ;
+    gap: 10px;
+    place-items: center;
+    background: linear-gradient(100deg, #E9F5F3 40%, #FFF 40%);
+      /* background-image: radial-gradient(circle at left, rgb(234, 243, 234) 30%, transparent 50%); */
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.icons{
+    background-color: #A4D368;
+    height: 60px;
+    width: 60px;
+    color: #fff;
+    border-radius: 22px;
+}
+
+.icon-cross{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(243, 235, 235);
+    border-radius: 50%;
+    color: grey;
+
+}
+
+
+body {
+  position: relative;
+  background-color: #f2f2f2;
+  width: 400px;
+  height: 300px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F2E4FD;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  z-index: -1;
+}
+main > div {
+    margin-bottom: 20px;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: -60%;
+  transform: translate(-50%, -50%);
+  background-color: #F3E6FF;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  z-index: -11;
+}
+
+
+.color-red{
+    background-color:#E24F4A;
+    border-radius: 50%;
+}

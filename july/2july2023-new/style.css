@@ -111,12 +111,12 @@ footer {
   width: auto;
   text-align: center;
 }
-footer > button {
-background-color: #4A91E2;
-color: #fff;
-font-weight: bold;
-padding: 1rem 1.5rem;
-}
+    footer > button {
+    background-color: #4A91E2;
+    color: #fff;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    }
 
 .receive-chat > div{
     margin-bottom: 5px;
