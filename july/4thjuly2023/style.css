@@ -1,0 +1,188 @@
+/* Add CSS here */
+/*  Variables */
+
+:root {
+    --clr-primario:	hsla(254, 32%, 21%, 1);
+    --clr-accent: 	hsla(10, 100%, 64%, 1);
+    --clr-bg-top: hsla(18, 96%, 68%, 1);
+    --clr-bg-bottom: hsla(35, 99%, 71%, 1);
+    --clr-bg-times: hsla(254, 32%, 21%, 0.05);
+    --clr-box-shadow: hsl(0, 0%, 0%, .14);
+    --clr-bg-price:	hsla(240, 10%, 96%, 1);
+    --ff-primaria: 'DotGothic16', sans-serif;
+    --fs-primaria: 1rem;
+}
+
+/* Estilos Reset */
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Estilos Principales */
+body
+{
+    min-height: 100svh;
+    background: rgb(252,142,95);
+    background: linear-gradient(135deg, rgba(252,142,95,1) 0%, rgba(254,193,108,1) 100%);
+    color: var(--clr-primario);
+    font-family: var(--ff-primaria);
+    font-weight: 400;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    width: clamp(20rem, 100vw, 20rem);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: 0px 10px 40px var(--clr-box-shadow);
+    position: relative;
+    padding: .7rem;
+}
+
+.logo {
+    padding-block-start: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo-image {
+    margin-block-end: 1rem;
+}
+.logo img {
+    width: 6rem;
+    opacity: 0.8;
+}
+
+.logo p {
+    margin: 0;
+}
+
+.logo p.asterik {
+    overflow: hidden;
+}
+
+.logo p.brand {
+    margin-block-start: -.1rem;
+    margin-block-end: .7rem;
+    font-weight: 600;
+    opacity: .7;
+}
+
+.logo img {
+    width: 6rem;
+    opacity: 0.8;
+}
+
+.items {
+    padding-block: 2rem;
+    font-size: .9rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item * {
+    margin: 0;
+    padding: 0;
+}
+
+.item-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    font-size: .9rem;
+    pointer-events: none;
+}
+
+.quantity {
+    position: relative;
+    transform: translateX(-100%);
+    pointer-events: none;
+}
+
+.minus, 
+.plus {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.times {
+    border-radius: 50%;
+    background-color: var(--clr-bg-times);
+    padding: .23rem;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+
+}
+
+.times > svg {
+    width: .8rem;
+    height: .8rem;
+    color: var(--clr-primario);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.price {
+    padding: .8rem;
+    font-size: .9rem;
+    font-weight: 500;
+    border-top: 1px dashed var(--clr-primario);
+    border-bottom: 1px dashed var(--clr-primario);
+    text-transform: uppercase;
+}
+
+.price-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: .4rem;
+    padding-inline: .8rem
+}
+
+.address {
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+

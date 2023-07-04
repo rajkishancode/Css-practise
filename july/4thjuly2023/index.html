@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>order_summary</title>
+</head>
+<body>
+    <main>
+       <div class="container">
+           <!-- Start Logo -->
+           <div class="logo">
+               <div class="logo-image"><img src="https://i.ibb.co/GTwF9T1/Pizza-Hut-Pixelated.jpg" alt="Pizza Hut Logo"></div>
+               <p class="asterisk">***************************************</p>
+               <p>Your order from</p>
+               <p class="brand">Pizza Hut</p>
+                <p class="asterisk">&gt;******************************************</p>
+           </div>
+           <!-- End Logo -->
+           <!-- Start Body -->
+           <div class="body">
+
+               <div class="items">
+                   <div class="item">
+                        <p> Hawaiian pizza | M</p>
+                        <div class="item-right">
+                            <div class="quantity"><span class="minus">-</span> <span class="amount"> 1</span> <span class="plus">+</span></div>
+                            <p><span>$</span><span="value">7.99</span="value"></p>
+                            <div class="times">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="item">
+                        <p>  Pizza Diavola | XL </p>
+                        <div class="item-right">
+                        <div class="quantity"><span class="minus">-</span> <span class="amount"> 1</span> <span class="plus">+</span></div>
+                            <p><span>$</span><span="value">7.99</span="value"></p>
+                            <div class="times"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+               <div class="price">
+                   <div class="price-line">
+                       <span>Subtotal</span>
+                       <span><span>$</span><span class="subtotal">15.98</span></span>
+                   </div>
+                    <div class="price-line">
+                        <span>Shipping</span>
+                        <span><span>$</span><span class="shipping">2</span></span>
+                    </div>
+                    <div class="price-line">
+                        <span>Total (TVA incl.)</span>
+                        <span><span>$</span><span class="total">17.98</span></span>
+                    </div>
+                </div>
+                
+                <div class="order-info">
+                    <span>16:38 04/07/2023</span>
+                    <span>Order #33</span>
+                </div>
+                <div class="address">
+                    <span>Restaurant #326</span>
+                    <span>Pineapple St. 24</span> 
+                    <span>28080, Honolulu, HI</span> 
+                    <span>Tel: 555-454064</span>
+                    <span>HID: B-745034600</span>
+                </div>                 
+                <p style="text-align: center;">***Thank you for your visit***</p>
+
+            </div>
+           <!-- End Body -->
+        </div>  
+     </main>
+     <script>// Add JavaScript code here
+const PIZZA_PRICE = 7.99;
+const quantity = document.querySelectorAll('.quantity');
+const amount = document.querySelector('amount');
+const value = document.querySelector('.value');
+const subtotal = document.querySelector('.subtotal');
+const total = document.querySelector('.total');
+const times = document.querySelectorAll('.times');
+
+
+for (let i = 0; i < times.length; i++) {
+    quantity[i].addEventListener('click', (e) => {
+        if (e.target.classList.contains('plus')) {
+            let insideAmount = e.currentTarget.querySelector('span.amount').innerHTML;
+            let count = +insideAmount;
+            count++;
+            e.currentTarget.querySelector('span.amount').innerHTML = count;
+            e.currentTarget.parentNode.querySelector('p').children[1].innerHTML = (count * PIZZA_PRICE).toFixed(2);
+            let insideSubtotal = +(subtotal.innerHTML);
+            subtotal.innerHTML = (insideSubtotal + (PIZZA_PRICE)).toFixed(2);
+            let insideTotal = +(total.innerHTML);
+            total.innerHTML = (insideTotal + (PIZZA_PRICE)).toFixed(2);
+
+        } else {
+            let insideAmount = e.currentTarget.querySelector('span.amount').innerHTML;
+            let count = +insideAmount;
+            if (count >= 2) {
+                count--;
+                e.currentTarget.querySelector('span.amount').innerHTML = count;
+                e.currentTarget.parentNode.querySelector('p').children[1].innerHTML = (count * PIZZA_PRICE).toFixed(2);
+                let insideSubtotal = +(subtotal.innerHTML);
+                subtotal.innerHTML = (insideSubtotal - (PIZZA_PRICE)).toFixed(2);
+                let insideTotal = +(total.innerHTML);
+                total.innerHTML = (insideTotal - (PIZZA_PRICE)).toFixed(2);
+            }
+        }   
+
+    });
+}
+
+
+
+
+for (let j = 0; j < times.length; j++) {
+    times[j].addEventListener('click', () => {
+        times[j].parentNode.parentNode.style.display = 'none';
+
+        let insidePartial = times[j].parentNode.querySelector('p').children[1].innerHTML;
+       
+        let insideSubtotal = +(subtotal.innerHTML);
+        subtotal.innerHTML = (insideSubtotal - (insidePartial)).toFixed(2);
+        let insideTotal = +(total.innerHTML);
+        total.innerHTML = (insideTotal - (insidePartial)).toFixed(2);
+    });
+}</script>
+</body>
+</html>
