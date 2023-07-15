@@ -5,13 +5,138 @@
     padding: 0;
     margin: 0;
 }
-
-
+main{
+    width: 100%;
+    background-color: #2D2F31;
+    margin-top: 200px;
+}
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1A5AB6;
+    background-color: #2D2F31;
     font-family: 'Rubik', sans-serif;
 }
+nav{
+    height: 100px;
+    background-color: cyan;
+    color: #B5B7B9;
+    background-color: #2D2F31;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    
+     
+
+}
+.brand-logo{
+    
+    display: flex;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.content{
+    position: absolute;
+    top: 30%;
+   
+    color: #F4F7F4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  
+}
+h1{
+    font-size: 2rem;
+}
+.content > P{
+    width: 80%;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: .9rem;
+    line-height: 20px;
+    
+}
+button{
+    border: none;
+    cursor: pointer;
+    background: inherit;
+    border: 3px solid #fff;
+    padding: .5rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+ul{
+    list-style-type: none;
+    display: flex;
+   width: 100%;
+    
+    justify-content: space-around;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 10px;
+  position: relative;
+}
+
+
+.carousel img {
+  width: 30%;
+  height: auto;
+}
+
+footer{
+    padding: 1rem;
+    color: #fff;
+    
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-images > img{
+    width: 30%;
+    height: auto;
+    overflow: hidden;
+}
+
+.carousel-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left-icon {
+  left: 10px;
+}
+
+.right-icon {
+  right: 10px;
+}
+
