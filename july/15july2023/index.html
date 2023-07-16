@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>payment_method</title>
 </head>
+
 <body>
-    
+    <main>
+
+
+        <header>
+            <span class="icons"><svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-shopping-cart" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                    <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                    <path d="M17 17h-11v-14h-2"></path>
+                    <path d="M6 5l14 1l-1 7h-13"></path>
+                </svg>
+                <p>Cart</p>
+            </span>
+            <div class="line"></div>
+
+            <span class="icons"><svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-map-pin-filled" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                        stroke-width="0" fill="currentColor"></path>
+                </svg>
+                <p>Address</p>
+            </span>
+            <div class="line"></div>
+            <span class="icons"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cash"
+                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M7 9m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"></path>
+                    <path d="M14 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                    <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2"></path>
+                </svg>
+                <p>Pay</p>
+            </span>
+            <div class="line"></div>
+            <span class="icons"><svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-clipboard-list" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
+                    <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                    <path d="M9 12l.01 0"></path>
+                    <path d="M13 12l2 0"></path>
+                    <path d="M9 16l.01 0"></path>
+                    <path d="M13 16l2 0"></path>
+                </svg>
+                <p>Order</p>
+            </span>
+        </header>
+
+        <section>
+            <h3>PAYMENT METHOD</h3>
+
+            <article>
+
+
+                <div><img src="https://www.logo.wine/a/logo/Visa_Inc./Visa_Inc.-Logo.wine.svg" alt="" class="pay-logo">
+                    <img src="https://www.logo.wine/a/logo/PayPal/PayPal-Logo.wine.svg" alt="" class="pay-logo">
+                    <img src="https://www.logo.wine/a/logo/Bitcoin/Bitcoin-Logo.wine.svg" alt="" class="pay-logo">
+                </div>
+
+
+
+                <div class="user-inputs">
+
+                    <div>
+
+                        <label for="card-number">Card Number
+                        </label>
+                        <div class="verified-input">
+                            <input type="text" placeholder="7569 8859 8744 3244" />
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M5 12l5 5l10 -10"></path>
+                                </svg></span>
+
+                        </div>
+                    </div>
+
+                    <div class="user-date">
+                        <div>
+                            <label for="expiry">Expiration Date</label>
+
+                            <div class="verified-input">
+                                <input type="text" placeholder="07/25" />
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check"
+                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M5 12l5 5l10 -10"></path>
+                                    </svg></span>
+
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <label for="cvv">CVV</label>
+
+                            <div class="verified-input">
+                                <input type="text" placeholder="477" />
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check"
+                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M5 12l5 5l10 -10"></path>
+                                    </svg></span>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+
+                        <label for="card-number">Card Holder Name
+                        </label>
+                        <div class="verified-input">
+                            <input type="text" placeholder="John Green" />
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M5 12l5 5l10 -10"></path>
+                                </svg></span>
+
+                        </div>
+                    </div>
+
+                    <button>Confirm Payment</button>
+                </div>
+
+
+
+
+            </article>
+        </section>
+    </main>
 </body>
+
 </html>

@@ -1,0 +1,121 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #A7EDF3 ;
+    font-family: 'Rubik', sans-serif;
+}
+
+main{
+    background-color: #fff ;
+    padding: 1rem;
+    width: 700px;
+    color: #615EA8;
+   
+}
+
+header{
+     display: flex;
+   
+    align-items: center;
+    position: relative;
+    background-color: #F9FBFC;
+    
+}
+
+span > svg{
+    color: skyblue;
+   
+}
+
+.line {
+    height: 2px;
+    flex-grow: 1;
+    background-color: #C1CACB;
+  
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    
+    
+
+}
+
+article{
+    display: grid;
+    grid-template-columns: 30% auto;
+    
+}
+
+
+.pay-logo{
+    height: 80px;
+    width: auto;
+    border: 1px solid greenyellow;
+}
+
+.user-inputs{
+    background-color: #F9FBFC;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap:10px;
+}
+
+input{
+    border:1px solid #d3d3d3;
+    padding: .5rem;
+    flex-grow: 1;
+    
+}
+input::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.verified-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-date{
+    display:flex;
+    align-items: center;
+}
+
+.user-date > div:nth-of-type(1){
+      display:flex;
+    flex-direction: column;
+}
+
+.user-date > div:nth-of-type(2){
+      display:flex;
+    flex-direction: column;
+}
+
+button{
+    background-color: #63B5F7;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+}
