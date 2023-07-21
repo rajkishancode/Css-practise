@@ -1,23 +1,174 @@
+:root {
+    --body-bg-color: #1a88aa;
+    --top-menu-bg: #01aad0;
+    --top-menu-active-bg: #0b9cbb;
+    --action-btn-bg: #acfce8;
+    --action-btn-active-text-color: #ecfbfe;
+    --action-btn-text-color: #afe8e9;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-/**
-* ! Resetting Base Styles
-**/
-
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    min-height: 100vh;
-    padding: 2rem 0;
-    background-color: #2A3942;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
+body {
+    background-color: var(--body-bg-color);
+    color: #fefefe;
+}
+
+
+section * {
+    transition: all 450ms ease-out;
+}
+
+.card {
+    min-height: 38rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgb(78,208,227);
+    background: -moz-linear-gradient(225deg, rgba(78,208,227,1) 0%, rgba(95,232,192,1) 70%);
+    background: -webkit-linear-gradient(225deg, rgba(78,208,227,1) 0%, rgba(95,232,192,1) 70%);
+    background: linear-gradient(225deg, rgba(78,208,227,1) 0%, rgba(95,232,192,1) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4ed0e3",endColorstr="#5fe8c0",GradientType=1);
+    position: relative;
+}
+
+.card .top .item {
+    background-color: var(--top-menu-bg);
+    padding-block: 1.25rem;
+    width: 7.5rem;
+    border: 1px solid transparent;
+}
+
+.card .top .item:hover {
+    background-color: var(--top-menu-active-bg);
+    border: 0.1px solid #1697b4ec;
+}
+
+
+.card .top .item.active {
+    background-color: var(--top-menu-active-bg);
+}
+
+.card .top .item.active span{
+    color: var(--action-btn-active-text-color);
+    font-weight: 400;
+}
+
+.card .top .item i {
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+.card .top .item span {
+    color: var(--action-btn-text-color);
+    font-weight: 300;
+    pointer-events: none;
+}
+
+
+.card .body {
+    padding-block: 2rem;
+}
+
+.card .body .tabs {
     align-items: center;
+    justify-content: center;
+}
+
+.card .body .tabs .tab-item {
+    transform: translateX(150%);
+}
+
+.card .body .tabs .tab-item.active {
+    transform: translateX(0);
+}
+
+
+.card .body #timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card .body .circle {
+    /* background-color: #c1edea; */
+    height: 16rem;
+    width: 16rem;
+    border-radius: 100%;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background: conic-gradient(#fff 0deg, rgba(237, 237, 237, 0.69) 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .body .circle::after {
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 95%;
+
+    background: rgb(78,208,227);
+    background: -moz-linear-gradient(225deg, rgba(78,208,227,1) 0%, rgba(95,232,192,1) 70%);
+    background: -webkit-linear-gradient(225deg, rgba(78,208,227,1) 0%, rgba(95,232,192,1) 70%);
+    background: linear-gradient(225deg, rgba(78,208,227,1) 0%, rgba(95,232,192,1) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4ed0e3",endColorstr="#5fe8c0",GradientType=1);
+    border-radius: 100%;
+}
+
+
+.card .body #stop-watch .circle {
+    height: 13rem;
+    width: 13rem;
+}
+
+
+.card .body .time-remaining {
+    font-size: 2.25rem;
+}
+
+
+.card .bottom {
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    bottom: 3rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.card .bottom button {
+    width: 5.3rem;
+    height: 5.3rem;
+    padding: 1.25rem 2rem;
+    background-color: var(--action-btn-bg);
+    border-radius: 100%;
+    font-size: 1.75rem;
+}
+
+.card .bottom button:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.card .bottom #reset {
+    color: #fe737d;
+}
+
+.card .bottom #play-pause {
+    color: #525659;
+}
+
+@media (max-width: 	640px) {
+    
+    .card .top .item {
+        padding-block: 1.25rem;
+        width: 6rem;
+    }
+
 }

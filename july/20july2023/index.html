@@ -4,9 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>timer</title>
 </head>
-<body>
-    
-</body>
+<body class="flex justify-center items-center min-h-screen" data-new-gr-c-s-check-loaded="14.1115.0" data-gr-ext-installed="">
+    <section>
+        <div class="card max-w-md w-full">
+            <div class="top flex">
+                <button class="item grid active" data-target="alarm">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Alarm</span>
+                </button>
+                <button class="item grid" data-target="timer">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Timer</span>
+                </button>
+                <button class="item grid" data-target="stop-watch">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <span>Stopwatch</span>
+                </button>
+            </div>
+
+            <div class="body">
+                <div class="grid place-items-center gap-4">
+                    <h2>Alarm</h2>
+                    <div class="tabs flex overflow-hidden">
+                        <div id="timer" class="tab-item relative grid">
+                            <div class="relative grid place-items-center">
+                                <div class="circle" style="background: conic-gradient(white 12deg, rgba(237, 237, 237, 0.69) 0deg);"></div>
+                                <div class="time-remaining absolute flex gap-1 items-center">
+                                    <span class="minute">00</span>
+                                    <span class="semicolon">:</span>
+                                    <span class="second">00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="alarm" class="tab-item absolute grid active">
+                            <div class="relative grid place-items-center">
+                                <div class="circle"></div>
+                                <div class="time-remaining absolute flex gap-1 items-center">
+                                    <span class="minute">
+                                        00
+                                    </span>
+                                    <span class="semicolon">:</span>
+                                    <span class="second">00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="stop-watch" class="tab-item absolute grid">
+                            <div class="relative grid place-items-center">
+                                <div class="circle"></div>
+                                <div class="time-remaining absolute flex gap-1 items-center">
+                                    <span class="minute">
+                                        00
+                                    </span>
+                                    <span class="semicolon">:</span>
+                                    <span class="second">00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom flex">
+                <button id="reset" class="item">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+                <button id="play-pause" class="item pause">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+            <script>
+const tabContainer = document.querySelector(".tabs")
+const tabItems = tabContainer.querySelectorAll(".tab-item")
+
+const timeRemaining = document.querySelector(".time-remaining")
+const minute = timeRemaining.querySelector(".minute")
+const second = timeRemaining.querySelector(".second")
+
+const playPause = document.querySelector("#play-pause")
+const reset = document.querySelector("#reset")
+
+const topBtns = document.querySelectorAll(".top .item")
+
+minute.textContent = "00"
+second.textContent = "00"
+
+let hour = 0
+let timerStatus = "pause"
+
+let timer
+
+// Handle the white circle animation. Magic comes from conic-gradient
+function handleAnimation(sec) {
+    let circle = document.querySelector(".circle")
+    circle.style.background = `conic-gradient(white ${sec * 6}deg, #edededb0 0deg)`
+
+    if (sec === 60) {
+        circle.style.background = `conic-gradient(white 6deg, #edededb0 0deg)`
+
+    }
+
+}
+
+// Handle second, minute and hour
+function handleTimer() {
+    var sec = parseInt(second.textContent)
+    var min = parseInt(minute.textContent)
+
+    sec = sec + 1
+
+    // if second reached 60, increase min by one and reset the second
+    if (sec > 59) {
+        min += 1
+        sec = 0
+    }
+
+    // handle zeros of numbers less than 10
+    if (min <= 9) {
+        minute.textContent = `0${min}`
+    } else {
+        minute.textContent = min
+    }
+    if (sec <= 9) {
+        second.textContent = `0${sec}`
+    } else {
+        second.textContent = sec
+    }
+
+    // handle hour. if min reached 60, reset min, increase hour by one.
+    //If there is no hour indicator, add one.Also handle zero of < 10
+    if (min > 59) {
+        min = 0
+        minute.textContent = `0${min}`
+        hour += 1
+        let isHourExists = timeRemaining.querySelector(".hour")
+
+        if (!isHourExists) {
+            const semicolonSpan = document.createElement("span").textContent = ":"
+            const hourSpan = document.createElement("span")
+            semicolonSpan.textContent = ":"
+            hourSpan.classList.add("hour")
+            hourSpan.textContent = hour
+            timeRemaining.prepend(semicolonSpan)
+            timeRemaining.prepend(hourSpan)
+        } else {
+            isHourExists.textContent = hour
+        }
+        if (isHourExists && parseInt(isHourExists.textContent) < 9) {
+            isHourExists.textContent = `0${hour}`
+        }
+    }
+
+    //every second animate circle
+    handleAnimation(parseInt(second.textContent))
+}
+
+// toggle pause and play state
+function toggleStatus() {
+    if (timerStatus === "pause") {
+        timerStatus = "play"
+    } else {
+        timerStatus = "pause"
+    }
+}
+
+//handling timer state. If state this take action etc.
+function handleStatus() {
+    if (timerStatus === "pause") {
+        clearInterval(timer)
+        let icon = playPause.querySelector("i")
+        icon.classList.remove("fa-pause")
+        icon.classList.add("fa-play")
+    } else {
+        timer = setInterval(handleTimer, 1000)
+        let icon = playPause.querySelector("i")
+        icon.classList.add("fa-pause")
+        icon.classList.remove("fa-play")
+    }
+}
+
+
+playPause.addEventListener("click", () => {
+    toggleStatus()
+    handleStatus()
+})
+
+
+reset.addEventListener("click", () => {
+    clearInterval(timer)
+    minute.textContent = "00"
+    second.textContent = "00"
+})
+
+
+topBtns.forEach(el => {
+    el.addEventListener("click", (event) => {
+        
+        topBtns.forEach(btn => {
+            if (btn == event.target) {
+                btn.classList.add("active")
+            } else {
+                btn.classList.remove("active")
+            }
+        })
+
+        let activeTabItem = tabContainer.querySelector(`#${el.dataset.target}`)
+        if (activeTabItem != null) {
+            tabItems.forEach(tabItem => tabItem.classList.remove("active"))
+            activeTabItem.classList.add("active")
+            el.classList.add("active")
+        }
+        
+        const span = event.target.querySelector("span")
+        const h2 = document.querySelector(".card .body h2")
+        h2.textContent = span.textContent
+    })
+})</script>
+        </body>
 </html>
