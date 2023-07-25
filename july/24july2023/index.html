@@ -3,10 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.25.0/tabler-icons.min.css">
     <title>crypto_account</title>
 </head>
-<body>
-    <div></div>
-</body>
+<body class="bg-purple-100 flex justify-center items-center min-h-screen p-6" data-new-gr-c-s-check-loaded="14.1115.0" data-gr-ext-installed="">
+    <div class="bg-white text-[#181028] shadow-lg  max-w-3xl flex flex-col w-full">
+        <div class="flex flex-row items-center p-6">YOUR ACCOUNTS</div>
+        <div class="flex flex-row max-sm:flex-col">
+            <ul class="flex flex-col w-2/5 p-2 border [&amp;_li:hover]:bg-[#e8e6fb] [&amp;_li:hover]:scale-105 [&amp;_button:hover]:text-[#7c7484] divide-y-2 max-sm:w-full ">
+                <li class="flex flex-row items-center p-4  gap-2 max-sm:flex-col">
+                    <i class="ti ti-currency-bitcoin bg-blue-500 rounded-full w-14 h-14 flex items-center justify-center text-[32px] font-bold text-white hover:scale-95"></i>
+                    <div class="flex flex-col items-start justify-start">
+                        <h6 class="font-semibold">USD Wallet</h6>
+                        <span class="font-semi-bold">$254.00</span>
+                        <div class="flex flex-row items-start gap-2">
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-upload"></i>Deposit</button>
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-download "></i>Withdraw</button>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="flex flex-row items-center p-4  gap-2 max-sm:flex-col">
+                    <i class="ti ti-currency-bitcoin bg-[#fb9215] rounded-full w-14 h-14 flex items-center justify-center text-[32px] font-bold text-white hover:scale-95 rotate-12"></i>
+                    <div class="flex flex-col items-start justify-start">
+                        <h6 class="font-semibold">BTC Wallet</h6>
+                        <span class="font-semi-bold">$154.00</span>
+                        <div class="flex flex-row items-start gap-2">
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-upload"></i>Deposit</button>
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-download "></i>Withdraw</button>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="flex flex-row items-center p-4  gap-2 max-sm:flex-col">
+                    <i class="ti ti-currency-bitcoin bg-[#7cd324] rounded-full w-14 h-14 flex items-center justify-center text-[32px] font-bold text-white hover:scale-95 -rotate-12"></i>
+                    <div class="flex flex-col items-start justify-start">
+                        <h6 class="font-semibold">BCH Wallet</h6>
+                        <span class="font-semi-bold">$54.00</span>
+                        <div class="flex flex-row items-start gap-2">
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-upload"></i>Deposit</button>
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-download "></i>Withdraw</button>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="flex flex-row items-center p-4  gap-2 max-sm:flex-col">
+                    <i class="ti ti-currency-ethereum bg-[#687cdc] rounded-full w-14 h-14 flex items-center justify-center text-[32px] font-bold text-white hover:scale-95"></i>
+                    <div class="flex flex-col items-start justify-start">
+                        <h6 class="font-semibold">ETH Wallet</h6>
+                        <span class="font-semi-bold">$454.00 <span class="text-slate-300 ">=$12.63</span></span>
+                        <div class="flex flex-row items-start gap-2">
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-upload"></i>Deposit</button>
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-download "></i>Withdraw</button>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="flex flex-row items-center p-4  gap-2 max-sm:flex-col">
+                    <i class="ti ti-currency-pound bg-[#bebebe] rounded-full w-14 h-14 flex items-center justify-center text-[32px] font-bold text-white hover:scale-95"></i>
+                    <div class="flex flex-col items-start justify-start">
+                        <h6 class="font-semibold">LTC Wallet</h6>
+                        <span class="font-semi-bold">$254.00</span>
+                        <div class="flex flex-row items-start gap-2">
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-upload"></i>Deposit</button>
+                            <button class="flex items-center text-xs px-2 py-1 rounded-full bg-white shadow-lg gap-1"><i class="ti ti-download "></i>Withdraw</button>
+                        </div>
+
+                    </div>
+                </li>
+                <div class="mb-24"></div>
+                <button class="flex gap-2 items-center justify-center bg-[#b2acf2] rounded-full py-4 text-white mb-6"> <i class="ti ti-plus"></i>New Account</button>
+
+
+            </ul>
+            <ul class="flex flex-col border w-full p-2 divide-y-2 [&amp;_li:hover]:scale-105">
+                <h3 class="text-stone-400">TRANSACTIONS</h3>
+                <li class="flex flex-row items-center gap-4 p-2">
+                    <div class="flex flex-col items-center text-slate-400">
+                        <span>Jan</span>
+                        <span>12</span>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <i class="ti ti-arrow-narrow-left text-[#7688c6] rounded-full border-2 p-1 font-bold "></i>
+                    </div>
+                    <div class="flex flex-col items-start grow">
+                        <h3 class="font-bold text-sm">Bought Ethereum</h3>
+                        <span class="text-stone-400 text-xs">Using USD Wallet</span>
+                    </div>
+                    <div class="flex flex-col items-end">
+
+                   <h3 class="font-bold text-sm">-$6.83</h3>
+                    <span class="text-stone-400 text-xs">-$6.83</span>
+                    </div>
+                </li>
+<li class="flex flex-row items-center gap-4 p-2">
+    <div class="flex flex-col items-center text-slate-400">
+        <span>Feb</span>
+        <span>12</span>
+    </div>
+    <div class="flex items-center justify-center">
+        <i class="ti ti-arrow-narrow-right text-[#f98e1a] rounded-full border-2 p-1 font-bold "></i>
+    </div>
+    <div class="flex flex-col items-start grow">
+        <h3 class="font-bold text-sm">Sold Ethereum</h3>
+        <span class="text-stone-400 text-xs">Using USD Wallet</span>
+    </div>
+    <div class="flex flex-col items-end">
+
+        <h3 class="font-bold text-sm">-$6.83</h3>
+        <span class="text-stone-400 text-xs">-$6.83</span>
+    </div>
+</li>
+<li class="flex flex-row items-center gap-4 p-2">
+    <div class="flex flex-col items-center text-slate-400">
+        <span>Dec</span>
+        <span>12</span>
+    </div>
+    <div class="flex items-center justify-center">
+        <i class="ti ti-arrow-narrow-left text-[#7688c6] rounded-full border-2 p-1 font-bold "></i>
+    </div>
+    <div class="flex flex-col items-start grow">
+        <h3 class="font-bold text-sm">Bought Ethereum</h3>
+        <span class="text-stone-400 text-xs">Using USD Wallet</span>
+    </div>
+    <div class="flex flex-col items-end">
+
+        <h3 class="font-bold text-sm">-$6.83</h3>
+        <span class="text-stone-400 text-xs">-$6.83</span>
+    </div>
+</li>
+<li class="flex flex-row items-center gap-4 p-2">
+    <div class="flex flex-col items-center text-slate-400">
+        <span>Jan</span>
+        <span>24</span>
+    </div>
+    <div class="flex items-center justify-center">
+        <i class="ti ti-arrow-narrow-right text-[#f98e1a] rounded-full border-2 p-1 font-bold "></i>
+    </div>
+    <div class="flex flex-col items-start grow">
+        <h3 class="font-bold text-sm">Sold Bitcoin</h3>
+        <span class="text-stone-400 text-xs">Using USD Wallet</span>
+    </div>
+    <div class="flex flex-col items-end">
+
+        <h3 class="font-bold text-sm">-$6.83</h3>
+        <span class="text-stone-400 text-xs">-$6.83</span>
+    </div>
+</li><li class="flex flex-row items-center gap-4 p-2">
+    <div class="flex flex-col items-center text-slate-400">
+        <span>Jan</span>
+        <span>12</span>
+    </div>
+    <div class="flex items-center justify-center">
+        <i class="ti ti-arrow-narrow-left text-[#7688c6] rounded-full border-2 p-1 font-bold "></i>
+    </div>
+    <div class="flex flex-col items-start grow">
+        <h3 class="font-bold text-sm">Bought Ethereum</h3>
+        <span class="text-stone-400 text-xs">Using USD Wallet</span>
+    </div>
+    <div class="flex flex-col items-end">
+
+        <h3 class="font-bold text-sm">-$6.83</h3>
+        <span class="text-stone-400 text-xs">-$6.83</span>
+    </div>
+</li>
+
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+
+         
+        </body>
 </html>
