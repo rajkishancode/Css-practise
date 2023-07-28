@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<script src="index.js" defer></script>
+    <title>meal_results</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div>
+                <h1>Results for "Avocado"</h1>
+                <span class="found_results">3 results found</span>
+            </div>
+            <div class="display">
+                <span>Choose display</span>
+                <div class="display_btns">
+                    <button class="display_rect selected">
+                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.68">
+                            <path d="M2 4.5C2 4.22386 2.22386 4 2.5 4H17.5C17.7761 4 18 4.22386 18 4.5C18 4.77614 17.7761 5 17.5 5H2.5C2.22386 5 2 4.77614 2 4.5Z" fill="#fff"></path>
+                            <path d="M2 9.5C2 9.22386 2.22386 9 2.5 9H17.5C17.7761 9 18 9.22386 18 9.5C18 9.77614 17.7761 10 17.5 10H2.5C2.22386 10 2 9.77614 2 9.5Z" fill="#fff"></path>
+                            <path d="M2.5 14C2.22386 14 2 14.2239 2 14.5C2 14.7761 2.22386 15 2.5 15H17.5C17.7761 15 18 14.7761 18 14.5C18 14.2239 17.7761 14 17.5 14H2.5Z" fill="#fff"></path>
+                        </svg>
+                    </button>
+                    <button class="display_sqr">
+                        <svg fill="#5b595c" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 11.531h5.938v-5.938h-5.938v5.938zM7.438 11.531h5.938v-5.938h-5.938v5.938zM14.844 11.531h5.969v-5.938h-5.969v5.938zM0 18.969h5.938v-5.938h-5.938v5.938zM7.438 18.969h5.938v-5.938h-5.938v5.938zM14.844 18.969h5.969v-5.938h-5.969v5.938zM0 26.406h5.938v-5.969h-5.938v5.969zM7.438 26.406h5.938v-5.969h-5.938v5.969zM14.844 26.406h5.969v-5.969h-5.969v5.969z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="filters">
+                <button class="filter_btn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 7H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M7 12L17 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M11 17H13" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Filters
+                    <span class="selected_filters_count">0</span>
+                </button>
+                <div class="filters_list hidden">
+                    <div class="filter">
+                        <input type="checkbox" name="category" id="vegetarian" value="Vegetarian">
+                        <label for="vegetarian">Vegetarian</label>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox" name="category" id="protein" value="Protein">
+                        <label for="protein">Protein</label>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox" name="categoryr" id="dinner" value="Dinner">
+                        <label for="dinner">Dinner</label>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox" name="categoryr" id="breakfast" value="Breakfast">
+                        <label for="breakfast">Breakfast</label>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox" name="categoryr" id="light" value="Light">
+                        <label for="light">Light</label>
+                    </div>
+                </div>
+                <div class="selected_filters"></div>
+            </div>
+            <article class="results">
+                <div class="result">
+                    <img src="https://i.postimg.cc/rs1qkd1z/img1.webp" alt="">
+                    <div class="result_details">
+                        <a href="#">Avocado sandwitch with boiled egg</a>
+                        <span class="preparation_time">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 7V12L13.5 14.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="1.224" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            Under 1 hour
+                        </span>
+                    </div>
+                    <button class="save_btn" data-saved="no">
+                        <svg viewBox="-4 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                            <g transform="translate(-417.000000, -151.000000)" fill="#000000">
+                                <path d="M437,177 C437,178.104 436.104,179 435,179 L428,172 L421,179 C419.896,179 419,178.104 419,177 L419,155 C419,153.896 419.896,153 421,153 L435,153 C436.104,153 437,153.896 437,155 L437,177 L437,177 Z M435,151 L421,151 C418.791,151 417,152.791 417,155 L417,177 C417,179.209 418.791,181 421,181 L428,174 L435,181 C437.209,181 439,179.209 439,177 L439,155 C439,152.791 437.209,151 435,151 L435,151 Z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="result">
+                    <img src="https://i.postimg.cc/vZMccyTp/img2.webp" alt="">
+                    <div class="result_details">
+                        <a href="#">Fresh avocado salad with broccoli</a>
+                        <span class="preparation_time">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 7V12L13.5 14.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="1.224" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            Under 1 hour
+                        </span>
+                    </div>
+                    <button class="save_btn" data-saved="no">
+                        <svg viewBox="-4 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                            <g transform="translate(-417.000000, -151.000000)" fill="#000000">
+                                <path d="M437,177 C437,178.104 436.104,179 435,179 L428,172 L421,179 C419.896,179 419,178.104 419,177 L419,155 C419,153.896 419.896,153 421,153 L435,153 C436.104,153 437,153.896 437,155 L437,177 L437,177 Z M435,151 L421,151 C418.791,151 417,152.791 417,155 L417,177 C417,179.209 418.791,181 421,181 L428,174 L435,181 C437.209,181 439,179.209 439,177 L439,155 C439,152.791 437.209,151 435,151 L435,151 Z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="result">
+                    <img src="https://i.postimg.cc/5N2Bj8rB/img3.webp" alt="">
+                    <div class="result_details">
+                        <a href="#">Avocado and spinach pesto spagetti</a>
+                        <span class="preparation_time">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 7V12L13.5 14.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="1.224" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            Under 1 hour
+                        </span>
+                    </div>
+                    <button class="save_btn" data-saved="no">
+                        <svg viewBox="-4 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                            <g transform="translate(-417.000000, -151.000000)" fill="#000000">
+                                <path d="M437,177 C437,178.104 436.104,179 435,179 L428,172 L421,179 C419.896,179 419,178.104 419,177 L419,155 C419,153.896 419.896,153 421,153 L435,153 C436.104,153 437,153.896 437,155 L437,177 L437,177 Z M435,151 L421,151 C418.791,151 417,152.791 417,155 L417,177 C417,179.209 418.791,181 421,181 L428,174 L435,181 C437.209,181 439,179.209 439,177 L439,155 C439,152.791 437.209,151 435,151 L435,151 Z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
