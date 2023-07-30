@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tags</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1117.0" data-gr-ext-installed="">
+    <main>
+        <section class="tags_section">
+            <h2>Tags</h2>
+            <div class="tags_list">
+                <input type="text" placeholder="Add tags separated by comma">
+            </div>
+            <small>For example: <span>fitness app, dashboard, navigation, webshop, landing page</span></small>
+        </section>
+        <section class="category_section">
+            <h2>Category</h2>
+            <div class="categories_list_area">
+                <button class="select_category_btn active">
+                   <span>Select something</span>
+                    <svg fill="#202042" viewBox="-8.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.28 20.040c-0.24 0-0.44-0.080-0.6-0.24l-6.44-6.44c-0.32-0.32-0.32-0.84 0-1.2 0.32-0.32 0.84-0.32 1.2 0l5.84 5.84 5.84-5.84c0.32-0.32 0.84-0.32 1.2 0 0.32 0.32 0.32 0.84 0 1.2l-6.44 6.44c-0.16 0.16-0.4 0.24-0.6 0.24z">
+                        </path>
+                    </svg>
+                </button>
+                <ul class="categories_list">
+                    <li>
+                        <button>Web</button>
+                    </li>
+                    <li>
+                        <button>Mobile</button>
+                    </li>
+                    <li>
+                        <button>UI Kit</button>
+                    </li>
+                    <li>
+                        <button>Coded</button>
+                    </li>
+                    <li>
+                        <button>Other</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+            <style>:root {
+    --font-color-main: #202042;
+    --bg-body: #fcfcfe;
+    --bg-inputs: #ffffff;
+    --bg-tag-element: #212042;
+    --bg-tag-element-hover: #ee4878;
+    --font-family-main: 'Poppins', sans-serif;
+    --font-family-headings: 'Lisu Bosa', serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg-body);
+    color: var(--font-color-main);
+    font-family: var(--font-family-main);
+    display: grid;
+    place-items: center;
+}
+
+h2 {
+    margin: 0;
+    font-size: 23px;
+    font-family: var(--font-family-headings);
+    font-weight: 800;
+}
+
+button,
+input {
+    border: none;
+    background: #fff;
+    cursor: pointer;
+    font-family: var(--font-color-main);
+}
+
+svg {
+    width: 30px;
+}
+
+main {
+    margin: -50px 0 0;
+    width: 1000px;
+}
+
+/* Tags Section */
+
+input[type="text"] {
+    flex: 1;
+    height: 41px;
+    padding: 0 15px;
+    font-size: 15px;
+    border: none;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.tags_section small {
+    margin: 15px 0 0;
+    display: block;
+}
+
+.tags_section small span {
+    color: #4440b3;
+}
+
+.tags_list {
+    background: #fff;
+    border: 1px solid #202042;
+    border-radius: 8px;
+    margin: 20px 0 0;
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.tags_list.active {
+    border-color: #ee4878;
+}
+
+.tag_element {
+    padding: 9px 12px;
+    background: var(--bg-tag-element);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    word-break: break-all;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background .5s;
+}
+
+.tag_element:hover {
+    background: var(--bg-tag-element-hover);
+}
+
+.tag_element svg {
+    width: 18px;
+    height: 18px;
+}
+
+.remove_btn {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    background: transparent;
+}
+
+/* Category section */
+
+.category_section {
+    margin: 60px 0 0;
+}
+
+.categories_list_area {
+    margin: 20px 0 0;
+    width: 380px;
+    position: relative;
+}
+
+.select_category_btn {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #202042;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select_category_btn.active {
+    border-color: #ee4878;
+}
+
+.select_category_btn svg {
+    width: 34px;
+    transition: transform .5s;
+}
+
+.select_category_btn.active svg {
+    transform: rotate(180deg);
+}
+
+.categories_list {
+    list-style: none;
+    padding: 20px 20px 20px 5px;
+    width: 100%;
+    background: var(--bg-inputs);
+    border-radius: 8px;
+    position: absolute;
+    top: 50px;
+}
+
+.categories_list button {
+    width: 100%;
+    margin: 4px 0;
+    padding: 10px 10px 10px 35px;
+    font-size: 15px;
+    text-align: left;
+    background: transparent;
+    border-radius: 8px;
+    transition: background .5s, color .5s;
+}
+
+.categories_list button:hover,
+.categories_list button.selected {
+    background: var(--bg-tag-element);
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+@media(max-width: 1110px) {
+    main {
+        width: 95%;
+    }
+}
+
+@media(max-width: 395px) {
+    .categories_list_area {
+        width: 95%;
+    }
+}</style>
+            <script>const TAGS = [];
+
+const tagsInput = document.querySelector('input[type="text"]');
+const tagsContainer = document.querySelector('.tags_list');
+const selectCategoryButton = document.querySelector('.select_category_btn');
+const categoriesListItems = document.querySelectorAll('.categories_list li button');
+
+const showHideCategories = () => {
+    const categoriesListElement = document.querySelector('.categories_list');
+    selectCategoryButton.classList.toggle('active');
+    categoriesListElement.classList.toggle('hidden');
+}
+
+const selectCategory = (category, btn) => {
+    categoriesListItems.forEach(categories => {
+        categories.classList.remove('selected');
+    });
+    selectCategoryButton.querySelector('span').textContent = category;
+    btn.classList.add('selected');
+    showHideCategories();
+}
+
+const handleTags = val => {
+    TAGS.push(val.replace(',', ''));
+    renderTags(TAGS);
+}
+
+
+const renderTags = tags => {
+    const tagsElements = document.querySelectorAll('.tag_element');
+    tagsElements.forEach(tag => {
+        tag.remove();
+    })
+    tags.forEach(tag => {
+        if (tag !== '') {
+            const tagElement = document.createElement('div');
+            tagElement.className = 'tag_element';
+            const tagNameElement = document.createElement('span');
+            tagNameElement.textContent = tag;
+            const removeTagButton = document.createElement('button');
+            removeTagButton.className = 'remove_btn';
+            removeTagButton.innerHTML = `
+                <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="0.01024">
+                    <path fill="#fff" d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z">
+                    </path>
+                </svg>
+            `;
+
+            tagElement.appendChild(tagNameElement);
+            tagElement.appendChild(removeTagButton);
+
+            removeTagButton.addEventListener('click', () => {
+                tagElement.remove();
+                TAGS.splice(TAGS.indexOf(tag), 1);
+            })
+
+            tagsContainer.insertBefore(tagElement, tagsInput);
+        }
+    });
+}
+
+tagsInput.addEventListener('input', () => {
+    if (tagsInput.value.charAt(tagsInput.value.length - 1) === ',') {
+        handleTags(tagsInput.value);
+        tagsInput.value = '';
+    }
+});
+
+tagsInput.addEventListener('focus', () => {
+    tagsContainer.classList.add('active');
+});
+
+tagsInput.addEventListener('blur', () => {
+    tagsContainer.classList.remove('active');
+});
+
+categoriesListItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        selectCategory(e.target.textContent, e.target);
+    });
+});
+
+selectCategoryButton.addEventListener('click', showHideCategories);</script>
+        </body>
+</html>
