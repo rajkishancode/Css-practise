@@ -1,0 +1,239 @@
+:root {
+    --bg-body: #f6f9ff;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f9ff;
+    --color-font-primary: #17142d;
+    --color-border: #eee;
+    --font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg-body);
+    display: grid;
+    place-items: center;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+main {
+    width: 420px;
+    min-height: 502px;
+    position: relative;
+}
+
+.downloads_btn {
+    background: var(--bg-primary);
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: -62px;
+    right: 0;
+}
+
+.downloads_btn::before {
+    content: '';
+    width: 135%;
+    height: 135%;
+    background: #dfe9fb;
+    border-radius: 16px;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.downloads_btn svg {
+    width: 24px;
+}
+
+.downloads_section {
+    width: 100%;
+    background: var(--bg-primary);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 10px #ddd;
+    animation: show .5s;
+}
+
+.cloud_storage {
+    background: var(--bg-secondary);
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+
+.cloud_storage h2 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.storage_progress_line {
+    background: var(--bg-primary);
+    width: 100%;
+    height: 15px;
+    margin: 7px 0 8px;
+    padding: 3px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    position: relative;
+}
+
+.storage_progress_line::before {
+    content: '';
+    width: 24%;
+    background: #17142d;
+    border-radius: inherit;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+}
+
+.cloud_storage span {
+    font-size: 13px;
+}
+
+.downloads {
+    padding: 5px 0;
+}
+
+.download_item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+}
+
+.download_item:last-of-type {
+    border-bottom: none;
+}
+
+.download_item p {
+    margin: 0 0 2px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.download_item span {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .7;
+}
+
+.download_item_progress svg.up_to_date {
+    margin: 6px 8px 0 0;
+    width: 38px;
+    height: 38px;
+}
+
+.download_circle {
+    margin: 4px 8px 0 0;
+    width: 38px;
+    height: 38px;
+     transform: rotate(-90deg) scale(1, -1);
+}
+
+.download_circle circle {
+    fill: transparent;
+    stroke: #c8d2ea;
+    stroke-width: 4;
+}
+
+.download_circle circle:nth-of-type(2) {
+    stroke: #17142d;
+    stroke-dasharray: 90;
+    transition: .1s;
+}
+
+.download_item_options {
+    margin: 0 15px 0 auto;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+}
+
+.download_item_options svg {
+    width: 25px;
+    transition: transform .5s;
+}
+
+.download_item_options:hover svg {
+    transform: rotate(90deg);
+}
+
+.go_to_downloads_btn {
+    background: transparent;
+    margin: 6px 0 0;
+    padding: 14px 60px;
+    border: 2px solid #a3adc5;
+    border-radius: 5px;
+}
+
+.updated_info {
+    width: 300px;
+    padding: 10px;
+    background: #17142d;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: fixed;
+    top: 30px;
+    z-index: 5;
+    animation: show .5s;
+}
+
+.updated_info svg {
+    margin: 0 0 0 20px;
+    width: 45px;
+    height: 45px;
+}
+
+.downloads_section.onhidden,
+.updated_info.onhidden {
+    animation: hide .5s;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes show {
+    from {opacity: 0; transform: translateY(-100px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes hide {
+    from {opacity: 1; transform: translateY(0);}
+    to {opacity: 0; transform: translateY(-100px);}
+}
+
+@media(max-width: 445px) {
+    main {
+        width: 98%;
+    }
+
+    .downloads_btn {
+        right: 10px;
+    }
+}
