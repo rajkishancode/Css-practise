@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Merriweather:wght@400;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Merriweather", serif;
+    background-color: #F7EFF8;
+    margin: 8rem 2rem;
+}
+
+main {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    position: relative;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 20px;
+}
+
+.name__and__email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.d-flex-col>input {
+    padding: 1rem;
+}
+
+.conditions {
+    display: flex;
+    gap: 10px;
+}
+
+.close-btn>svg {
+    background-color: #F6F4FF;
+    height: 40px;
+    width: 40px;
+    color: gray;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+
+ul {
+    list-style: none;
+
+}
+
+li {
+    border: 2px solid #F1F1FA;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-content: center;
+}
+
+
+li>svg {
+    height: 40px;
+    width: 40px;
+    stroke: orange;
+    fill: yellow;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+
+
+.review {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.review>input {
+    padding: 1rem;
+
+
+}
+
+input::placeholder {
+    font-weight: 600;
+    font-size: 1rem;
+
+
+
+}
+
+.product-review {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product-review>input {
+    padding: 1rem;
+    height: 4rem;
+}
+
+
+a.button {
+    background-color: #101831;
+    color: #fff;
+    padding: 1rem;
+    align-self: flex-start;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+p {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+main {
+    z-index: 1;
+
+}
+
+.back {
+    content: "";
+    height: 600px;
+    width: 900px;
+    display: grid;
+    place-content: center;
+    border-radius: 30px;
+    background-color: #FED2D3;
+    position: absolute;
+    /* z-index: -1; */
+
+}
