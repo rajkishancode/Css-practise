@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subscribe_popup</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1119.0">
+    <div class="circles">
+        <span class="circle1"></span>
+        <span class="circle2"></span>
+    </div>
+    <div class="overlay"></div>
+    <section class="main_popup" style="transform: translateX(0px);">
+        <h2>Our newsletter is waiting for you</h2>
+        <button class="main_btn">Ok, let's go!</button>
+    </section>
+    <section class="newsletter_popup" style="transform: translateX(100vw);">
+        <button class="close_btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#18192e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </button>
+        <h2>Enjoyed the read?</h2>
+        <p>Join our monthly newsletter for helpful tips on design and more.</p>
+        <form action="#" novalidate="">
+            <div class="email_area">
+                <input type="text" name="email" id="email" required="" class="error">
+                <label for="email">Your email address</label>
+                <svg class="email_error_icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#f43d3d">
+                    <path fill="#f43d3d" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 192a58.432 58.432 0 0 0-58.24 63.744l23.36 256.384a35.072 35.072 0 0 0 69.76 0l23.296-256.384A58.432 58.432 0 0 0 512 256zm0 512a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 0 0 0 102.4z"></path>
+                </svg>
+                <small class="txt_error">Invalid email address</small>
+            </div>
+            <div class="checkbox_area">
+                <div>
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement">I agree to receive this newsletter and subscribe at any time.</label>
+                </div>
+                <small class="txt_error hidden">Mark this checkbox</small>
+            </div>
+            <button class="subscribe_btn">Subscribe</button>
+        </form>
+    </section>
+    <section class="confirm_popup">
+        <h2>Confirm your subscription</h2>
+        <p>We've sent a verification code to <span class="confirm_email"></span>. Enter the code you received below.</p>
+        <input type="number" placeholder="0000">
+        <span class="txt_error hidden">Incorrect code</span>
+        <button class="confirm_btn">Confirm</button>
+    </section>
+    <section class="success_popup">
+        <h2>Yaaaaay! 🥳</h2>
+        <p>Thanks for the subscription. Remember that you can unsubscribe at any time.</p>
+    </section>
+    <div class="email_message_popup">
+        <svg viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-340.000000, -922.000000)" fill="#fff">
+                    <g transform="translate(56.000000, 160.000000)">
+                        <path d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#fffff]"> </path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <div class="message">
+            <span>TheUnknownSite.com - confirm your subscription</span>
+            <p><span class="code"></span> is your verification code</p>
+            <p></p>
+        </div>
+    </div>
+
+
+          
+            <script>const mainPopup = document.querySelector('.main_popup');
+const mainBtn = document.querySelector('.main_btn');
+const closeBtn = document.querySelector('.close_btn');
+const newsletterPopup = document.querySelector('.newsletter_popup');
+const emailInput = document.querySelector('.email_area input');
+const agreementCheckbox = document.querySelector('.checkbox_area input');
+const emailErrorIcon = document.querySelector('.email_error_icon');
+const subscribeBtn = document.querySelector('.subscribe_btn');
+const confirmPopup = document.querySelector('.confirm_popup');
+const confirmBtn = document.querySelector('.confirm_btn');
+const successPopup = document.querySelector('.success_popup');
+const confirmNumInput = document.querySelector('.confirm_popup input');
+
+let generatedCode = undefined;
+
+const generateVerificationCode = () => {
+    return Array.from({ length: 4 }, () => Math.floor(Math.random() * 10));
+}
+
+const showSuccessPopup = () => {
+    confirmPopup.style.transform = "translateX(-100vw)";
+    successPopup.style.transform = "translateX(0)";
+}
+
+const checkConfirmationCode = () => {
+    if (confirmNumInput.value !== generatedCode) {
+        confirmNumInput.classList.add('error');
+        confirmNumInput.parentElement.querySelector('.txt_error').classList.remove('hidden');
+    } else {
+        confirmNumInput.classList.remove('error');
+        confirmNumInput.parentElement.querySelector('.txt_error').classList.add('hidden');
+        showSuccessPopup();
+    }
+}
+
+const checkNumInput = val => {
+    if (val.length > 4) {
+        confirmNumInput.value = val.slice(0, -1);
+    }
+}
+
+const showEmailMessage = () => {
+    generatedCode = generateVerificationCode().join('');
+
+    const emailMsgPopup = document.querySelector('.email_message_popup');
+    emailMsgPopup.querySelector('.code').textContent = generatedCode;
+    setTimeout(() => {
+        emailMsgPopup.style.transform = "translateY(280px)";
+    }, 2000);
+    setTimeout(() => {
+        emailMsgPopup.style.transform = "translateY(0)";
+    }, 7000);
+}
+
+const confirmation = email => {
+    newsletterPopup.style.transform = "translateX(-100vw)";
+    confirmPopup.style.transform = "translateX(0)";
+
+    confirmPopup.querySelector('.confirm_email').textContent = email;
+    showEmailMessage();
+}
+
+const validateForm = () => {
+    let errors = 0;
+
+    if (!/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/gi.test(emailInput.value) || emailInput.value.toLowerCase() !== emailInput.value) {
+        emailInput.classList.add('error');
+        emailErrorIcon.classList.remove('hidden');
+        emailInput.parentElement.querySelector('.txt_error').classList.remove('hidden');
+        errors++;
+    } else {
+        emailInput.classList.remove('error');
+        emailErrorIcon.classList.add('hidden');
+        emailInput.parentElement.querySelector('.txt_error').classList.add('hidden');
+    }
+
+    if (!agreementCheckbox.checked) {
+        agreementCheckbox.parentElement.parentElement.querySelector('.txt_error').classList.remove('hidden');
+        errors++;
+    } else {
+        agreementCheckbox.parentElement.parentElement.querySelector('.txt_error').classList.add('hidden');
+    }
+
+    if (errors === 0) {
+        confirmation(emailInput.value);
+    }
+}
+
+const goToMainPopup = () => {
+    mainPopup.style.transform = "translateX(0)";
+    newsletterPopup.style.transform = "translateX(100vw)";
+}
+
+const goToNewsletterPopup = () => {
+    mainPopup.style.transform = "translateX(-100vw)";
+    newsletterPopup.style.transform = "translateX(0)";
+}
+
+confirmNumInput.addEventListener('input', e => {
+    checkNumInput(e.target.value);
+})
+
+closeBtn.addEventListener('click', goToMainPopup);
+
+mainBtn.addEventListener('click', goToNewsletterPopup);
+
+subscribeBtn.addEventListener('click', e => {
+    e.preventDefault();
+    validateForm();
+});
+
+confirmBtn.addEventListener('click', checkConfirmationCode);</script>
+        </body>
+</html>
