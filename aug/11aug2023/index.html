@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>accordion4</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
+    <section class="accordion_section">
+        <h1>The accordion</h1>
+        <p>The accordion is a graphical control element comprising a vertically stacked list of items, such as labels or thumbnails. Each item can be "expanded" or "collapsed" to reveal the content associated with that item.</p>
+        <div>
+            <div class="accordion_item">
+                <div class="accordion_header">
+                    <div class="accordion_state_icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#fff"></path>
+                        </svg>
+                    </div>
+                    <h2>When and how it should be used?</h2>
+                </div>
+                <div class="accordion_body hidden">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum iste placeat eligendi voluptatibus. Omnis libero nulla consequuntur animi debitis alias.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_header">
+                    <div class="accordion_state_icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#fff"></path>
+                        </svg>
+                    </div>
+                    <h2>What's an accordion?</h2>
+                </div>
+                <div class="accordion_body hidden">
+                    <h3>Show/Hide operation</h3>
+                    <p>An accordion always contains the category title, an expanded and a collapsed state, on icon indicating expansion, and the spacing between them.</p>
+                    <h3>Tabbed interface</h3>
+                    <p>A list of items where exactly one item is expanded into a panel</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_header">
+                    <div class="accordion_state_icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#fff"></path>
+                        </svg>
+                    </div>
+                    <h2>What if the user clicks on a collapsed card while another card is open?</h2>
+                </div>
+                <div class="accordion_body hidden">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum iste placeat eligendi voluptatibus. Omnis libero nulla consequuntur animi debitis alias.</p>
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_header">
+                    <div class="accordion_state_icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#fff"></path>
+                        </svg>
+                    </div>
+                    <h2>How to choose an icon to indicate expansion?</h2>
+                </div>
+                <div class="accordion_body hidden">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum iste placeat eligendi voluptatibus. Omnis libero nulla consequuntur animi debitis alias.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+            
+            <script>const accordionHeaders = document.querySelectorAll('.accordion_header');
+const allLinks = document.querySelectorAll('a');
+
+const plusSVGTemplate = `
+     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#fff"></path>
+    </svg>
+`;
+
+const minusSVGTemplate = `
+    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <path fill="#fff" fill-rule="evenodd" d="M18 10a1 1 0 01-1 1H3a1 1 0 110-2h14a1 1 0 011 1z"></path>
+    </svg>
+`;
+
+const openHideAccordion = header => {
+    const accordionBody = header.parentElement.querySelector('.accordion_body');
+    const accordionIconState = header.parentElement.querySelector('.accordion_state_icon');
+
+    accordionBody.classList.toggle('hidden');
+
+
+    if (accordionBody.classList.contains('hidden')) {
+        accordionIconState.innerHTML = plusSVGTemplate;
+    } else {
+        accordionIconState.innerHTML = minusSVGTemplate;
+    }
+}
+
+accordionHeaders.forEach(accordionHeader => {
+    accordionHeader.addEventListener('click', () => {
+        openHideAccordion(accordionHeader);
+    })
+});
+
+allLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+    })
+})</script>
+        </body>
+</html>
