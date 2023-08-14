@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
+    <main>
+        <section class="calendar_section">
+            <div class="years">
+                <button class="past_year">2022</button>
+                <button class="current_year">AUG. 2023</button>
+                <button class="next_year">2024</button>
+            </div>
+            <div class="calendar">
+                <ul class="weeks">
+                    <li>Sun</li>
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thur</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                </ul>
+                <ul class="days"><li class="other_month">30</li><li class="other_month">31</li><li data-day-num="1">1</li><li data-day-num="2">2</li><li data-day-num="3" class="planned">3</li><li data-day-num="4">4</li><li data-day-num="5">5</li><li data-day-num="6">6</li><li data-day-num="7">7</li><li data-day-num="8">8</li><li data-day-num="9">9</li><li data-day-num="10">10</li><li data-day-num="11">11</li><li data-day-num="12">12</li><li data-day-num="13" class="planned">13</li><li data-day-num="14" class="planned">14</li><li data-day-num="15">15</li><li data-day-num="16">16</li><li data-day-num="17">17</li><li data-day-num="18">18</li><li data-day-num="19">19</li><li data-day-num="20" class="planned">20</li><li data-day-num="21">21</li><li data-day-num="22">22</li><li data-day-num="23" class="planned">23</li><li data-day-num="24">24</li><li data-day-num="25">25</li><li data-day-num="26">26</li><li data-day-num="27">27</li><li data-day-num="28">28</li><li data-day-num="29">29</li><li data-day-num="30">30</li><li data-day-num="31">31</li><li class="other_month">1</li><li class="other_month">2</li></ul>
+            </div>
+            <div class="months">
+                <button class="month_navigation inactive prev">
+                    <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                        <path d="M12.792 15.233l-0.754 0.754 6.035 6.035 0.754-0.754-5.281-5.281 5.256-5.256-0.754-0.754-3.013 3.013z" fill="#dce8e6"></path>
+                    </svg>
+                </button>
+                <button class=" month_navigation next">
+                    <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" transform="rotate(180)">
+                        <path d="M12.792 15.233l-0.754 0.754 6.035 6.035 0.754-0.754-5.281-5.281 5.256-5.256-0.754-0.754-3.013 3.013z" fill="#dce8e6"> </path>
+                    </svg>
+                </button>
+                <div class="months_btns">
+                    <button data-month-num="0">Jan</button>
+                    <button data-month-num="1">Feb</button>
+                    <button data-month-num="2">Mar</button>
+                    <button data-month-num="3">Apr</button>
+                    <button data-month-num="4">May</button>
+                    <button data-month-num="5">Jun</button>
+                    <button data-month-num="6">Jul</button>
+                    <button data-month-num="7" class="selected">Aug</button>
+                    <button data-month-num="8">Sep</button>
+                    <button data-month-num="9">Oct</button>
+                    <button data-month-num="10">Nov</button>
+                    <button data-month-num="11">Dec</button>
+                </div>
+            </div>
+        </section>
+        <section class="events_section">
+            <h2>Events of the month</h2>
+            <div class="events_container"><div data-event-id="28fe298b-8285-42a1-99b5-9a67579c75ce" class="event"><img class="event_icon" src="https://i.ibb.co/Jv8PNcg/cutlery-icon.png"><div class="event_description"><span class="event_title">Dinner with dad</span><span class="event_date">Thur 3 20:00</span></div><div class="event_actions"><button class="edit_btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.0671 2.27157C17.5 2.09228 17.9639 2 18.4324 2C18.9009 2 19.3648 2.09228 19.7977 2.27157C20.2305 2.45086 20.6238 2.71365 20.9551 3.04493C21.2864 3.37621 21.5492 3.7695 21.7285 4.20235C21.9077 4.63519 22 5.09911 22 5.56761C22 6.03611 21.9077 6.50003 21.7285 6.93288C21.5492 7.36572 21.2864 7.75901 20.9551 8.09029L20.4369 8.60845L15.3916 3.56308L15.9097 3.04493C16.241 2.71365 16.6343 2.45086 17.0671 2.27157Z" fill="#364240"></path>
+                <path d="M13.9774 4.9773L3.6546 15.3001C3.53154 15.4231 3.44273 15.5762 3.39694 15.7441L2.03526 20.7369C1.94084 21.0831 2.03917 21.4534 2.29292 21.7071C2.54667 21.9609 2.91693 22.0592 3.26314 21.9648L8.25597 20.6031C8.42387 20.5573 8.57691 20.4685 8.69996 20.3454L19.0227 10.0227L13.9774 4.9773Z" fill="#364240"></path>
+            </svg>
+        </button><button class="delete_btn">
+            <svg viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+            <g transform="translate(-261.000000, -205.000000)" fill="#364240">
+                <path d="M268,220 C268,219.448 268.448,219 269,219 C269.552,219 270,219.448 270,220 L270,232 C270,232.553 269.552,233 269,233 C268.448,233 268,232.553 268,232 L268,220 L268,220 Z M273,220 C273,219.448 273.448,219 274,219 C274.552,219 275,219.448 275,220 L275,232 C275,232.553 274.552,233 274,233 C273.448,233 273,232.553 273,232 L273,220 L273,220 Z M278,220 C278,219.448 278.448,219 279,219 C279.552,219 280,219.448 280,220 L280,232 C280,232.553 279.552,233 279,233 C278.448,233 278,232.553 278,232 L278,220 L278,220 Z M263,233 C263,235.209 264.791,237 267,237 L281,237 C283.209,237 285,235.209 285,233 L285,217 L263,217 L263,233 L263,233 Z M277,209 L271,209 L271,208 C271,207.447 271.448,207 272,207 L276,207 C276.552,207 277,207.447 277,208 L277,209 L277,209 Z M285,209 L279,209 L279,207 C279,205.896 278.104,205 277,205 L271,205 C269.896,205 269,205.896 269,207 L269,209 L263,209 C261.896,209 261,209.896 261,211 L261,213 C261,214.104 261.895,214.999 262.999,215 L285.002,215 C286.105,214.999 287,214.104 287,213 L287,211 C287,209.896 286.104,209 285,209 L285,209 Z"></path>
+            </g>
+        </svg>
+        </button></div></div><div data-event-id="a3251966-b4b3-41e6-8ebc-a37c4e413f0d" class="event"><img class="event_icon" src="https://i.ibb.co/7gD6YvQ/cart-icon.png"><div class="event_description"><span class="event_title">Pay phone bills</span><span class="event_date">Sun 13 12:00</span></div><div class="event_actions"><button class="edit_btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.0671 2.27157C17.5 2.09228 17.9639 2 18.4324 2C18.9009 2 19.3648 2.09228 19.7977 2.27157C20.2305 2.45086 20.6238 2.71365 20.9551 3.04493C21.2864 3.37621 21.5492 3.7695 21.7285 4.20235C21.9077 4.63519 22 5.09911 22 5.56761C22 6.03611 21.9077 6.50003 21.7285 6.93288C21.5492 7.36572 21.2864 7.75901 20.9551 8.09029L20.4369 8.60845L15.3916 3.56308L15.9097 3.04493C16.241 2.71365 16.6343 2.45086 17.0671 2.27157Z" fill="#364240"></path>
+                <path d="M13.9774 4.9773L3.6546 15.3001C3.53154 15.4231 3.44273 15.5762 3.39694 15.7441L2.03526 20.7369C1.94084 21.0831 2.03917 21.4534 2.29292 21.7071C2.54667 21.9609 2.91693 22.0592 3.26314 21.9648L8.25597 20.6031C8.42387 20.5573 8.57691 20.4685 8.69996 20.3454L19.0227 10.0227L13.9774 4.9773Z" fill="#364240"></path>
+            </svg>
+        </button><button class="delete_btn">
+            <svg viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+            <g transform="translate(-261.000000, -205.000000)" fill="#364240">
+                <path d="M268,220 C268,219.448 268.448,219 269,219 C269.552,219 270,219.448 270,220 L270,232 C270,232.553 269.552,233 269,233 C268.448,233 268,232.553 268,232 L268,220 L268,220 Z M273,220 C273,219.448 273.448,219 274,219 C274.552,219 275,219.448 275,220 L275,232 C275,232.553 274.552,233 274,233 C273.448,233 273,232.553 273,232 L273,220 L273,220 Z M278,220 C278,219.448 278.448,219 279,219 C279.552,219 280,219.448 280,220 L280,232 C280,232.553 279.552,233 279,233 C278.448,233 278,232.553 278,232 L278,220 L278,220 Z M263,233 C263,235.209 264.791,237 267,237 L281,237 C283.209,237 285,235.209 285,233 L285,217 L263,217 L263,233 L263,233 Z M277,209 L271,209 L271,208 C271,207.447 271.448,207 272,207 L276,207 C276.552,207 277,207.447 277,208 L277,209 L277,209 Z M285,209 L279,209 L279,207 C279,205.896 278.104,205 277,205 L271,205 C269.896,205 269,205.896 269,207 L269,209 L263,209 C261.896,209 261,209.896 261,211 L261,213 C261,214.104 261.895,214.999 262.999,215 L285.002,215 C286.105,214.999 287,214.104 287,213 L287,211 C287,209.896 286.104,209 285,209 L285,209 Z"></path>
+            </g>
+        </svg>
+        </button></div></div><div data-event-id="70a3df83-14ad-4c76-98be-acb58c1f4ae5" class="event"><img class="event_icon" src="https://i.ibb.co/NpSxzCq/star-icon.png"><div class="event_description"><span class="event_title">Special day :)</span><span class="event_date">Mon 14 16:00</span></div><div class="event_actions"><button class="edit_btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.0671 2.27157C17.5 2.09228 17.9639 2 18.4324 2C18.9009 2 19.3648 2.09228 19.7977 2.27157C20.2305 2.45086 20.6238 2.71365 20.9551 3.04493C21.2864 3.37621 21.5492 3.7695 21.7285 4.20235C21.9077 4.63519 22 5.09911 22 5.56761C22 6.03611 21.9077 6.50003 21.7285 6.93288C21.5492 7.36572 21.2864 7.75901 20.9551 8.09029L20.4369 8.60845L15.3916 3.56308L15.9097 3.04493C16.241 2.71365 16.6343 2.45086 17.0671 2.27157Z" fill="#364240"></path>
+                <path d="M13.9774 4.9773L3.6546 15.3001C3.53154 15.4231 3.44273 15.5762 3.39694 15.7441L2.03526 20.7369C1.94084 21.0831 2.03917 21.4534 2.29292 21.7071C2.54667 21.9609 2.91693 22.0592 3.26314 21.9648L8.25597 20.6031C8.42387 20.5573 8.57691 20.4685 8.69996 20.3454L19.0227 10.0227L13.9774 4.9773Z" fill="#364240"></path>
+            </svg>
+        </button><button class="delete_btn">
+            <svg viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+            <g transform="translate(-261.000000, -205.000000)" fill="#364240">
+                <path d="M268,220 C268,219.448 268.448,219 269,219 C269.552,219 270,219.448 270,220 L270,232 C270,232.553 269.552,233 269,233 C268.448,233 268,232.553 268,232 L268,220 L268,220 Z M273,220 C273,219.448 273.448,219 274,219 C274.552,219 275,219.448 275,220 L275,232 C275,232.553 274.552,233 274,233 C273.448,233 273,232.553 273,232 L273,220 L273,220 Z M278,220 C278,219.448 278.448,219 279,219 C279.552,219 280,219.448 280,220 L280,232 C280,232.553 279.552,233 279,233 C278.448,233 278,232.553 278,232 L278,220 L278,220 Z M263,233 C263,235.209 264.791,237 267,237 L281,237 C283.209,237 285,235.209 285,233 L285,217 L263,217 L263,233 L263,233 Z M277,209 L271,209 L271,208 C271,207.447 271.448,207 272,207 L276,207 C276.552,207 277,207.447 277,208 L277,209 L277,209 Z M285,209 L279,209 L279,207 C279,205.896 278.104,205 277,205 L271,205 C269.896,205 269,205.896 269,207 L269,209 L263,209 C261.896,209 261,209.896 261,211 L261,213 C261,214.104 261.895,214.999 262.999,215 L285.002,215 C286.105,214.999 287,214.104 287,213 L287,211 C287,209.896 286.104,209 285,209 L285,209 Z"></path>
+            </g>
+        </svg>
+        </button></div></div><div data-event-id="bf78af40-854e-48a8-9980-39b95d2d63b6" class="event"><img class="event_icon" src="https://i.ibb.co/NpSxzCq/star-icon.png"><div class="event_description"><span class="event_title">100 completed challenges</span><span class="event_date">Sun 20 12:00</span></div><div class="event_actions"><button class="edit_btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.0671 2.27157C17.5 2.09228 17.9639 2 18.4324 2C18.9009 2 19.3648 2.09228 19.7977 2.27157C20.2305 2.45086 20.6238 2.71365 20.9551 3.04493C21.2864 3.37621 21.5492 3.7695 21.7285 4.20235C21.9077 4.63519 22 5.09911 22 5.56761C22 6.03611 21.9077 6.50003 21.7285 6.93288C21.5492 7.36572 21.2864 7.75901 20.9551 8.09029L20.4369 8.60845L15.3916 3.56308L15.9097 3.04493C16.241 2.71365 16.6343 2.45086 17.0671 2.27157Z" fill="#364240"></path>
+                <path d="M13.9774 4.9773L3.6546 15.3001C3.53154 15.4231 3.44273 15.5762 3.39694 15.7441L2.03526 20.7369C1.94084 21.0831 2.03917 21.4534 2.29292 21.7071C2.54667 21.9609 2.91693 22.0592 3.26314 21.9648L8.25597 20.6031C8.42387 20.5573 8.57691 20.4685 8.69996 20.3454L19.0227 10.0227L13.9774 4.9773Z" fill="#364240"></path>
+            </svg>
+        </button><button class="delete_btn">
+            <svg viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+            <g transform="translate(-261.000000, -205.000000)" fill="#364240">
+                <path d="M268,220 C268,219.448 268.448,219 269,219 C269.552,219 270,219.448 270,220 L270,232 C270,232.553 269.552,233 269,233 C268.448,233 268,232.553 268,232 L268,220 L268,220 Z M273,220 C273,219.448 273.448,219 274,219 C274.552,219 275,219.448 275,220 L275,232 C275,232.553 274.552,233 274,233 C273.448,233 273,232.553 273,232 L273,220 L273,220 Z M278,220 C278,219.448 278.448,219 279,219 C279.552,219 280,219.448 280,220 L280,232 C280,232.553 279.552,233 279,233 C278.448,233 278,232.553 278,232 L278,220 L278,220 Z M263,233 C263,235.209 264.791,237 267,237 L281,237 C283.209,237 285,235.209 285,233 L285,217 L263,217 L263,233 L263,233 Z M277,209 L271,209 L271,208 C271,207.447 271.448,207 272,207 L276,207 C276.552,207 277,207.447 277,208 L277,209 L277,209 Z M285,209 L279,209 L279,207 C279,205.896 278.104,205 277,205 L271,205 C269.896,205 269,205.896 269,207 L269,209 L263,209 C261.896,209 261,209.896 261,211 L261,213 C261,214.104 261.895,214.999 262.999,215 L285.002,215 C286.105,214.999 287,214.104 287,213 L287,211 C287,209.896 286.104,209 285,209 L285,209 Z"></path>
+            </g>
+        </svg>
+        </button></div></div><div data-event-id="cb263810-dc30-4b2e-baa5-303106be0511" class="event"><img class="event_icon" src="https://i.ibb.co/dGnHnbH/presentation-icon.png"><div class="event_description"><span class="event_title">Meeting with John</span><span class="event_date">Wed 23 10:00</span></div><div class="event_actions"><button class="edit_btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.0671 2.27157C17.5 2.09228 17.9639 2 18.4324 2C18.9009 2 19.3648 2.09228 19.7977 2.27157C20.2305 2.45086 20.6238 2.71365 20.9551 3.04493C21.2864 3.37621 21.5492 3.7695 21.7285 4.20235C21.9077 4.63519 22 5.09911 22 5.56761C22 6.03611 21.9077 6.50003 21.7285 6.93288C21.5492 7.36572 21.2864 7.75901 20.9551 8.09029L20.4369 8.60845L15.3916 3.56308L15.9097 3.04493C16.241 2.71365 16.6343 2.45086 17.0671 2.27157Z" fill="#364240"></path>
+                <path d="M13.9774 4.9773L3.6546 15.3001C3.53154 15.4231 3.44273 15.5762 3.39694 15.7441L2.03526 20.7369C1.94084 21.0831 2.03917 21.4534 2.29292 21.7071C2.54667 21.9609 2.91693 22.0592 3.26314 21.9648L8.25597 20.6031C8.42387 20.5573 8.57691 20.4685 8.69996 20.3454L19.0227 10.0227L13.9774 4.9773Z" fill="#364240"></path>
+            </svg>
+        </button><button class="delete_btn">
+            <svg viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+            <g transform="translate(-261.000000, -205.000000)" fill="#364240">
+                <path d="M268,220 C268,219.448 268.448,219 269,219 C269.552,219 270,219.448 270,220 L270,232 C270,232.553 269.552,233 269,233 C268.448,233 268,232.553 268,232 L268,220 L268,220 Z M273,220 C273,219.448 273.448,219 274,219 C274.552,219 275,219.448 275,220 L275,232 C275,232.553 274.552,233 274,233 C273.448,233 273,232.553 273,232 L273,220 L273,220 Z M278,220 C278,219.448 278.448,219 279,219 C279.552,219 280,219.448 280,220 L280,232 C280,232.553 279.552,233 279,233 C278.448,233 278,232.553 278,232 L278,220 L278,220 Z M263,233 C263,235.209 264.791,237 267,237 L281,237 C283.209,237 285,235.209 285,233 L285,217 L263,217 L263,233 L263,233 Z M277,209 L271,209 L271,208 C271,207.447 271.448,207 272,207 L276,207 C276.552,207 277,207.447 277,208 L277,209 L277,209 Z M285,209 L279,209 L279,207 C279,205.896 278.104,205 277,205 L271,205 C269.896,205 269,205.896 269,207 L269,209 L263,209 C261.896,209 261,209.896 261,211 L261,213 C261,214.104 261.895,214.999 262.999,215 L285.002,215 C286.105,214.999 287,214.104 287,213 L287,211 C287,209.896 286.104,209 285,209 L285,209 Z"></path>
+            </g>
+        </svg>
+        </button></div></div></div>  
+            <button class="add_event_btn">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path fill="#d2d9d9" fill-rule="evenodd" d="M9 17a1 1 0 102 0v-6h6a1 1 0 100-2h-6V3a1 1 0 10-2 0v6H3a1 1 0 000 2h6v6z"></path>
+                </svg>
+                Add event
+            </button>
+        </section>
+        <section class="new_event_section hidden">
+            <button class="close_new_event_btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#eb7363"></path>
+                </svg>
+            </button>
+            <h2>Add new event</h2>
+            <form action="#">
+                <div class="form_control">
+                    <label for="event_title">Event title</label>
+                    <input type="text" id="event_title">
+                </div>
+                <div class="form_control">
+                    <label for="event_time">Event time</label>
+                    <input type="time" id="event_time">
+                </div>
+                <div class="form_control">
+                    <p>Select event icon</p>
+                    <ul class="icons">
+                        <li>
+                            <input type="radio" name="icon" id="icon-1" checked="">
+                            <label for="icon-1">
+                                <img src="https://i.ibb.co/Jv8PNcg/cutlery-icon.png" alt="Cutlery">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon" id="icon-2">
+                            <label for="icon-2">
+                                <img src="https://i.ibb.co/7gD6YvQ/cart-icon.png" alt="Cart">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon" id="icon-3">
+                            <label for="icon-3">
+                                <img src="https://i.ibb.co/k94gb9x/heart-icon.png" alt="Heart">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon" id="icon-4">
+                            <label for="icon-4">
+                                <img src="https://i.ibb.co/NpSxzCq/star-icon.png" alt="Star">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon" id="icon-5">
+                            <label for="icon-5">
+                                <img src="https://i.ibb.co/dGnHnbH/presentation-icon.png" alt="Presentation">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon" id="icon-6">
+                            <label for="icon-6">
+                                <img src="https://i.ibb.co/6RmH6yZ/baguette-icon.png" alt="Baguette">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon" id="icon-7">
+                            <label for="icon-7">
+                                <img src="https://i.ibb.co/122XwvY/bell-icon.png" alt="Bell">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon" id="icon-8">
+                            <label for="icon-8">
+                                <img src="https://i.ibb.co/RHRzyn6/sport-icon.png" alt="Sport">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <button class="create_event_btn">Create event</button>
+            </form>
+        </section>
+        <section class="edit_event_section hidden">
+            <h2>Edit Event</h2>
+            <button class="close_edit_btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#eb7363"></path>
+                </svg>
+            </button>
+            <form action="#">
+                <div class="form_control">
+                    <label for="event_title_edit">Event title</label>
+                    <input type="text" id="event_title_edit">
+                </div>
+                <div class="form_control">
+                    <p>Select event icon</p>
+                    <ul class="icons">
+                        <li>
+                            <input type="radio" name="icon_edit" id="icon-1-edit" checked="">
+                            <label for="icon-1-edit">
+                                <img src="https://i.ibb.co/Jv8PNcg/cutlery-icon.png" alt="Cutlery">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon_edit" id="icon-2-edit">
+                            <label for="icon-2-edit">
+                                <img src="https://i.ibb.co/7gD6YvQ/cart-icon.png" alt="Cart">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon_edit" id="icon-3-edit">
+                            <label for="icon-3-edit">
+                                <img src="https://i.ibb.co/k94gb9x/heart-icon.png" alt="Heart">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon_edit" id="icon-4-edit">
+                            <label for="icon-4-edit">
+                                <img src="https://i.ibb.co/NpSxzCq/star-icon.png" alt="Star">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon_edit" id="icon-5-edit">
+                            <label for="icon-5-edit">
+                                <img src="https://i.ibb.co/dGnHnbH/presentation-icon.png" alt="Presentation">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon_edit" id="icon-6-edit">
+                            <label for="icon-6-edit">
+                                <img src="https://i.ibb.co/6RmH6yZ/baguette-icon.png" alt="Baguette">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon_edit" id="icon-7-edit">
+                            <label for="icon-7-edit">
+                                <img src="https://i.ibb.co/122XwvY/bell-icon.png" alt="Bell">
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="icon_edit" id="icon-8-edit">
+                            <label for="icon-8-edit">
+                                <img src="https://i.ibb.co/RHRzyn6/sport-icon.png" alt="Sport">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <button class="save_btn">Save</button>
+            </form>
+        </section>
+    </main>
+    <div class="overlay hidden"></div>
+
+
+            <style>:root {
+    --bg-body: #feffff;
+    --bg-main: #364240;
+    --bg-day-selected: #bedd3b;
+    --bg-day-planned: #fdbf7e;
+    --bg-sections-body: #ed8071;
+    --bg-sections-heading: #fcbf7e;
+    --clr-1: #d2d9d9;
+    --clr-2: #818a89;
+    --clr-3: #a09f93;
+    --font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 40px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--bg-body);
+    display: grid;
+    place-items: center;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+main {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Calendar */
+
+.calendar_section {
+    width: 550px;
+    background: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.years {
+    margin: 80px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.past_year,
+.next_year {
+    margin: 4px 0 0;
+    color: var(--clr-2);
+    font-size: 17px;
+}
+
+.current_year {
+    color: var(--clr-1);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.calendar {
+    min-height: 376px;
+}
+
+.weeks {
+    margin: 25px 0 0;
+    color: var(--clr-3);
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 44px);
+    justify-items: center;
+    grid-gap: 0 15px;
+}
+
+.days {
+    margin: 30px 0 0;
+    font-size: 22px;
+    display: grid;
+    grid-template-columns: repeat(7, 55px);
+    justify-content: center;
+    grid-gap: 10px 4px;
+}
+
+.days li {
+    width: 42px;
+    height: 42px;
+    color: var(--clr-1);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.days li.selected {
+    background: var(--bg-day-selected);
+    color: #364240;
+}
+
+.days li.planned {
+    background: var(--bg-day-planned);
+    color: #364240;
+    pointer-events: none;
+}
+
+.days li.selected::after,
+.days li.planned::after {
+    content: '';
+    border: 3px solid #364240;
+    border-radius: 50%;
+    position: absolute;
+    inset: 3px;
+}
+
+.days li.other_month {
+    color: var(--clr-2);
+    pointer-events: none;
+}
+
+.months {
+    margin: 25px 0 70px;
+    position: relative;
+}
+
+.months .prev,
+.months .next {
+    width: 80px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: -20px;
+}
+
+.month_navigation.inactive {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.months .prev {
+    left: -80px;
+}
+
+.months .next {
+    right: -80px;
+}
+
+.months .prev svg,
+.months .next svg {
+    width: 70px;
+    aspect-ratio: 1 / 1;
+}
+
+.months_btns {
+    width: 380px;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    gap: 5px;
+    scroll-behavior: smooth;
+}
+
+.months_btns button {
+    min-width: 70px;
+    color: var(--clr-1);
+    font-size: 28px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.months_btns button.selected {
+    font-weight: 700;
+}
+
+/* Events */
+
+.events_section {
+    width: 500px;
+    background: var(--bg-sections-body);
+}
+
+.events_section h2 {
+    margin: 0;
+    padding: 55px 0;
+    background: var(--bg-sections-heading);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.events_container {
+    height: 500px;
+    padding: 0 35px;
+    overflow-y: auto;
+}
+
+.event {
+    padding: 25px 0;
+    border-bottom: 1px solid #364240;
+    display: flex;
+    align-items: center;
+}
+
+.event:last-of-type {
+    border-bottom: none;
+}
+
+.event_icon {
+    width: 45px;
+    margin: 0 18px 0 0;
+}
+
+.event_description span {
+    display: block;
+}
+
+.event_title {
+    color: #ffebbc;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.event_actions {
+    margin-left: auto;
+    display: flex;
+    gap: 14px;
+}
+
+.event_actions button {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+}
+
+.event_actions button svg {
+    width: 22px;
+}
+
+.edit_btn {
+    margin: 0 5px 0 0;
+}
+
+.add_event_btn {
+    background: var(--bg-main);
+    color: var(--clr-1);
+    margin: 30px auto;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add_event_btn svg {
+    width: 30px;
+}
+
+/* New event section & edit event section */
+
+.new_event_section,
+.edit_event_section {
+    width: 400px;
+    background: var(--bg-sections-body);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.new_event_section h2,
+.edit_event_section h2 {
+    margin: 0;
+    padding: 35px;
+    text-transform: uppercase;
+    background: var(--bg-sections-heading);
+}
+
+.close_new_event_btn,
+.close_edit_btn {
+    position: absolute;
+    top: 34px;
+    right: 15px;
+}
+
+.close_new_event_btn svg,
+.close_edit_btn svg {
+    width: 30px;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .75);
+    position: fixed;
+    inset: 0;
+}
+
+form {
+    padding: 15px 35px;
+}
+
+.form_control {
+    margin: 15px 0;
+}
+
+.form_control label,
+.form_control > p {
+    margin: 5px 0;
+    color: #364240;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+}
+
+.form_control input {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 3px solid #364240;
+    border-radius: 10px;
+    outline: none;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+}
+
+.icons label {
+    border: 3px solid transparent;
+    width: 55px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.icons label > img {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+}
+
+.icons input {
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+}
+
+.icons input:checked + label {
+    border-color: #364240;
+}
+
+.create_event_btn,
+.save_btn {
+    background: var(--bg-main);
+    color: var(--clr-1);
+    margin: 30px auto;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media(max-width: 1060px) {
+    main {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media(max-width: 580px) {
+    .calendar_section,
+    .events_section {
+        width: 98%;
+    }
+
+    .calendar_section {
+        padding: 20px;
+        height: 600px;
+    }
+
+    .calendar {
+        min-height: 330px;
+    }
+
+    .years {
+        margin: 10px 0;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .past_year,
+    .next_year {
+        font-size: 16px;
+    }
+
+    .current_year {
+        font-size: 18px;
+    }
+
+    .weeks,
+    .days {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .weeks {
+        font-size: 13px;
+    }
+
+    .days {
+        font-size: 15px;
+        grid-gap: 15px;
+    }
+
+    .days li {
+        width: 30px;
+        height: 30px;
+    }
+
+    .days li.selected::after,
+    .days li.planned::after {
+        content: '';
+        border: 3px solid #364240;
+        border-radius: 50%;
+        position: absolute;
+        inset: 1px;
+    }
+
+    .months_btns {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .months_btns button {
+        width: 60px;
+        font-size: 16px;
+    }
+
+    .month_navigation {
+        display: none;
+    }
+
+    .close_new_event_btn,
+    .close_edit_btn {
+        top: 20px;
+    }
+
+    .events_section h2,
+    .new_event_section h2,
+    .edit_event_section h2 {
+        font-size: 18px;
+        padding: 25px;
+    }
+
+    .event {
+        padding: 18px 0;
+    }
+
+    .event_icon {
+        width: 30px;
+    }
+
+    .event_title {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 420px) {
+    .new_event_section,
+    .edit_event_section {
+        width: 98%;
+    }
+}</style>
+            <script>// Events database
+
+let events = [
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "HCR2",
+        eventDate: "2022-08-14T20:30:00",
+        eventIcon: "https://i.ibb.co/NpSxzCq/star-icon.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "It works lol",
+        eventDate: "2023-05-13T12:00:00",
+        eventIcon: "https://i.ibb.co/7gD6YvQ/cart-icon.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "Dinner with dad",
+        eventDate: "2023-08-03T20:00:00",
+        eventIcon: "https://i.ibb.co/Jv8PNcg/cutlery-icon.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "Pay phone bills",
+        eventDate: "2023-08-13T12:00:00",
+        eventIcon: "https://i.ibb.co/7gD6YvQ/cart-icon.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "Special day :)",
+        eventDate: "2023-08-14T16:00:00",
+        eventIcon: "https://i.ibb.co/NpSxzCq/star-icon.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "100 completed challenges",
+        eventDate: "2023-08-20T12:00:00",
+        eventIcon: "https://i.ibb.co/NpSxzCq/star-icon.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "Meeting with John",
+        eventDate: "2023-08-23T10:00:00",
+        eventIcon: "https://i.ibb.co/dGnHnbH/presentation-icon.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "Meeting with BAGI3TA",
+        eventDate: "2024-08-31T10:00:00",
+        eventIcon: "https://i.ibb.co/dGnHnbH/presentation-icon.png"
+    },
+    {
+        id: crypto.randomUUID(),
+        eventTitle: "You found that :D",
+        eventDate: "2023-11-02T22:22:00",
+        eventIcon: "https://i.ibb.co/dGnHnbH/presentation-icon.png"
+    },
+]
+
+// HTML elements
+const currentYearElement = document.querySelector('.current_year');
+const pastYearElement = document.querySelector('.past_year');
+const nextYearElement = document.querySelector('.next_year');
+const daysContainer = document.querySelector('ul.days');
+const monthsButtonsContainer = document.querySelector('.months_btns');
+const allMonthsButtons = document.querySelectorAll('.months_btns button');
+const monthNavigationButtons = document.querySelectorAll('.month_navigation');
+const eventsContainer = document.querySelector('.events_container');
+const addEventButton = document.querySelector('.add_event_btn');
+const newEventSection = document.querySelector('.new_event_section');
+const closeNewEventButton = document.querySelector('.close_new_event_btn');
+const createEventButton = document.querySelector('.create_event_btn');
+const editEventSection = document.querySelector('.edit_event_section');
+const closeEditButton = document.querySelector('.close_edit_btn');
+const saveButton = document.querySelector('.save_btn');
+const overlay = document.querySelector('.overlay');
+
+// Helpers
+const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+let todaysDate = new Date();
+let currentYear = todaysDate.getFullYear();
+let currentMonth = todaysDate.getMonth();
+let currentMonthName = MONTHS[todaysDate.getMonth()];
+let MONTH_CONTAINER_WIDTH = monthsButtonsContainer.clientWidth;
+const MONTH_CONTAINER_WIDTH_TOTAL = monthsButtonsContainer.scrollWidth;
+let scrollIndex = 0;
+const MONTH_BUTTON_WIDTH = 75;
+
+let selectedDate = undefined;
+let selectedEditedEventTitle = undefined;
+let selectedEditedEventIconSrc = undefined;
+
+// Functions
+const renderYears = () => {
+    pastYearElement.textContent = currentYear - 1;
+    currentYearElement.textContent = `${currentMonthName}. ${currentYear}`;
+    nextYearElement.textContent = currentYear + 1;
+}
+
+const renderDays = () => {
+    daysContainer.innerHTML = '';
+    let firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+    let lastDateOfMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    let lastDateOfLastMonth = new Date(currentYear, currentMonth, 0).getDate();
+    let lastDayOfMonth = new Date(currentYear, currentMonth, lastDateOfMonth).getDay();
+
+    for (let i = firstDayOfMonth; i > 0; i--) {
+        const liElement = document.createElement('li');
+        liElement.className = 'other_month';
+        liElement.textContent = lastDateOfLastMonth - i + 1;
+        daysContainer.appendChild(liElement);
+    }
+
+    for (let i = 1; i <= lastDateOfMonth; i++) {
+        const liElement = document.createElement('li');
+        liElement.textContent = i;
+        liElement.setAttribute('data-day-num', i);
+        if (selectedDate !== undefined) {
+            if (i === selectedDate.getDate() && currentMonth === selectedDate.getMonth() && currentYear === selectedDate.getFullYear()) {
+                liElement.classList.add('selected');
+            }
+        }
+        daysContainer.appendChild(liElement);
+        liElement.addEventListener('click', () => {
+            selectDate(liElement);
+        });
+    }
+
+    for (let i = lastDayOfMonth; i < 6; i++) {
+        const liElement = document.createElement('li');
+        liElement.className = 'other_month';
+        liElement.textContent = i - lastDayOfMonth + 1;
+        daysContainer.appendChild(liElement);
+    }
+}
+
+const renderEvents = () => {
+    eventsContainer.innerHTML = '';
+    events.forEach(event => {
+        
+        const date = new Date(event.eventDate);
+        const weekday = WEEKDAYS[date.getDay()];
+        const day = date.getDate();
+        const time = `${(date.getHours() < 10) ? date.getHours() + '0' : date.getHours()}:${(date.getMinutes() < 10) ? date.getMinutes() + '0' : date.getMinutes()}`;
+
+        if ( date.getFullYear() === currentYear && date.getMonth() == currentMonth) {
+            const eventElement = document.createElement('div');
+            eventElement.setAttribute('data-event-id', event.id);
+            eventElement.className = 'event';
+
+            const eventIcon = document.createElement('img');
+            eventIcon.className = 'event_icon'
+            eventIcon.setAttribute('src', event.eventIcon);
+
+            const eventDescriptionElement = document.createElement('div');
+            eventDescriptionElement.className = 'event_description';
+
+            const eventTitle = document.createElement('span');
+            eventTitle.className = 'event_title';
+            eventTitle.textContent = event.eventTitle;
+
+            const eventDate = document.createElement('span');
+            eventDate.className = 'event_date';
+            eventDate.textContent = `${weekday} ${day} ${time}`;
+
+            eventDescriptionElement.appendChild(eventTitle);
+            eventDescriptionElement.appendChild(eventDate);
+
+            const eventActionsElement = document.createElement('div');
+            eventActionsElement.className = 'event_actions';
+
+            const editButton = document.createElement('button');
+            editButton.className = 'edit_btn';
+            editButton.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.0671 2.27157C17.5 2.09228 17.9639 2 18.4324 2C18.9009 2 19.3648 2.09228 19.7977 2.27157C20.2305 2.45086 20.6238 2.71365 20.9551 3.04493C21.2864 3.37621 21.5492 3.7695 21.7285 4.20235C21.9077 4.63519 22 5.09911 22 5.56761C22 6.03611 21.9077 6.50003 21.7285 6.93288C21.5492 7.36572 21.2864 7.75901 20.9551 8.09029L20.4369 8.60845L15.3916 3.56308L15.9097 3.04493C16.241 2.71365 16.6343 2.45086 17.0671 2.27157Z" fill="#364240"></path>
+                <path d="M13.9774 4.9773L3.6546 15.3001C3.53154 15.4231 3.44273 15.5762 3.39694 15.7441L2.03526 20.7369C1.94084 21.0831 2.03917 21.4534 2.29292 21.7071C2.54667 21.9609 2.91693 22.0592 3.26314 21.9648L8.25597 20.6031C8.42387 20.5573 8.57691 20.4685 8.69996 20.3454L19.0227 10.0227L13.9774 4.9773Z" fill="#364240"></path>
+            </svg>
+        `;
+            editButton.addEventListener('click', () => {
+                editEvent(editButton.parentElement.parentElement);
+            });
+
+            const deleteButton = document.createElement('button');
+            deleteButton.className = 'delete_btn';
+            deleteButton.innerHTML = `
+            <svg viewBox="-3 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+            <g transform="translate(-261.000000, -205.000000)" fill="#364240">
+                <path d="M268,220 C268,219.448 268.448,219 269,219 C269.552,219 270,219.448 270,220 L270,232 C270,232.553 269.552,233 269,233 C268.448,233 268,232.553 268,232 L268,220 L268,220 Z M273,220 C273,219.448 273.448,219 274,219 C274.552,219 275,219.448 275,220 L275,232 C275,232.553 274.552,233 274,233 C273.448,233 273,232.553 273,232 L273,220 L273,220 Z M278,220 C278,219.448 278.448,219 279,219 C279.552,219 280,219.448 280,220 L280,232 C280,232.553 279.552,233 279,233 C278.448,233 278,232.553 278,232 L278,220 L278,220 Z M263,233 C263,235.209 264.791,237 267,237 L281,237 C283.209,237 285,235.209 285,233 L285,217 L263,217 L263,233 L263,233 Z M277,209 L271,209 L271,208 C271,207.447 271.448,207 272,207 L276,207 C276.552,207 277,207.447 277,208 L277,209 L277,209 Z M285,209 L279,209 L279,207 C279,205.896 278.104,205 277,205 L271,205 C269.896,205 269,205.896 269,207 L269,209 L263,209 C261.896,209 261,209.896 261,211 L261,213 C261,214.104 261.895,214.999 262.999,215 L285.002,215 C286.105,214.999 287,214.104 287,213 L287,211 C287,209.896 286.104,209 285,209 L285,209 Z"></path>
+            </g>
+        </svg>
+        `;
+            deleteButton.addEventListener('click', () => {
+                deleteEvent(deleteButton.parentElement.parentElement, day);
+            });
+
+            eventActionsElement.appendChild(editButton);
+            eventActionsElement.appendChild(deleteButton);
+
+            eventElement.appendChild(eventIcon);
+            eventElement.appendChild(eventDescriptionElement);
+            eventElement.appendChild(eventActionsElement);
+
+            eventsContainer.appendChild(eventElement);
+
+            document.querySelector(`[data-day-num="${day}"]`).classList.add('planned');
+        }
+    });
+}
+
+const editEvent = event => {
+    selectedEditedEventTitle = event.querySelector('.event_title').textContent;
+    selectedEditedEventIconSrc = event.querySelector('img').getAttribute('src');
+    overlay.classList.remove('hidden');
+    editEventSection.classList.remove('hidden');
+    editEventSection.querySelector('#event_title_edit').value = selectedEditedEventTitle;
+};
+
+const saveEventEdit = () => {
+    events.filter(e => e.eventTitle === selectedEditedEventTitle && e.eventIcon === selectedEditedEventIconSrc)[0].eventIcon = editEventSection.querySelector('input[type="radio"]:checked + label > img').getAttribute('src');
+    events.filter(e => e.eventTitle === selectedEditedEventTitle)[0].eventTitle = editEventSection.querySelector('#event_title_edit').value;
+    
+    closeEditEventSection();
+    renderEvents();
+}
+
+const closeEditEventSection = () => {
+    overlay.classList.add('hidden');
+    editEventSection.classList.add('hidden');
+}
+
+const deleteEvent = (event, day) => {
+    event.remove();
+    document.querySelector(`[data-day-num="${day}"]`).classList.remove('planned');
+    events = events.filter(e => e.id !== event.getAttribute('data-event-id'));
+    renderEvents();
+}
+
+const goToYear = year => {
+    currentYear = +year.textContent;
+    renderYears();
+    renderDays();
+    renderEvents();
+    selectedDate = undefined;
+}
+
+const selectMonth = month => {
+    month.classList.add('selected');
+    currentMonthName = month.textContent.toUpperCase();
+    currentMonth = +month.getAttribute('data-month-num');
+    renderYears();
+    renderDays();
+    renderEvents();
+}
+
+const handleMonthNavigation = button => {
+    if (button.classList.contains('prev')) {
+        scrollIndex -= MONTH_BUTTON_WIDTH;
+        monthsButtonsContainer.scroll(scrollIndex, 0);
+    }
+
+    if (button.classList.contains('next')) {
+        scrollIndex += MONTH_BUTTON_WIDTH;
+        monthsButtonsContainer.scroll(scrollIndex, 0);
+    }
+
+    if (scrollIndex >= 895 - (5 * MONTH_BUTTON_WIDTH)) {
+        monthNavigationButtons[1].classList.add('inactive');
+    } else {
+        monthNavigationButtons[1].classList.remove('inactive');
+    }
+
+    if (scrollIndex === 0) {
+        monthNavigationButtons[0].classList.add('inactive');
+    } else {
+        monthNavigationButtons[0].classList.remove('inactive');
+    }
+
+    selectedDate = undefined;
+}
+
+const selectDate = dayElement => {
+    const daysElements = document.querySelectorAll('.days li');
+    daysElements.forEach(el => {
+        el.classList.remove('selected');
+    });
+    dayElement.classList.add('selected');
+    selectedDate = new Date(currentYear, currentMonth, dayElement.textContent);
+}
+
+const openNewEventSection = () => {
+    overlay.classList.remove('hidden');
+    newEventSection.classList.remove('hidden');
+}
+
+const closeNewEventSection = () => {
+    overlay.classList.add('hidden');
+    newEventSection.classList.add('hidden');
+}
+
+const createNewEvent = () => {
+    const eventTitleInput = newEventSection.querySelector('#event_title');
+    const timeInput = newEventSection.querySelector('#event_time');
+    const selectedIconInput = newEventSection.querySelector('input[type="radio"]:checked');
+
+    if (eventTitleInput.value === '') {
+        eventTitleInput.value = 'Event';
+    }
+
+    if (!timeInput.value) {
+        timeInput.value = '00:00';
+    }
+
+    events.push({
+        id: crypto.randomUUID(),
+        eventTitle: eventTitleInput.value,
+        eventDate: `${currentYear}-${(selectedDate.getMonth() + 1 < 10) ? "0" + (selectedDate.getMonth() + 1) : selectedDate.getMonth() + 1}-${(selectedDate.getDate() < 10) ? "0" + selectedDate.getDate() : selectedDate.getDate()}T${timeInput.value}:00`,
+        eventIcon: selectedIconInput.nextElementSibling.querySelector('img').getAttribute('src')
+    });
+
+    eventTitleInput.value = '';
+    timeInput.value = '';
+
+    selectedDate = undefined;
+    closeNewEventSection();
+    renderEvents();
+}
+
+// All event listeners
+pastYearElement.addEventListener('click', e => {
+    goToYear(e.target);
+});
+
+nextYearElement.addEventListener('click', e => {
+    goToYear(e.target);
+});
+
+allMonthsButtons.forEach(month => {
+    month.addEventListener('click', () => {
+        allMonthsButtons.forEach(month => {
+            month.classList.remove('selected');
+        })
+        selectMonth(month);
+    });
+});
+
+monthNavigationButtons.forEach(monthNavigation => {
+    monthNavigation.addEventListener('click', () => {
+        handleMonthNavigation(monthNavigation);
+    });
+});
+
+addEventButton.addEventListener('click', () => {
+    if (selectedDate === undefined) {
+        alert("First select a date")
+    } else {
+        openNewEventSection();
+    }
+});
+
+createEventButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    createNewEvent()
+});
+
+saveButton.addEventListener('click', e => {
+    e.preventDefault();
+    saveEventEdit();
+});
+
+closeNewEventButton.addEventListener('click', closeNewEventSection);
+
+closeEditButton.addEventListener('click', closeEditEventSection);
+
+window.addEventListener('DOMContentLoaded', () => {
+    renderYears();
+    renderDays();
+    selectMonth(document.querySelector(`[data-month-num="${currentMonth}"]`));
+    renderEvents();
+});</script>
+        </body>
+</html>
