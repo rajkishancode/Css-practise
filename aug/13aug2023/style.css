@@ -1,0 +1,522 @@
+:root {
+    --bg-body: #feffff;
+    --bg-main: #364240;
+    --bg-day-selected: #bedd3b;
+    --bg-day-planned: #fdbf7e;
+    --bg-sections-body: #ed8071;
+    --bg-sections-heading: #fcbf7e;
+    --clr-1: #d2d9d9;
+    --clr-2: #818a89;
+    --clr-3: #a09f93;
+    --font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 40px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--bg-body);
+    display: grid;
+    place-items: center;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+main {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Calendar */
+
+.calendar_section {
+    width: 550px;
+    background: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.years {
+    margin: 80px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.past_year,
+.next_year {
+    margin: 4px 0 0;
+    color: var(--clr-2);
+    font-size: 17px;
+}
+
+.current_year {
+    color: var(--clr-1);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.calendar {
+    min-height: 376px;
+}
+
+.weeks {
+    margin: 25px 0 0;
+    color: var(--clr-3);
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 44px);
+    justify-items: center;
+    grid-gap: 0 15px;
+}
+
+.days {
+    margin: 30px 0 0;
+    font-size: 22px;
+    display: grid;
+    grid-template-columns: repeat(7, 55px);
+    justify-content: center;
+    grid-gap: 10px 4px;
+}
+
+.days li {
+    width: 42px;
+    height: 42px;
+    color: var(--clr-1);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.days li.selected {
+    background: var(--bg-day-selected);
+    color: #364240;
+}
+
+.days li.planned {
+    background: var(--bg-day-planned);
+    color: #364240;
+    pointer-events: none;
+}
+
+.days li.selected::after,
+.days li.planned::after {
+    content: '';
+    border: 3px solid #364240;
+    border-radius: 50%;
+    position: absolute;
+    inset: 3px;
+}
+
+.days li.other_month {
+    color: var(--clr-2);
+    pointer-events: none;
+}
+
+.months {
+    margin: 25px 0 70px;
+    position: relative;
+}
+
+.months .prev,
+.months .next {
+    width: 80px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: -20px;
+}
+
+.month_navigation.inactive {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.months .prev {
+    left: -80px;
+}
+
+.months .next {
+    right: -80px;
+}
+
+.months .prev svg,
+.months .next svg {
+    width: 70px;
+    aspect-ratio: 1 / 1;
+}
+
+.months_btns {
+    width: 380px;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    gap: 5px;
+    scroll-behavior: smooth;
+}
+
+.months_btns button {
+    min-width: 70px;
+    color: var(--clr-1);
+    font-size: 28px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.months_btns button.selected {
+    font-weight: 700;
+}
+
+/* Events */
+
+.events_section {
+    width: 500px;
+    background: var(--bg-sections-body);
+}
+
+.events_section h2 {
+    margin: 0;
+    padding: 55px 0;
+    background: var(--bg-sections-heading);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.events_container {
+    height: 500px;
+    padding: 0 35px;
+    overflow-y: auto;
+}
+
+.event {
+    padding: 25px 0;
+    border-bottom: 1px solid #364240;
+    display: flex;
+    align-items: center;
+}
+
+.event:last-of-type {
+    border-bottom: none;
+}
+
+.event_icon {
+    width: 45px;
+    margin: 0 18px 0 0;
+}
+
+.event_description span {
+    display: block;
+}
+
+.event_title {
+    color: #ffebbc;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.event_actions {
+    margin-left: auto;
+    display: flex;
+    gap: 14px;
+}
+
+.event_actions button {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+}
+
+.event_actions button svg {
+    width: 22px;
+}
+
+.edit_btn {
+    margin: 0 5px 0 0;
+}
+
+.add_event_btn {
+    background: var(--bg-main);
+    color: var(--clr-1);
+    margin: 30px auto;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add_event_btn svg {
+    width: 30px;
+}
+
+/* New event section & edit event section */
+
+.new_event_section,
+.edit_event_section {
+    width: 400px;
+    background: var(--bg-sections-body);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.new_event_section h2,
+.edit_event_section h2 {
+    margin: 0;
+    padding: 35px;
+    text-transform: uppercase;
+    background: var(--bg-sections-heading);
+}
+
+.close_new_event_btn,
+.close_edit_btn {
+    position: absolute;
+    top: 34px;
+    right: 15px;
+}
+
+.close_new_event_btn svg,
+.close_edit_btn svg {
+    width: 30px;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .75);
+    position: fixed;
+    inset: 0;
+}
+
+form {
+    padding: 15px 35px;
+}
+
+.form_control {
+    margin: 15px 0;
+}
+
+.form_control label,
+.form_control > p {
+    margin: 5px 0;
+    color: #364240;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+}
+
+.form_control input {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 3px solid #364240;
+    border-radius: 10px;
+    outline: none;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+}
+
+.icons label {
+    border: 3px solid transparent;
+    width: 55px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.icons label > img {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+}
+
+.icons input {
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+}
+
+.icons input:checked + label {
+    border-color: #364240;
+}
+
+.create_event_btn,
+.save_btn {
+    background: var(--bg-main);
+    color: var(--clr-1);
+    margin: 30px auto;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media(max-width: 1060px) {
+    main {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media(max-width: 580px) {
+    .calendar_section,
+    .events_section {
+        width: 98%;
+    }
+
+    .calendar_section {
+        padding: 20px;
+        height: 600px;
+    }
+
+    .calendar {
+        min-height: 330px;
+    }
+
+    .years {
+        margin: 10px 0;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .past_year,
+    .next_year {
+        font-size: 16px;
+    }
+
+    .current_year {
+        font-size: 18px;
+    }
+
+    .weeks,
+    .days {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .weeks {
+        font-size: 13px;
+    }
+
+    .days {
+        font-size: 15px;
+        grid-gap: 15px;
+    }
+
+    .days li {
+        width: 30px;
+        height: 30px;
+    }
+
+    .days li.selected::after,
+    .days li.planned::after {
+        content: '';
+        border: 3px solid #364240;
+        border-radius: 50%;
+        position: absolute;
+        inset: 1px;
+    }
+
+    .months_btns {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .months_btns button {
+        width: 60px;
+        font-size: 16px;
+    }
+
+    .month_navigation {
+        display: none;
+    }
+
+    .close_new_event_btn,
+    .close_edit_btn {
+        top: 20px;
+    }
+
+    .events_section h2,
+    .new_event_section h2,
+    .edit_event_section h2 {
+        font-size: 18px;
+        padding: 25px;
+    }
+
+    .event {
+        padding: 18px 0;
+    }
+
+    .event_icon {
+        width: 30px;
+    }
+
+    .event_title {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 420px) {
+    .new_event_section,
+    .edit_event_section {
+        width: 98%;
+    }
+}
