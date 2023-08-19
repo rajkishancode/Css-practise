@@ -1,0 +1,143 @@
+:root {
+    --bg-body: linear-gradient(45deg, #e4a8d7, #fdfbfe, #fed0f4);
+    --bg-card: linear-gradient(35deg, rgba(254, 127, 205, .9), rgba(244, 117, 82, .9), rgba(254, 127, 205, .2));
+    --clr-font: #feffff;
+    --clr-font-2: #d0456b;
+    --bg-elements-hover: #d0456b;
+    --font-family-headings: 'Rouge Script', cursive;
+    --font-family-main: 'Lato', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: var(--font-family-main);
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg-body);
+    display: grid;
+    place-items: center;
+}
+
+.promo_card {
+    width: 1300px;
+    padding: 5px 24px;
+    background: var(--bg-card);
+    color: var(--clr-font);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 0 16px #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo_card_illustration {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: -1;
+    scale: 1.1;
+    transition: scale .6s;
+}
+
+.promo_card:hover .promo_card_illustration {
+    scale: 1;
+}
+
+.promo_card h1 {
+    margin: 100px 0 0;
+    font-size: 100px;
+    font-family: var(--font-family-headings);
+}
+
+.promo_card p:nth-of-type(1) {
+    width: 60%;
+    margin: 10px auto 0;
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+.social_links {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+.social_links a {
+    width: 46px;
+    aspect-ratio: 1 / 1;
+    background: transparent;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transition: background .4s;
+}
+
+.social_links svg {
+    width: 35px;
+    aspect-ratio: 1 / 1;
+}
+
+.social_links li:hover a {
+    background: var(--bg-elements-hover);
+}
+
+.results_link {
+    display: block;
+    width: max-content;
+    margin: 70px auto 0;
+    padding: 16px 90px;
+    text-decoration: none;
+    background: #feffff;
+    color: var(--clr-font-2);
+    font-size: 28px;
+    border-radius: 35px;
+    position: relative;
+    transition: background .4s, color .4s;
+}
+
+.results_link:hover {
+    background: var(--bg-elements-hover);
+    color: var(--clr-font);
+}
+
+.promo_card p:nth-of-type(2) {
+    margin: 26px auto 120px;
+    font-size: 22px;
+}
+
+@media(max-width: 1300px) {
+    .promo_card {
+        width: 98%;
+    }
+}
+
+@media(max-width: 670px) {
+    .promo_card h1 {
+        margin: 60px 0 0;
+        font-size: 70px;
+        line-height: .9;
+    }
+
+    .promo_card p:nth-of-type(1),
+    .promo_card p:nth-of-type(2) {
+        width: 90%;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+
+
+    .results_link {
+        font-size: 18px;
+        padding: 16px 60px;
+    }
+}
