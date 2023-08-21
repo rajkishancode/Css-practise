@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1120.0" data-gr-ext-installed="">
+    <main class="wrapper">
+        <header>
+            <div class="products_header">
+                <h2>Products</h2>
+            </div>
+            <div class="reviews_header hidden">
+                <button class="prev_section_btn" data-goto="products">
+                    <svg viewBox="-3.57 -3.57 24.14 24.14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                        <path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z" fill="#90fbfb"></path>
+                    </svg>
+                </button>
+                <h2>Reviews</h2>
+                <button class="add_review_btn" data-goto="add_review">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="#90fbfb" stroke-width="0.792"></circle>
+                        <path d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15" stroke="#90fbfb" stroke-width="0.792" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="add_review_header hidden">
+                <button class="prev_section_btn" data-goto="reviews">
+                    <svg viewBox="-3.57 -3.57 24.14 24.14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                        <path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z" fill="#90fbfb">
+                        </path>
+                    </svg>
+                </button>
+                <h2>Add a review</h2>
+            </div>
+        </header>
+
+        <section class="products">
+            <h3>View all reviews of recently purchased products</h3>
+            <p>(admin is too lazy to look for normal pictures lol)</p>
+            <div class="products_wrapper"><div class="product_card"><img src="https://placehold.co/95"><div class="product_info"><a href="#" data-product-id="247f0204-370e-4372-ab6f-468ff8bd2148">Product 1</a><div class="product_rating"><span class="product_average_rating">4.5 (4)</span><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""></div></div></div><div class="product_card"><img src="https://placehold.co/95"><div class="product_info"><a href="#" data-product-id="1426d210-74fd-47d7-bf75-4ed9019aaf22">Product 2</a><div class="product_rating"><span class="product_average_rating">3.7 (3)</span><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""></div></div></div><div class="product_card"><img src="https://placehold.co/95"><div class="product_info"><a href="#" data-product-id="f7701318-ac0c-4802-9784-6e0600de71a3">Product 3</a><div class="product_rating"><span class="product_average_rating">2.4 (5)</span><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""></div></div></div><div class="product_card"><img src="https://placehold.co/95"><div class="product_info"><a href="#" data-product-id="52da3f1e-60f4-4723-828b-8ce049e6e220">Product 4</a><div class="product_rating"><span class="product_average_rating">2.0 (9)</span><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""></div></div></div><div class="product_card"><img src="https://placehold.co/95"><div class="product_info"><a href="#" data-product-id="83405989-19d5-4a1d-b93e-28e6a2e4e52a">Product 5</a><div class="product_rating"><span class="product_average_rating">4.3 (3)</span><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""></div></div></div><div class="product_card"><img src="https://placehold.co/95"><div class="product_info"><a href="#" data-product-id="96c875c3-c502-4fe9-bacd-fcd542c80bdc">Product 6</a><div class="product_rating"><span class="product_average_rating">4.0 (2)</span><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""></div></div></div><div class="product_card"><img src="https://placehold.co/95"><div class="product_info"><a href="#" data-product-id="d7811ead-5ef3-4497-a959-c87c79d3256d">Product 7</a><div class="product_rating"><span class="product_average_rating">5.0 (1)</span><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""></div></div></div><div class="product_card"><img src="https://placehold.co/95"><div class="product_info"><a href="#" data-product-id="3e38cbb4-7c4b-45c6-b1f9-55985b37b9b4">Product 8</a><div class="product_rating"><span class="product_average_rating">1.5 (2)</span><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""></div></div></div></div>
+        </section>
+
+        <section class="reviews hidden">
+            <h3>Reviews for the product: Product 1</h3>
+            <div class="reviews_wrapper">
+                <div class="rating_summary">
+                    <div class="rating_summary_info">
+                        <div class="star">
+                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                                <path fill="#fad53d" d="M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z">
+                                </path>
+                            </svg>
+                            <span class="average_rating">4.5</span>
+                        </div>
+                        <p>Average rating</p>
+                        <p>Based on 4 ratings</p>
+                    </div>
+                    <div class="rating_summary_chart">
+                        <div class="star_progress_wrapper">
+                            <span>5 star</span>
+                            <div class="progress">
+                                <span data-star-progress="5" style="min-width: 75%;"></span>
+                            </div>
+                            <span class="star_count" data-star="5">3</span>
+                        </div>
+                        <div class="star_progress_wrapper">
+                            <span>4 star</span>
+                            <div class="progress">
+                                <span data-star-progress="4" style="min-width: 0%;"></span>
+                            </div>
+                            <span class="star_count" data-star="4">0</span>
+                        </div>
+                        <div class="star_progress_wrapper">
+                            <span>3 star</span>
+                            <div class="progress">
+                                <span data-star-progress="3" style="min-width: 25%;"></span>
+                            </div>
+                            <span class="star_count" data-star="3">1</span>
+                        </div>
+                        <div class="star_progress_wrapper">
+                            <span>2 star</span>
+                            <div class="progress">
+                                <span data-star-progress="2" style="min-width: 0%;"></span>
+                            </div>
+                            <span class="star_count" data-star="2">0</span>
+                        </div>
+                        <div class="star_progress_wrapper">
+                            <span>1 star</span>
+                            <div class="progress">
+                                <span data-star-progress="1" style="min-width: 0%;"></span>
+                            </div>
+                            <span class="star_count" data-star="1">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_reviews"><div class="user_review_card"><img src="https://i.ibb.co/8DRspKf/user.png" alt="Peter"><div><p class="user_name">Peter</p><div class="user_stars"><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""></div><p class="user_comment">I can't believe he put me here!</p></div></div><div class="user_review_card"><img src="https://i.ibb.co/6JSfZ19/author5.webp" alt="BAGI3TA"><div><p class="user_name">BAGI3TA</p><div class="user_stars"><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""></div><p class="user_comment">Good product, I recommend it!</p></div></div><div class="user_review_card"><img src="https://i.ibb.co/kcx8BdX/author4.webp" alt="GigaChad"><div><p class="user_name">GigaChad</p><div class="user_stars"><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""><img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt=""></div><p class="user_comment">Average product</p></div></div><div class="user_review_card"><img src="https://i.ibb.co/4TL867N/profile-pic.png" alt="Kamil (admin)"><div><p class="user_name">Kamil (admin)</p><div class="user_stars"><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""><img src="https://i.ibb.co/L6WXvN8/star-full.png" alt=""></div><p class="user_comment">Great choice! I recommend to everyone!</p></div></div></div>
+            </div>
+        </section>
+
+        <section class="add_review hidden">
+            <h3>Add a review for the Product 1</h3>
+            <form action="#">
+                <div class="form_control">
+                    <label for="username">Username</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="rating_area">
+                    <p>Select rating</p>
+                    <div class="rating_stars">
+                        <svg class="star_full" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path fill="#fad239" d="M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z">
+                            </path>
+                        </svg>
+
+                        <svg class="star_empty" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path fill="#fad239" d="M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z">
+                            </path>
+                        </svg>
+
+                        <svg class="star_empty" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path fill="#fad239" d="M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z">
+                            </path>
+                        </svg>
+
+                        <svg class="star_empty" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path fill="#fad239" d="M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z">
+                            </path>
+                        </svg>
+
+                        <svg class="star_empty" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path fill="#fad239" d="M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form_control">
+                    <label for="comment">Comment</label>
+                    <textarea id="comment"></textarea>
+                </div>
+                <button class="submit_btn">Submit</button>
+            </form>
+            <p>Your review will be visible to all users</p>
+        </section>
+    </main>
+
+    <div class="special_label">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+            <path fill="#fff" d="M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z">
+        </path></svg>
+        100th challenge
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+            <path fill="#fff" d="M283.84 867.84 512 747.776l228.16 119.936a6.4 6.4 0 0 0 9.28-6.72l-43.52-254.08 184.512-179.904a6.4 6.4 0 0 0-3.52-10.88l-255.104-37.12L517.76 147.904a6.4 6.4 0 0 0-11.52 0L392.192 379.072l-255.104 37.12a6.4 6.4 0 0 0-3.52 10.88L318.08 606.976l-43.584 254.08a6.4 6.4 0 0 0 9.28 6.72z">
+            </path>
+        </svg>
+    </div>
+
+
+            
+            <script>const PRODUCTS_DB = [
+    {
+        id: crypto.randomUUID(),
+        productName: 'Product 1',
+        productImg: "https://placehold.co/95",
+        userReviews: [
+            {
+                username: 'Peter',
+                userImg: 'https://i.ibb.co/8DRspKf/user.png',
+                userRating: 5,
+                userComment: "I can't believe he put me here!"
+            },
+            {
+                username: 'BAGI3TA',
+                userImg: 'https://i.ibb.co/6JSfZ19/author5.webp',
+                userRating: 5,
+                userComment: "Good product, I recommend it!"
+            },
+            {
+                username: 'GigaChad',
+                userImg: 'https://i.ibb.co/kcx8BdX/author4.webp',
+                userRating: 3,
+                userComment: "Average product"
+            },
+            {
+                username: 'Kamil (admin)',
+                userImg: 'https://i.ibb.co/4TL867N/profile-pic.png',
+                userRating: 5,
+                userComment: "Great choice! I recommend to everyone!"
+            },
+        ]
+    },
+    {
+        id: crypto.randomUUID(),
+        productName: 'Product 2',
+        productImg: "https://placehold.co/95",
+        userReviews: [
+            {
+                username: 'Barbara Hines',
+                userImg: 'https://i.ibb.co/WGpHD2h/author1.webp',
+                userRating: 4,
+                userComment: "Ac neque quam, eiusmod nec ultricies elit mi nec amet. Est phasellus quis at mi vel quis, gravida pede."
+            },
+            {
+                username: 'Troy I. Kyles',
+                userImg: 'https://i.ibb.co/c20tJbc/blog3.webp',
+                userRating: 4,
+                userComment: "Et tempus ullamcorper mi fringilla donec diam."
+            },
+            {
+                username: 'Nancy Shepardson',
+                userImg: 'https://i.ibb.co/wyD19Ch/author3.webp',
+                userRating: 3,
+                userComment: "¡Aculis pede mollis, ipsum elit. Aliquam quam lorem maecenas fusce, justo in et a quisque cursus et, leo risus magnis sem ali- quet maecenas a."
+            },
+        ]
+    },
+    {
+        id: crypto.randomUUID(),
+        productName: 'Product 3',
+        productImg: "https://placehold.co/95",
+        userReviews: [
+            {
+                username: 'Kamil (admin)',
+                userImg: 'https://i.ibb.co/4TL867N/profile-pic.png',
+                userRating: 5,
+                userComment: "I see you!"
+            },
+            {
+                username: 'User 1',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 1,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'Nancy Shepardson',
+                userImg: 'https://i.ibb.co/wyD19Ch/author3.webp',
+                userRating: 3,
+                userComment: "It's OK"
+            },
+            {
+                username: 'User 2',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 1,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 3',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 2,
+                userComment: "Comment for testing purposes"
+            }
+        ]
+    },
+    {
+        id: crypto.randomUUID(),
+        productName: 'Product 4',
+        productImg: "https://placehold.co/95",
+        userReviews: [
+            {
+                username: 'User 1',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 4,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'Nancy Shepardson',
+                userImg: 'https://i.ibb.co/wyD19Ch/author3.webp',
+                userRating: 1,
+                userComment: "Poor quality product, do not recommend"
+            },
+            {
+                username: 'User 2',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 1,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 3',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 1,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 4',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 2,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 5',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 2,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 6',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 5,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 7',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 1,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 8',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 1,
+                userComment: "Comment for testing purposes"
+            }
+        ]
+    },
+    {
+        id: crypto.randomUUID(),
+        productName: 'Product 5',
+        productImg: "https://placehold.co/95",
+        userReviews: [
+            {
+                username: 'clement',
+                userImg: 'https://i.ibb.co/jVC12Wb/139d30a2-9345-4d36-8e84-cc5bb04abd2f.png',
+                userRating: 5,
+                userComment: "Good product"
+            },
+            {
+                username: 'User 1',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 5,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 2',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 3,
+                userComment: "Comment for testing purposes"
+            },
+        ]
+    },
+    {
+        id: crypto.randomUUID(),
+        productName: 'Product 6',
+        productImg: "https://placehold.co/95",
+        userReviews: [
+            {
+                username: 'User 1',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 5,
+                userComment: "Comment for testing purposes"
+            },
+            {
+                username: 'User 2',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 3,
+                userComment: "Comment for testing purposes"
+            },
+        ]
+    },
+    {
+        id: crypto.randomUUID(),
+        productName: 'Product 7',
+        productImg: "https://placehold.co/95",
+        userReviews: [
+            {
+                username: 'BAGI3TA',
+                userImg: 'https://i.ibb.co/6JSfZ19/author5.webp',
+                userRating: 5,
+                userComment: "Good product, I recommend it!"
+            }
+        ]
+    },
+    {
+        id: crypto.randomUUID(),
+        productName: 'Product 8',
+        productImg: "https://placehold.co/95",
+        userReviews: [
+            {
+                username: 'User 1',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 1,
+                userComment: "No comment"
+            },
+            {
+                username: 'User 2',
+                userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+                userRating: 2,
+                userComment: "Comment for testing purposes"
+            },
+        ]
+    },
+];
+
+const productsWrapper = document.querySelector('.products_wrapper');
+const allHeaders = document.querySelectorAll('header > div');
+const allSections = document.querySelectorAll('section');
+const allGoTonBtns = document.querySelectorAll('[data-goto]');
+const reviewsWrapper = document.querySelector('.user_reviews');
+const ratingStars = document.querySelectorAll('.rating_stars svg');
+const submitBtn = document.querySelector('.submit_btn');
+
+let selectedProductId = undefined;
+let selectedProductName = undefined;
+let selectedRating = 1;
+
+const addReview = () => {
+    const usernameInput = document.querySelector('#username');
+    const commentInput = document.querySelector('#comment');
+
+    if (usernameInput.value === '') {
+        usernameInput.value = 'User';
+    }
+
+    if (commentInput.value === '') {
+        commentInput.value = 'No comment';
+    }
+
+    PRODUCTS_DB.filter(product => product.id === selectedProductId)[0].userReviews.push(
+        {
+            username: usernameInput.value,
+            userImg: 'https://i.ibb.co/zbSnMHT/user.jpg',
+            userRating: selectedRating,
+            userComment: commentInput.value
+        }
+    );
+
+    document.querySelector('.reviews').classList.remove('hidden');
+    document.querySelector('.add_review').classList.add('hidden');
+    document.querySelector('.reviews_header').classList.remove('hidden');
+    document.querySelector('.add_review_header').classList.add('hidden');
+
+    renderProductReviews();
+    renderProducts();
+    reviewsWrapper.scrollTo(0, reviewsWrapper.scrollHeight);
+
+    usernameInput.value = '';
+    commentInput.value = '';
+}
+
+const handleStarRating = index => {
+    ratingStars.forEach(star => {
+        star.classList.remove(...star.classList);
+        star.classList.add('star_empty');
+    });
+
+    for (let i = index; i >= 0; i--) {
+        ratingStars[i].classList.remove('star_empty');
+        ratingStars[i].classList.add('star_full');
+    }
+
+    selectedRating = index + 1;
+}
+
+const renderProducts = () => {
+    productsWrapper.innerHTML = '';
+
+    PRODUCTS_DB.forEach(product => {
+        let totalRating = 0;
+        let averageRating = 0;
+
+        product.userReviews.forEach(review => {
+            totalRating += review.userRating;
+        });
+
+        averageRating = (totalRating / product.userReviews.length).toFixed(1);
+
+        const productCard = document.createElement('div');
+        productCard.className = 'product_card';
+
+        const productImg = document.createElement('img');
+        productImg.src = product.productImg;
+
+        const productInfo = document.createElement('div');
+        productInfo.className = 'product_info';
+
+        const productName = document.createElement('a');
+        productName.setAttribute('href', '#');
+        productName.textContent = product.productName;
+        productName.setAttribute('data-product-id', product.id);
+
+        productName.addEventListener('click', e => {
+            e.preventDefault();
+            selectedProductId = product.id;
+            selectedProductName = product.productName;
+            document.querySelector('.add_review h3').textContent = `Add a review for the ${selectedProductName}`;
+            renderProductReviews();
+        });
+
+        const productRating = document.createElement('div');
+        productRating.className = 'product_rating';
+
+        const productRatingAverage = document.createElement('span');
+        productRatingAverage.className = 'product_average_rating';
+        productRatingAverage.textContent = `${averageRating} (${product.userReviews.length})`;
+
+        productCard.appendChild(productImg);
+        productCard.appendChild(productInfo);
+
+        productInfo.appendChild(productName);
+        productInfo.appendChild(productRating);
+
+        productRating.appendChild(productRatingAverage);
+
+        for (let i = 1; i <= Math.floor(averageRating); i++) {
+            productRating.innerHTML += '<img src="https://i.ibb.co/L6WXvN8/star-full.png" alt="">';
+        }
+
+        for (let i = (5 - Math.floor(averageRating)); i >= 1; i--) {
+            productRating.innerHTML += '<img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt="">';
+        }
+
+        productsWrapper.appendChild(productCard);
+    });
+}
+
+const renderProductReviews = () => {
+    let totalRatings = 0;
+    reviewsWrapper.innerHTML = '';
+
+    const productReviews = PRODUCTS_DB.filter(product => product.id === selectedProductId)[0].userReviews;
+    productReviews.forEach(review => {
+        totalRatings += review.userRating;
+    });
+
+    const ratingsCountMap = {
+        5: 0,
+        4: 0,
+        3: 0,
+        2: 0,
+        1: 0,
+    }
+
+    productReviews.forEach(review => {
+        ratingsCountMap[review.userRating]++;
+    });
+
+    document.querySelector('.products').classList.add('hidden');
+    document.querySelector('.reviews').classList.remove('hidden');
+    document.querySelector('.products_header').classList.add('hidden');
+    document.querySelector('.reviews_header').classList.remove('hidden');
+    document.querySelector('.average_rating').textContent = (totalRatings / productReviews.length).toFixed(1);
+    document.querySelector('.reviews h3').textContent = `Reviews for the product: ${selectedProductName}`;
+    document.querySelector('.rating_summary_info p:nth-of-type(2)').textContent = `Based on ${productReviews.length} ratings`;
+
+    for (const [key, val] of Object.entries(ratingsCountMap)) {
+        document.querySelector(`[data-star="${key}"]`).textContent = val;
+        document.querySelector(`[data-star-progress="${key}"]`).style.minWidth = `${(val / productReviews.length) * 100}%`;
+    }
+
+    productReviews.forEach(review => {
+        const userReviewCard = document.createElement('div');
+        userReviewCard.className = 'user_review_card';
+
+        const userImg = document.createElement('img');
+        userImg.src = review.userImg;
+        userImg.alt = review.username;
+
+        const userInfoElement = document.createElement('div');
+
+        const userName = document.createElement('p');
+        userName.className = 'user_name';
+        userName.textContent = review.username;
+
+        const userStars = document.createElement('div');
+        userStars.className = 'user_stars';
+
+        for (let i = 1; i <= review.userRating; i++) {
+            userStars.innerHTML += '<img src="https://i.ibb.co/L6WXvN8/star-full.png" alt="">'
+        }
+
+        for (let i = (5 - review.userRating); i >= 1; i--) {
+            userStars.innerHTML += '<img src="https://i.ibb.co/CWm01Zb/star-empty.png" alt="">';
+        }
+
+        const userComment = document.createElement('p');
+        userComment.className = 'user_comment';
+        userComment.textContent = review.userComment;
+
+        userReviewCard.appendChild(userImg);
+        userReviewCard.appendChild(userInfoElement);
+
+        userInfoElement.appendChild(userName);
+        userInfoElement.appendChild(userStars);
+        userInfoElement.appendChild(userComment);
+
+        reviewsWrapper.appendChild(userReviewCard);
+    });
+}
+
+const goToSection = goTo => {
+    allHeaders.forEach(header => {
+        header.classList.add('hidden');
+    });
+
+    allSections.forEach(section => {
+        section.classList.add('hidden');
+    });
+
+    document.querySelector(`.${goTo}_header`).classList.remove('hidden');
+    document.querySelector(`.${goTo}`).classList.remove('hidden');
+}
+
+allGoTonBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        goToSection(btn.dataset.goto);
+    })
+});
+
+ratingStars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+        handleStarRating(index);
+    })
+})
+
+submitBtn.addEventListener('click', e => {
+    e.preventDefault();
+    addReview();
+});
+
+window.addEventListener('DOMContentLoaded', renderProducts);</script>
+        </body>
+</html>
