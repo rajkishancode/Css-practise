@@ -1,0 +1,185 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+   font-family: "Poppins", sans-serif;
+}
+header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+    /* background-color: grey; */
+}
+.logo-container, .nav-links, .cart{
+    display: flex;
+    list-style: none;
+   
+}
+.logo{
+    font-weight: 400;
+    margin: 5px;
+}
+.logo-container{
+    flex: 1;
+}
+nav{
+    flex: 2;
+}
+.nav-links{
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-link{
+     text-decoration: none;
+     font: #5f5f79;
+}
+
+.cart{
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.presentation{
+    display: flex;
+    width: 90%;
+    min-height: 80vh;
+    margin: auto;
+    align-items: center;
+}
+.introduction{
+    flex: 1;
+}
+.intro-text  h1 {
+    font-size: 44px;
+    font-weight: 500;
+    background: linear-gradient(to right,red,pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+p{
+    font-size: 22px;
+    margin: 5px;
+    color:#585772;
+}
+
+.cta{
+    padding: 50px 0 0 0;
+}
+.cta-select{
+    border: 2px solid #c36cbb;
+    background: none;
+    color: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-add{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #c36cbb;
+    border: none;
+    color: white;
+    margin: 0 0 0 30px;
+
+}
+.cover{
+    display:flex;
+    justify-content: center;
+    flex: 1;
+    height: 60vh;
+}
+
+.cover > img{
+     width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* height: 100%; */
+    filter: drop-shadow(0 5px 3px black); /*shadow under png laptop image*/
+    animation: drop 1.5s ;
+}
+
+.big-circle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+    height: 80%;
+}
+
+.mid-circle{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.4;
+}
+.small-circle{
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;
+
+}
+
+.laptop-select{
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+    position: absolute;
+    right: 30%;
+}
+
+@keyframes drop{
+
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:1024px) {
+   .presentation{
+    flex-direction: column;
+   }
+   .introduction{
+    margin-top: 5vh;
+    text-align: center;
+   }
+
+   .cta{
+    padding: 10px 0 0 0;
+   }
+
+   .intro-text h1{ font-size: 30px;}
+   .intro-text p{ font-size: 18px;}
+
+   .laptop-select{
+    width: 50%;
+    right: 50%;
+    bottom: 5%;
+    transform: translate(50%,5%);
+   }
+
+    .cover img {
+        width: 70%;
+        height: auto; /* Ensures aspect ratio is maintained */
+    }
+}
