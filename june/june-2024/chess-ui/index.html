@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3x3 Chessboard</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .chessboard-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        max-width: 100vmin;
+        max-height: 100vmin;
+      }
+
+      .chessboard {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%; /* Scale to fill parent container */
+        height: 100%; /* Scale to fill parent container */
+        aspect-ratio: 1 / 1; /* Maintain square shape */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .chessboard div {
+        width: 100%;
+        height: 100%;
+      }
+
+      .black {
+        background-color: #000;
+      }
+
+      .white {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chessboard-container">
+      <div class="chessboard">
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+      </div>
+    </div>
+  </body>
+</html>
